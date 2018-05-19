@@ -19,6 +19,7 @@
 
         <hr width="100%">
         <RouterLink to="/components">Components</RouterLink>
+        <RouterLink to="/Content">Content</RouterLink>
         <RouterLink to="/field">Field</RouterLink>
         <hr width="100%">
 

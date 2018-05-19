@@ -7,7 +7,7 @@ let maskIcon: HTMLElement | null = null
 export default new Vue({
   data: () => ({
     prefix: 'md-theme-',
-    theme: 'default',
+    themeName: 'default',
     enabled: true,
     metaColors: false
   }),
@@ -43,7 +43,7 @@ export default new Vue({
       }
     },
 
-    theme (newTheme: string, oldTheme: string) {
+    themeName (newTheme: string, oldTheme: string) {
       newTheme = this.getThemeName(newTheme)
 
       // @ts-ignore: Unknown error
@@ -80,7 +80,7 @@ export default new Vue({
             return getParentThemeName($parent)
           }
 
-          return this.theme
+          return this.themeName
         }
 
         return getParentThemeName(component.$parent)
@@ -89,7 +89,7 @@ export default new Vue({
       return ''
     },
     getThemeName (theme: string) {
-      const themeName = theme || this.theme
+      const themeName = theme || this.themeName
 
       return this.prefix + themeName
     },

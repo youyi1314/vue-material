@@ -36,6 +36,11 @@ export default new Router({
       component: importPage('Components/Components')
     },
     {
+      path: '/content',
+      name: 'content',
+      component: importPage('Components/Content')
+    },
+    {
       path: '/field',
       name: 'field',
       component: importPage('Components/Field')
