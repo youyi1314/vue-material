@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+EXTERNAL="external"
+PACKAGE="@vuematerial"
+SCOPE="--scope=$PACKAGE"
+
+if [[ $1 == $EXTERNAL ]] ; then
+  yarn lerna add $2 $SCOPE/$3
+else
+  if [[ $3 == $EXTERNAL ]] ; then
+    yarn lerna add $1 $SCOPE/$2
+  else
+    yarn lerna add $PACKAGE/$1 $SCOPE/$2
+  fi
+fi

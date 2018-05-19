@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:vue/strongly-recommended",
+    "eslint:recommended",
+    "@vue/typescript"
+  ],
+  "rules": {
+    "vue/script-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 1
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      4,
+      {
+        "singleline": 1,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ]
+  }
+}

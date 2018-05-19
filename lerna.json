@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "npmClient": "yarn",
+  "lerna": "3.0.0-beta.21",
+  "packages": [
+    "docs",
+    "packages/@vuematerial/*"
+  ],
+  "publish": {
+    "ignore": [
+      "docs"
+    ]
+  }
+}

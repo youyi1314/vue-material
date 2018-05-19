@@ -1,0 +1,90 @@
+/**
+ * The default transition
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-default-timing: cubic-bezier(.4, 0, .2, 1);
+$md-motion-default-duration: .275s;
+$md-motion-default: $md-motion-default-duration $md-motion-default-timing;
+
+
+/**
+ * For simple transitions such as hover and focus states or opening
+ * simple objects like small dialogs
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-simple-timing: $md-motion-default-timing;
+$md-motion-simple-duration: .175s;
+$md-motion-simple: $md-motion-simple-duration $md-motion-simple-timing;
+
+
+/**
+ * For complex transitions morph states
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-complex-timing: $md-motion-default-timing;
+$md-motion-complex-duration: .3s;
+$md-motion-complex: $md-motion-complex-duration $md-motion-complex-timing;
+
+
+/**
+ * For opening elements like drawers and bottom sheets
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-open-timing: cubic-bezier(0, 0, .2, 1);
+$md-motion-open-duration: .25s;
+$md-motion-open: $md-motion-open-duration $md-motion-open-timing;
+
+
+/**
+ * For opening elements faster than the usual
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-open-fast-timing: cubic-bezier(0, 0, .2, 1);
+$md-motion-open-fast-duration: .175s;
+$md-motion-open-fast: $md-motion-open-fast-duration $md-motion-open-fast-timing;
+
+
+/**
+ * For closing elements like drawers and bottom sheets
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-close-timing: cubic-bezier(.4, .0, 1, 1);
+$md-motion-close-duration: .2s;
+$md-motion-close: $md-motion-close-duration $md-motion-close-timing;
+
+
+/**
+ * For closeng elements faster than the usual
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-close-fast-timing: cubic-bezier(0, 0, .2, 1);
+$md-motion-close-fast-duration: .1s;
+$md-motion-close-fast: $md-motion-close-fast-duration $md-motion-close-fast-timing;
