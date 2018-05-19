@@ -10,8 +10,10 @@
 </template>
 
 <script lang="ts">
+  import { Component } from 'vue-property-decorator'
   import MdComponent from '@vuematerial/core/MdComponent'
 
+  @Component
   export default class MdField extends MdComponent {
 
   }
