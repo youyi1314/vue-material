@@ -2,28 +2,23 @@
   <AppContainer page="Field">
     <MdField>
       <label>Username</label>
-      <input class="md-input" />
+      <input class="md-input">
     </MdField>
 
     <MdField class="focused" :md-theme="test">
-      <MdField>
-        <MdField>
-          <i class="md-icon">♥</i>
-          <label>Password confirmation</label>
-          <input class="md-input" />
-        </MdField>
-      </MdField>
+      <label>Password</label>
+      <input class="md-input">
     </MdField>
 
     <MdField>
       <i class="md-icon">♥</i>
       <label>Password confirmation</label>
-      <input class="md-input" />
+      <input class="md-input">
     </MdField>
 
     <MdField>
       <label>Password confirmation</label>
-      <input class="md-input" v-model="test" />
+      <input class="md-input" v-model="test">
       <i class="md-icon">♥</i>
     </MdField>
   </AppContainer>

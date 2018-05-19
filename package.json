@@ -23,7 +23,7 @@
     "clean": "lerna clean; rm -rf node_modules yarn.lock;",
     "dev": "cd docs; yarn dev",
     "docs-lint": "cd docs; yarn lint",
-    "docs-lint-fix": "cd docs; yarn lint-fix"
+    "docs-lint-fix": "yarn docs-lint --fix"
   },
   "devDependencies": {
     "lerna": "3.0.0-beta.21",
