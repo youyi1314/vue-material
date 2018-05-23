@@ -1,12 +1,11 @@
 <template>
   <MdTagSwitcher :md-tag="mdTag" class="md-content">
-    <slot></slot>
+    <slot/>
   </MdTagSwitcher>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Prop } from 'vue-property-decorator'
-  import { VNode } from 'vue'
   import MdComponent from '@vuematerial/core/MdComponent'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
 
@@ -17,9 +16,9 @@
   })
   export default class MdContent extends MdComponent {
     @Prop({ type: String, default: 'div' })
-    mdTag: string
+    mdTag
 
-    render (createElement: any): VNode {
+    render (createElement) {
       return createElement(this.mdTag, {
         staticClass: 'md-content',
         class: [this.$material.theme.name],

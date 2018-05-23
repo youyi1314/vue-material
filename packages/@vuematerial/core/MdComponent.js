@@ -3,13 +3,12 @@ import MdThemeFactory from './MdThemeFactory'
 
 @Component
 export default class MdComponent extends Vue {
-
   @Prop(String)
-  mdTheme: string
+  mdTheme
 
-  get $material (): any {
+  get $material () {
     const { enabled, getThemeName, getAncestorTheme } = MdThemeFactory
-    const $material: any = {
+    const $material = {
       theme: {
         enabled: MdThemeFactory.enabled,
         name: null
@@ -17,11 +16,9 @@ export default class MdComponent extends Vue {
     }
 
     if (enabled) {
-      // @ts-ignore: Unknown error
       $material.theme.name = getThemeName(this.mdTheme || getAncestorTheme(this))
     }
 
     return $material
   }
-
 }

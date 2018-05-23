@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { Component, Prop } from 'vue-property-decorator'
   import MdComponent from '@vuematerial/core/MdComponent'
 
@@ -7,9 +7,9 @@
   })
   export default class MdContent extends MdComponent {
     @Prop(String, { default: 'div' })
-    mdTag: string
+    mdTag
 
-    render (createElement: any, { props, children, data, listeners }: any) {
+    render (createElement, { props, children, data, listeners }) {
       return createElement(props.mdTag, {
         ...data,
         on: listeners

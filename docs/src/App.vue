@@ -1,11 +1,11 @@
 <template>
-  <div class="app" id="app" v-if="loaded">
+  <div v-if="loaded" id="app" class="app">
     <AppSidebar />
     <RouterView />
   </div>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
   import AppSidebar from '@/components/AppSidebar.vue'
   import { getDocumentLocale, getGlobalMessages, setMessages } from '@/i18n'
@@ -16,11 +16,11 @@
     }
   })
   export default class App extends Vue {
-    loaded:boolean = false
+    loaded = false
 
     async created () {
-      const documentLanguage:string = getDocumentLocale()
-      const messages:any = await getGlobalMessages(documentLanguage)
+      const documentLanguage = getDocumentLocale()
+      const messages = await getGlobalMessages(documentLanguage)
 
       await setMessages(documentLanguage, messages)
       this.loaded = true

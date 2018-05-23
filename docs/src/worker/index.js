@@ -3,7 +3,7 @@
 import { register } from 'register-service-worker'
 import banner from './banner'
 
-export function registerServiceWorker() {
+export function registerServiceWorker () {
   if (process.env.NODE_ENV === 'production') {
     register(`${process.env.BASE_URL}service-worker.js`, {
       ready () {
@@ -20,7 +20,7 @@ export function registerServiceWorker() {
           'No internet connection found. App is running in offline mode.'
         )
       },
-      error (error: Error) {
+      error (error) {
         console.error('Error during service worker registration:', error)
       }
     })

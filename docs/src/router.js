@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import i18n, { getDocumentLocale, getPageMessages, setMessages } from '@/i18n'
+import i18n, { getPageMessages, setMessages } from '@/i18n'
 
 Vue.use(Router)
 
-function importPage(path: string) {
+function importPage (path) {
   return async () => {
     const locale = i18n.locale
     const messages = await getPageMessages(locale, path)

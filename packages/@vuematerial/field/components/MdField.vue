@@ -3,13 +3,13 @@
     <slot />
 
     <div class="md-field-notch">
-      <span class="md-field-notch-mask left"></span>
-      <span class="md-field-notch-mask right"></span>
+      <span class="md-field-notch-mask left"/>
+      <span class="md-field-notch-mask right"/>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
   import { Component } from 'vue-property-decorator'
   import MdComponent from '@vuematerial/core/MdComponent'
 

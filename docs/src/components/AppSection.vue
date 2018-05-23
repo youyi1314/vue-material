@@ -6,12 +6,12 @@
   </section>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue, Prop } from 'vue-property-decorator'
 
   @Component
   export default class AppSection extends Vue {
-  @Prop() title: string
+    @Prop() title
   }
 </script>
 

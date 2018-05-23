@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-export default function (data: any, setter?: Function): any {
+export default function (data, setter) {
   const Instance = {
     reactive: null
   }

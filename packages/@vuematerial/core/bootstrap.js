@@ -1,11 +1,11 @@
 import MdReactive from './MdReactive'
 import MdThemeFactory from './MdThemeFactory'
 
-function reactiveTheming (obj: any, prop: string, target: any) {
+function reactiveTheming (obj, prop, target) {
   Object.defineProperties(obj, {
     [prop]: {
       get: () => target[prop],
-      set (value: any) {
+      set (value) {
         target[prop] = value
       }
     }
@@ -37,7 +37,7 @@ const init = () => {
   return material
 }
 
-export default (Vue: any) => {
+export default (Vue) => {
   if (!Vue.material) {
     Vue.material = init()
     Vue.prototype.$material = Vue.material

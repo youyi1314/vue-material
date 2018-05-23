@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["./docs/src/*"]
+    },
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./docs/**/*",
+    "./packages/**/*"
+  ]
+}

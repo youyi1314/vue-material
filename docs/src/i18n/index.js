@@ -7,11 +7,11 @@ const i18n = new VueI18n()
 
 export default i18n
 
-async function getMessages(language: string, path?: string): Promise<any> {
+async function getMessages (language, path) {
   const defaultLanguage = 'en-US'
 
-  async function importFile(language: string): Promise<any> {
-    let filePath: string = ''
+  async function importFile (language) {
+    let filePath = ''
 
     if (path) {
       filePath += `${language}/${path}`
@@ -19,39 +19,33 @@ async function getMessages(language: string, path?: string): Promise<any> {
       filePath += `${language}/index`
     }
 
-    return await import(`./${filePath}`)
+    return import(`./${filePath}`)
   }
 
   try {
-    return await importFile(language)
+    return importFile(language)
   } catch (error) {
-    return await importFile(defaultLanguage)
+    return importFile(defaultLanguage)
   }
 }
 
-export function getDocumentLocale(): string {
+export function getDocumentLocale () {
   return document.documentElement.lang
 }
 
-export async function getGlobalMessages(language: string): Promise<any> {
+export async function getGlobalMessages (language) {
   const { default: messages } = await getMessages(language)
 
   return messages
 }
 
-export async function getPageMessages(
-  language: string,
-  page: string
-): Promise<any> {
+export async function getPageMessages (language, page) {
   const { default: messages } = await getMessages(language, `pages/${page}`)
 
   return messages
 }
 
-export async function setMessages(
-  language: string,
-  messages: any
-): Promise<any> {
+export async function setMessages (language, messages) {
   i18n.locale = language
   i18n.mergeLocaleMessage(language, messages)
 

@@ -26,16 +26,16 @@ THE SOFTWARE.
   </AppContainer>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
 
-@Component
+  @Component
   export default class PageLicense extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-pre {
-  font-family: inherit;
-  white-space: pre-line;
-}
+  pre {
+    font-family: inherit;
+    white-space: pre-line;
+  }
 </style>

@@ -5,7 +5,7 @@
       <input class="md-input">
     </MdField>
 
-    <MdField class="focused" :md-theme="test">
+    <MdField :md-theme="test" class="focused">
       <label>Password</label>
       <input class="md-input">
     </MdField>
@@ -18,13 +18,13 @@
 
     <MdField>
       <label>Password confirmation</label>
-      <input class="md-input" v-model="test">
+      <input v-model="test" class="md-input">
       <i class="md-icon">♥</i>
     </MdField>
   </AppContainer>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
   import MdField from '@vuematerial/field'
 
@@ -32,7 +32,7 @@
 
   @Component
   export default class PageField extends Vue {
-    test: string = ''
+    test = ''
   }
 </script>
 

@@ -10,7 +10,7 @@
   </AppContainer>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
   import MdContent from '@vuematerial/content'
 

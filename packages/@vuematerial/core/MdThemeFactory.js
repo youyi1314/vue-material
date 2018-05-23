@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
-let msColor: HTMLElement | null = null
-let themeColor: HTMLElement | null = null
-let maskIcon: HTMLElement | null = null
+let msColor = null
+let themeColor = null
+let maskIcon = null
 
 export default new Vue({
   data: () => ({
@@ -13,7 +13,7 @@ export default new Vue({
   }),
 
   computed: {
-    themeTarget (): HTMLElement | null {
+    themeTarget () {
       if (!this.$isServer) {
         return document.documentElement
       }
@@ -21,8 +21,7 @@ export default new Vue({
       return null
     },
 
-    fullThemeName (): string {
-      // @ts-ignore: Unknown error
+    fullThemeName () {
       return this.getThemeName('')
     }
   },
@@ -43,12 +42,10 @@ export default new Vue({
       }
     },
 
-    themeName (newTheme: string, oldTheme: string) {
+    themeName (newTheme, oldTheme) {
       newTheme = this.getThemeName(newTheme)
 
-      // @ts-ignore: Unknown error
       this.themeTarget.classList.remove(this.getThemeName(oldTheme))
-      // @ts-ignore: Unknown error
       this.themeTarget.classList.add(newTheme)
 
       if (this.metaColors) {
@@ -56,7 +53,7 @@ export default new Vue({
       }
     },
 
-    metaColors (meta: string) {
+    metaColors (meta) {
       if (meta) {
         this.setHtmlMetaColors(this.fullThemeName)
       } else {
@@ -66,10 +63,10 @@ export default new Vue({
   },
 
   methods: {
-    getAncestorTheme (component: any): string {
+    getAncestorTheme (component) {
       if (component) {
         const currentTheme = component.mdTheme
-        const getParentThemeName = (parent: any): string => {
+        const getParentThemeName = (parent) => {
           if (parent) {
             const { mdTheme, $parent } = parent
 
@@ -88,27 +85,27 @@ export default new Vue({
 
       return ''
     },
-    getThemeName (theme: string) {
+    getThemeName (theme) {
       const themeName = theme || this.themeName
 
       return this.prefix + themeName
     },
-    setMicrosoftColors (primaryColor: string) {
+    setMicrosoftColors (primaryColor) {
       if (msColor) {
         msColor.setAttribute('content', primaryColor)
       }
     },
-    setThemeColors (primaryColor: string) {
+    setThemeColors (primaryColor) {
       if (themeColor) {
         themeColor.setAttribute('content', primaryColor)
       }
     },
-    setMaskColors (primaryColor: string) {
+    setMaskColors (primaryColor) {
       if (maskIcon) {
         maskIcon.setAttribute('color', primaryColor)
       }
     },
-    setHtmlMetaColors (themeName: string) {
+    setHtmlMetaColors (themeName) {
       let primaryColor = '#fff'
 
       if (themeName) {
@@ -126,9 +123,9 @@ export default new Vue({
   },
 
   mounted () {
-    msColor = document.querySelector('[name="msapplication-TileColor"]') as HTMLElement
-    themeColor = document.querySelector('[name="theme-color"]') as HTMLElement
-    maskIcon = document.querySelector('[rel="mask-icon"]') as HTMLElement
+    msColor = document.querySelector('[name="msapplication-TileColor"]')
+    themeColor = document.querySelector('[name="theme-color"]')
+    maskIcon = document.querySelector('[rel="mask-icon"]')
 
     if (this.enabled && this.metaColors) {
       window.addEventListener('load', () => {

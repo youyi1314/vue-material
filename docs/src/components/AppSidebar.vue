@@ -10,20 +10,14 @@
       <nav class="app-sidebar-nav">
         <RouterLink to="/about">About</RouterLink>
 
-
-
-        <hr width="100%">
+        <hr>
         <RouterLink to="/style">Style</RouterLink>
 
-
-
-        <hr width="100%">
+        <hr>
         <RouterLink to="/components">Components</RouterLink>
         <RouterLink to="/Content">Content</RouterLink>
         <RouterLink to="/field">Field</RouterLink>
-        <hr width="100%">
-
-
+        <hr>
 
         <RouterLink to="/license">License</RouterLink>
       </nav>
@@ -31,7 +25,7 @@
   </Transition>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
@@ -66,6 +60,12 @@
       padding: 40px 24px;
       display: flex;
       flex-direction: column;
+
+      hr {
+        width: 100%;
+        height: 1px;
+        border-bottom: none;
+      }
     }
 
     &-nav-group {

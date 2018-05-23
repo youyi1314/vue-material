@@ -2,9 +2,9 @@
   <AppContainer page="About"/>
 </template>
 
-<script lang="ts">
+<script>
   import { Component, Vue } from 'vue-property-decorator'
 
-@Component
+  @Component
   export default class PageAbout extends Vue {}
 </script>
