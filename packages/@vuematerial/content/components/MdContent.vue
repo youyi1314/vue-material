@@ -1,5 +1,10 @@
 <template>
-  <MdTagSwitcher :md-tag="mdTag" class="md-content">
+  <MdTagSwitcher
+    :md-tag="mdTag"
+    :class="['md-content', $material.theme.name]"
+    v-on="$listeners"
+    v-bind="$attrs"
+  >
     <slot/>
   </MdTagSwitcher>
 </template>
@@ -17,14 +22,5 @@
   export default class MdContent extends MdComponent {
     @Prop({ type: String, default: 'div' })
     mdTag
-
-    render (createElement) {
-      return createElement(this.mdTag, {
-        staticClass: 'md-content',
-        class: [this.$material.theme.name],
-        attrs: this.$attrs,
-        on: this.$listeners
-      }, this.$slots.default)
-    }
   }
 </script>
