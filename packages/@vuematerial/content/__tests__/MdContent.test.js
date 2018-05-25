@@ -1,4 +1,4 @@
-import mountTemplate from 'test/utils/mountTemplate'
+import mountTemplate from '@vuematerial/test-utils/mountTemplate'
 import MdContent from '../components/MdContent'
 
 test('should render the content', async () => {

@@ -4,11 +4,13 @@
   "lerna": "3.0.0-beta.21",
   "packages": [
     "docs",
-    "packages/@vuematerial/*"
+    "packages/@vuematerial/*",
+    "packages/test-utils"
   ],
   "publish": {
     "ignore": [
-      "docs"
+      "docs",
+      "packages/test-utils"
     ]
   }
 }

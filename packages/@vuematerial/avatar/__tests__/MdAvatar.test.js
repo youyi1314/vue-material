@@ -1,5 +1,5 @@
-import mountTemplate from 'test/utils/mountTemplate'
-import MdAvatar from './MdAvatar.vue'
+import mountTemplate from '@vuematerial/test-utils/mountTemplate'
+import MdAvatar from '../components/MdAvatar.vue'
 
 test('should render the avatar', async () => {
   const template = '<md-avatar>Lorem ipsum</md-avatar>'

@@ -22,6 +22,7 @@
     "updated": "lerna updated",
     "clean": "lerna clean; rm -rf node_modules yarn.lock;",
     "dev": "cd docs; yarn dev",
+    "docs-test": "cd docs; yarn test",
     "docs-lint": "cd docs; yarn lint",
     "docs-lint-fix": "yarn docs-lint --fix"
   },

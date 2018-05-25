@@ -1,6 +1,6 @@
 {
-  "name": "@vuematerial/avatar",
-  "description": "Avatar component of Vue Material",
+  "name": "@vuematerial/test-utils",
+  "description": "Internal test utils for Vue Material components",
   "version": "2.0.0",
   "license": "MIT",
   "author": {
@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@vuematerial/core": "^2.0.0",
-    "@vuematerial/motion": "^2.0.0",
-    "@vuematerial/test-utils": "^2.0.0"
+    "@vuematerial/tag-switcher": "^2.0.0"
   }
 }
