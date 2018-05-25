@@ -36,13 +36,18 @@ export default new Router({
       component: importPage('Components/Components')
     },
     {
-      path: '/content',
-      name: 'content',
+      path: '/components/avatar',
+      name: 'components/avatar',
+      component: importPage('Components/Avatar')
+    },
+    {
+      path: '/components/content',
+      name: 'components/content',
       component: importPage('Components/Content')
     },
     {
-      path: '/field',
-      name: 'field',
+      path: '/components/field',
+      name: 'components/field',
       component: importPage('Components/Field')
     },
 

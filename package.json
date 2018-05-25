@@ -27,13 +27,14 @@
   },
   "devDependencies": {
     "lerna": "3.0.0-beta.21",
-    "lint-staged": "^7.1.0",
+    "lint-staged": "^7.1.2",
     "scripty": "^1.7.2",
     "yorkie": "^1.0.3"
   },
   "scripty": {
     "silent": true
   },
+  "sideEffects": false,
   "engines": {
     "node": ">= 7.0"
   },

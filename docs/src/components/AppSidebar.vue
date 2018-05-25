@@ -15,8 +15,9 @@
 
         <hr>
         <RouterLink to="/components">Components</RouterLink>
-        <RouterLink to="/Content">Content</RouterLink>
-        <RouterLink to="/field">Field</RouterLink>
+        <RouterLink to="/components/avatar">Avatar</RouterLink>
+        <RouterLink to="/components/content">Content</RouterLink>
+        <RouterLink to="/components/field">Field</RouterLink>
         <hr>
 
         <RouterLink to="/license">License</RouterLink>

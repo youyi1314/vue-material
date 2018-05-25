@@ -3,12 +3,26 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  extends: [
-    'plugin:vue/strongly-recommended',
-    '@vue/standard'
+  env: {
+    'jest/globals': true
+  },
+  extends: ['plugin:vue/strongly-recommended', '@vue/standard'],
+  plugins: [
+    'jest'
   ],
   rules: {
-    indent: 0,
+    indent: 'off',
+    'indent-legacy': ['error', 2],
+    'max-depth': ['error', 4],
+    'max-statements': ['error', 30],
+    'max-params': ['error', 5],
+    'max-nested-callbacks': ['error', 3],
+    complexity: [
+      'error',
+      {
+        max: 6
+      }
+    ],
     'vue/script-indent': [
       'error',
       2,
