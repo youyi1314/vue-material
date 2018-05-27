@@ -1,10 +1,10 @@
 <template>
   <AppContainer page="Avatar">
-    <MdAvatar class="md-avatar-icon md-small">B</MdAvatar>
+    <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
 
-    <MdAvatar class="md-avatar-icon">A</MdAvatar>
+    <MdAvatar class="md-avatar-icon">B</MdAvatar>
 
-    <MdAvatar class="md-avatar-icon md-large">B</MdAvatar>
+    <MdAvatar class="md-avatar-icon md-large">CC</MdAvatar>
 
     <MdAvatar class="md-small">
       <img src="/img/examples/avatar.jpg" alt="People">
