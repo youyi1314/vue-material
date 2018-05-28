@@ -12,12 +12,16 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@vuematerial/motion/variables';
+  @import '~@vuematerial/theme/engine/functions';
+
   .app-footer {
     min-height: 60px;
     padding: 16px 24px;
     display: flex;
     justify-content: flex-end;
     background-color: #fff;
+    transition: $md-motion-default-duration $md-motion-default;
   }
 
   a {
@@ -25,10 +29,13 @@
 
     &:hover .heart {
       transform: scale(1.4);
+      color: md-get-palette-color(red, 500);
     }
   }
 
   .heart {
     display: inline-block;
+    transition: $md-motion-default;
+    color: md-get-palette-color(red, 700);
   }
 </style>

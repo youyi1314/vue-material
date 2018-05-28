@@ -1,6 +1,6 @@
 export default {
   pageHome: {
-    title: 'Home',
-    description: 'This is the homepage page'
+    title: 'Vue Material',
+    description: 'Build beautiful apps with Material Design and Vue.js'
   }
 }

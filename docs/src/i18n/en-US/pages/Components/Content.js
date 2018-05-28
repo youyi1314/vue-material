@@ -1,6 +1,6 @@
 export default {
   pageContent: {
     title: 'Content',
-    description: 'This is the Content page'
+    description: 'The content component is commonly used to resemble a piece of paper.'
   }
 }

@@ -65,6 +65,19 @@ $md-motion-open-fast: $md-motion-open-fast-duration $md-motion-open-fast-timing;
 
 
 /**
+ * For opening elements slower than the usual
+ * ---
+ * @access private
+ * @type transition
+ * @group transition
+ */
+
+$md-motion-open-slow-timing: cubic-bezier(0, 0, .2, 1);
+$md-motion-open-slow-duration: .35s;
+$md-motion-open-slow: $md-motion-open-slow-duration $md-motion-open-slow-timing;
+
+
+/**
  * For closing elements like drawers and bottom sheets
  * ---
  * @access private

@@ -66,6 +66,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~@vuematerial/motion/variables";
+
   .app-container {
     flex: 1;
     display: flex;
@@ -77,11 +79,36 @@
 
     &-enter {
       opacity: 0;
-      transform: translate3D(-72px, 0, 0);
+      transform: translate3D(0, 80px, 0);
+
+      .app-container-description {
+        transform: translate3D(0, -24px, 0);
+      }
+
+      .app-container-content /deep/ {
+        * {
+          opacity: 0;
+        }
+
+        $space: 16px;
+
+        @for $i from 1 through 10 {
+          & :nth-child(#{$i}) {
+            $space: $space + 16px;
+
+            transform: translate3d(0, $space, 0);
+          }
+        }
+      }
     }
 
     &-enter-active {
       overflow: hidden;
+      transition: $md-motion-open-slow;
+
+      .app-footer {
+        opacity: 0;
+      }
     }
 
     &-leave-active {
@@ -101,6 +128,7 @@
 
     &-header {
       padding: 40px 0;
+      transition: $md-motion-default;
       transition-property: background-color;
 
       &.fixed {
@@ -147,12 +175,19 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        background-color: var(--md-theme-neo-primary);
+        transition: $md-motion-default-duration $md-motion-default;
         content: ' ';
       }
     }
 
     &-description {
       margin: 1rem 0;
+      transition: $md-motion-open;
+    }
+
+    /deep/ &-content * {
+      transition: $md-motion-open-slow-duration .15s $md-motion-open-slow-timing;
     }
   }
 </style>
