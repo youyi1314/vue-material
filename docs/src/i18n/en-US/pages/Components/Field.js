@@ -1,6 +1,6 @@
 export default {
   pageField: {
     title: 'Field',
-    description: 'Text fields allows users to input, edit, and select text.'
+    description: 'Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.'
   }
 }
