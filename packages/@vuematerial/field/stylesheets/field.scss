@@ -37,16 +37,19 @@
       font-size: 12px;
     }
 
-    .md-input {
+    .md-input,
+    .md-textarea {
+      padding: 12px 11px 11px;
       border-color: #6200ee;
       border-width: 0 2px 2px;
       outline: none;
       transition: $md-motion-default;
-      transition-property: border, color;
+      transition-property: padding, border, color;
     }
   }
+
   .md-field-notch {
-    height: 56px;
+    height: $md-input-height;
     position: absolute;
     top: 0;
     right: 0;
@@ -102,10 +105,11 @@
     white-space: nowrap;
   }
 
-  .md-input {
-    height: $md-input-height;
+  .md-input,
+  .md-textarea {
+    min-height: $md-input-height;
     margin: 0;
-    padding: 0 12px;
+    padding: 12px;
     display: block;
     flex: 1;
     background-color: #fff;
@@ -115,10 +119,9 @@
     background: none;
     touch-action: manipulation;
     transition: $md-motion-close;
-    transition-property: border, color;
+    transition-property: padding, border, color;
     font-family: inherit;
     font-size: 16px;
-    line-height: $md-input-height;
 
     &[type="date"] {
       font-size: 16px;
@@ -146,11 +149,16 @@
     }
   }
 
+  .md-input {
+    height: $md-input-height;
+    line-height: $md-input-height;
+  }
+
   .md-icon {
     width: 24px;
     height: 24px;
     position: absolute;
-    top: 16px;
+    top: ($md-input-height - 24px) / 2;
     left: 12px;
     color: rgba(#000, .54);
     font-style: normal;
