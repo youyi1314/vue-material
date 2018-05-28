@@ -85,7 +85,7 @@
         transform: translate3D(0, -24px, 0);
       }
 
-      .app-container-content /deep/ {
+      .app-container-content /deep/ > {
         * {
           opacity: 0;
         }
@@ -186,7 +186,7 @@
       transition: $md-motion-open;
     }
 
-    /deep/ &-content * {
+    /deep/ &-content > * {
       transition: $md-motion-open-slow-duration .15s $md-motion-open-slow-timing;
     }
   }
