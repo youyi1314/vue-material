@@ -5,12 +5,14 @@
   "packages": [
     "docs",
     "packages/@vuematerial/*",
-    "packages/test-utils"
+    "packages/test-utils",
+    "packages/vue-material"
   ],
-  "publish": {
-    "ignore": [
-      "docs",
-      "packages/test-utils"
-    ]
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "docs"
+      ]
+    }
   }
 }

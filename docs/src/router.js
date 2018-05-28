@@ -46,6 +46,11 @@ export default new Router({
       component: importPage('Components/Content')
     },
     {
+      path: '/components/divider',
+      name: 'components/divider',
+      component: importPage('Components/Divider')
+    },
+    {
       path: '/components/field',
       name: 'components/field',
       component: importPage('Components/Field')

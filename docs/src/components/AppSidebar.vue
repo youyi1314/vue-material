@@ -17,6 +17,7 @@
         <RouterLink to="/components">Components</RouterLink>
         <RouterLink to="/components/avatar">Avatar</RouterLink>
         <RouterLink to="/components/content">Content</RouterLink>
+        <RouterLink to="/components/divider">Divider</RouterLink>
         <RouterLink to="/components/field">Field</RouterLink>
         <hr>
 

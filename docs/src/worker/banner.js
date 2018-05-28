@@ -1,14 +1,14 @@
-export default () => {
-  const base = 'color: #303030; font: 500 16px/12px "SF Mono", "Hack", monospace; vertical-align: middle;'
-  const spacer = 'line-height: 8px;'
-  const green = `${base}; color: #b3ff58;`
-  const cyan = `${base}; color: #84ffff;`
-  const blue = `${base}; color: #526dfe;`
-  const emoji = `${base}; font-family: sans-serif; font-size: 12px; color: #f44336;`
-  const title = `${base}; font-size: 20px; line-height: 1.5em;`
-  const text = `${base}; line-height: 1em;`
-  const message = `${base}; font-size: 14px; line-height: 17px;`
+const base = 'color: #303030; font: 500 16px/12px "SF Mono", "Hack", monospace; vertical-align: middle;'
+const spacer = 'line-height: 8px;'
+const green = `${base}; color: #b3ff58;`
+const cyan = `${base}; color: #84ffff;`
+const blue = `${base}; color: #526dfe;`
+const emoji = `${base}; font-family: sans-serif; font-size: 12px; color: #f44336;`
+const title = `${base}; font-size: 20px; line-height: 1.5em;`
+const text = `${base}; line-height: 1em;`
+const message = `${base}; font-size: 14px; line-height: 17px;`
 
+export default () => {
   console.clear()
   console.log('%c                         #             %c#', green, blue)
   console.log('%c                        ##            %c##', green, blue)
