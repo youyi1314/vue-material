@@ -35,6 +35,7 @@
 </style>
 
 <style lang="scss" src="@vuematerial/base/base.scss"></style>
+<style lang="scss" src="@vuematerial/theme/presets/default/light.scss"></style>
 <style lang="scss" src="@vuematerial/theme/presets/neo/light.scss"></style>
 
 <style lang="scss" scoped>

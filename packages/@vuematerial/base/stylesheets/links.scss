@@ -1,0 +1,10 @@
+@import '~@vuematerial/motion/variables';
+
+/**
+ * Overrides - Default links
+ */
+
+ a:not(.md-button) {
+  transition: $md-motion-default;
+  transition-property: color, background-color, opacity;
+}

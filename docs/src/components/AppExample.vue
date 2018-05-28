@@ -1,0 +1,26 @@
+<template>
+  <div class="app-example">
+    <slot />
+  </div>
+</template>
+
+<script>
+  import { Component, Vue } from 'vue-property-decorator'
+
+  @Component
+  export default class AppExample extends Vue {
+  }
+</script>
+
+<style lang="scss" scoped>
+  .app-example {
+    padding: 16px;
+    border: 1px solid rgba(#000, .12);
+    border-radius: 8px;
+    background-color: #fff;
+
+    + .app-example {
+      margin-top: 40px;
+    }
+  }
+</style>

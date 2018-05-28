@@ -32,7 +32,7 @@
     }
 
     label {
-      transform: translate3D(0, -$md-input-height / 2, 0);
+      transform: translate3D(0, -$md-field-height / 2, 0);
       color: #6200ee;
       font-size: 12px;
     }
@@ -49,7 +49,7 @@
   }
 
   .md-field-notch {
-    height: $md-input-height;
+    height: $md-field-height;
     position: absolute;
     top: 0;
     right: 0;
@@ -58,7 +58,7 @@
   }
 
   .md-field-notch-mask {
-    height: $md-input-radius * 2;
+    height: $md-field-radius * 2;
     position: absolute;
     overflow: hidden;
     transition: width $md-motion-complex;
@@ -77,7 +77,7 @@
 
       &:after {
         width: 9999em;
-        border-top-left-radius: $md-input-radius;
+        border-top-left-radius: $md-field-radius;
       }
     }
 
@@ -87,7 +87,7 @@
 
       &:after {
         width: 100%;
-        border-top-right-radius: $md-input-radius;
+        border-top-right-radius: $md-field-radius;
         border-left-width: 0;
       }
     }
@@ -96,7 +96,7 @@
   label {
     padding: 0 12px;
     position: absolute;
-    top: ($md-input-height - 16px) / 2;
+    top: ($md-field-height - 16px) / 2;
     left: 0;
     transition: $md-motion-default;
     touch-action: manipulation;
@@ -107,7 +107,7 @@
 
   .md-input,
   .md-textarea {
-    min-height: $md-input-height;
+    min-height: $md-field-height;
     margin: 0;
     padding: 12px;
     display: block;
@@ -115,7 +115,7 @@
     background-color: #fff;
     border: solid #ededed;
     border-width: 0 1px 1px;
-    border-radius: $md-input-radius;
+    border-radius: $md-field-radius;
     background: none;
     touch-action: manipulation;
     transition: $md-motion-close;
@@ -150,15 +150,15 @@
   }
 
   .md-input {
-    height: $md-input-height;
-    line-height: $md-input-height;
+    height: $md-field-height;
+    line-height: $md-field-height;
   }
 
   .md-icon {
     width: 24px;
     height: 24px;
     position: absolute;
-    top: ($md-input-height - 24px) / 2;
+    top: ($md-field-height - 24px) / 2;
     left: 12px;
     color: rgba(#000, .54);
     font-style: normal;

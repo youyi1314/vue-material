@@ -1,38 +1,33 @@
 <template>
   <AppContainer page="Avatar">
-    <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
+    <AppExample>
+      <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
 
-    <MdAvatar class="md-avatar-icon">B</MdAvatar>
+      <MdAvatar class="md-avatar-icon">B</MdAvatar>
 
-    <MdAvatar class="md-avatar-icon md-large">CC</MdAvatar>
+      <MdAvatar class="md-avatar-icon md-large">CC</MdAvatar>
 
-    <MdAvatar class="md-small">
-      <img src="/img/examples/avatar.jpg" alt="People">
-    </MdAvatar>
+      <MdAvatar class="md-small">
+        <img src="/img/examples/avatar.jpg" alt="People">
+      </MdAvatar>
 
-    <MdAvatar>
-      <img src="/img/examples/avatar.jpg" alt="Avatar">
-    </MdAvatar>
+      <MdAvatar>
+        <img src="/img/examples/avatar.jpg" alt="Avatar">
+      </MdAvatar>
 
-    <MdAvatar class="md-large">
-      <img src="/img/examples/avatar.jpg" alt="Avatar">
-    </MdAvatar>
+      <MdAvatar class="md-large">
+        <img src="/img/examples/avatar.jpg" alt="Avatar">
+      </MdAvatar>
+    </AppExample>
   </AppContainer>
 </template>
 
 <script>
   import { Component, Vue } from 'vue-property-decorator'
-  import MdAvatar from '@vuematerial/avatar'
-
-  Vue.use(MdAvatar)
 
   @Component
   export default class PageAvatar extends Vue {}
 </script>
-
-<style lang="scss">
-  @import '~@vuematerial/avatar/avatar';
-</style>
 
 <style lang="scss" scoped>
 

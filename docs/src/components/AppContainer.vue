@@ -2,7 +2,7 @@
   <Transition name="app-container" appear>
     <main :style="appContainerStyles" class="app-container" @scroll="onScroll">
       <div class="app-container-wrapper">
-        <header ref="header" :class="{ 'fixed': isHeaderFixed }" class="app-container-header">
+        <header ref="header" :class="{ 'fixed md-elevation-4': isHeaderFixed }" class="app-container-header">
           <div class="app-container-wrapper">
             <h1 class="app-container-title">{{ $t(`${pageKey}.title`) }}</h1>
             <p class="app-container-description">{{ $t(`${pageKey}.description`) }}</p>
@@ -33,7 +33,7 @@
     page
 
     isHeaderFixed = false
-    header = null
+    headerEl = null
     headerHeight = 0
 
     get pageKey () {
@@ -52,15 +52,15 @@
       const targetEl = event.target
 
       requestAnimationFrame(() => {
-        if (this.header) {
-          this.isHeaderFixed = targetEl.scrollTop > this.header.offsetTop + 24
+        if (this.headerEl) {
+          this.isHeaderFixed = targetEl.scrollTop > this.headerEl.offsetTop + 24
         }
       })
     }
 
     mounted () {
-      this.header = this.$refs.header
-      this.headerHeight = this.header.offsetHeight
+      this.headerEl = this.$refs.header
+      this.headerHeight = this.headerEl.offsetHeight
     }
   }
 </script>
@@ -128,6 +128,7 @@
 
     &-header {
       padding: 40px 0;
+      background: #f8f8f8;
       transition: $md-motion-default;
       transition-property: background-color;
 

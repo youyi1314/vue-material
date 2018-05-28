@@ -1,12 +1,9 @@
 @import '../../engine/engine.scss';
 
-@include md-register-theme("neo", (
-  background-variant: #f8f8f8,
-  primary: #0092D6,
-  accent: #28C76F
+@include md-register-theme("default", (
+  primary: md-get-palette-color(deeppurple, A700),
+  accent: md-get-palette-color(teal, A200)
 ));
-
-$md-field-radius: 8px;
 
 @import '~@vuematerial/avatar/avatar';
 @import '~@vuematerial/content/content';
@@ -19,6 +16,3 @@ $md-field-radius: 8px;
 @import '~@vuematerial/content/theme.scss';
 @import '~@vuematerial/divider/theme.scss';
 @import '~@vuematerial/field/theme.scss';
-
-
-@import './fonts/fonts.scss';

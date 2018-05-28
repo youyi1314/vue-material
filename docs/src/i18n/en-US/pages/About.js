@@ -1,6 +1,6 @@
 export default {
   pageAbout: {
     title: 'About',
-    description: 'This is the about page'
+    description: 'Vue Material - Material Design for Vue.js'
   }
 }

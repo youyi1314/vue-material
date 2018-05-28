@@ -3,10 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import i18n from './i18n'
+import VueMaterial from 'vue-material'
 import { registerServiceWorker } from './worker'
 import './components'
 
 Vue.config.productionTip = false
+Vue.use(VueMaterial)
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
@@ -17,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   router.onReady(() => {
-    app.$mount('#app')
     app.$material.theming.themeName = 'neo'
+    app.$mount('#app')
     registerServiceWorker()
   })
 })

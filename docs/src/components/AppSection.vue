@@ -1,6 +1,6 @@
 <template>
   <section class="app-section">
-    <h2>{{ title }}</h2>
+    <h2 class="md-title" v-if="title">{{ title }}</h2>
 
     <slot />
   </section>
@@ -18,11 +18,7 @@
 <style lang="scss" scoped>
   .app-section {
     + .app-section {
-      margin-top: 48px;
+      margin-top: 40px;
     }
-  }
-
-  h2 {
-    padding-bottom: 16px;
   }
 </style>

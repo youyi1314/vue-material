@@ -8,19 +8,18 @@
       </header>
 
       <nav class="app-sidebar-nav">
-        <RouterLink to="/about">About</RouterLink>
-
-        <hr>
         <RouterLink to="/style">Style</RouterLink>
+        <div class="app-sidebar-nav-group" />
 
-        <hr>
         <RouterLink to="/components">Components</RouterLink>
-        <RouterLink to="/components/avatar">Avatar</RouterLink>
-        <RouterLink to="/components/content">Content</RouterLink>
-        <RouterLink to="/components/divider">Divider</RouterLink>
-        <RouterLink to="/components/field">Field</RouterLink>
-        <hr>
+        <div class="app-sidebar-nav-group">
+          <RouterLink to="/components/avatar">Avatar</RouterLink>
+          <RouterLink to="/components/content">Content</RouterLink>
+          <RouterLink to="/components/divider">Divider</RouterLink>
+          <RouterLink to="/components/field">Field</RouterLink>
+        </div>
 
+        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/license">License</RouterLink>
       </nav>
     </aside>
@@ -35,12 +34,15 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@vuematerial/theme/engine/functions';
+
   .app-sidebar {
     width: 220px;
     height: 100vh;
     position: relative;
     z-index: 2;
     background-color: #fff;
+    border-right: 1px solid rgba(#000, .12);
 
     &-enter,
     &-leave-active {
@@ -58,26 +60,45 @@
       }
     }
 
+    &-header {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &-nav {
-      padding: 40px 24px;
+      padding: 40px 8px;
       display: flex;
       flex-direction: column;
 
-      hr {
-        width: 100%;
-        height: 1px;
-        border-bottom: none;
+      a {
+        margin: 2px 0;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: rgba(#000, .87) !important;
+
+        &:hover {
+          color: #0092D6 !important;
+          text-decoration: none !important;
+        }
+
+        &.router-link-exact-active {
+          font-weight: 700;
+          background-color: lighten(#0092D6, 52%);
+          color: #0092D6 !important;
+        }
       }
     }
 
     &-nav-group {
-      margin: 0 0 16px 16px;
+      margin-bottom: 16px;
       display: flex;
       flex-direction: column;
-    }
-  }
 
-  .router-link-exact-active {
-    font-weight: 700;
+      a {
+        padding-left: 24px;
+      }
+    }
   }
 </style>
