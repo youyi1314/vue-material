@@ -1,0 +1,14 @@
+@import '../../engine/engine.scss';
+
+@include md-register-theme("neo", (
+  background: #f8f8f8,
+  primary: #0092D6,
+  accent: #28C76F
+));
+
+@import '~@vuematerial/avatar/theme.scss';
+@import '~@vuematerial/base/theme.scss';
+@import '~@vuematerial/content/theme.scss';
+@import '~@vuematerial/divider/theme.scss';
+
+@import './fonts/fonts.scss';

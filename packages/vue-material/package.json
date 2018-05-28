@@ -22,6 +22,6 @@
     "@vuematerial/elevation": "^2.0.0",
     "@vuematerial/field": "^2.0.0",
     "@vuematerial/test-utils": "^2.0.0",
-    "@vuematerial/themes": "^2.0.0"
+    "@vuematerial/theme": "^2.0.0"
   }
 }
