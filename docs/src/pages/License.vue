@@ -1,9 +1,10 @@
 <template>
   <AppContainer page="License">
+    <h2 class="md-headline">The MIT License (MIT)</h2>
+    <h3 class="md-title">Copyright &copy; 2016-2018 Marcos Moura</h3>
+
     <p>
       <pre>
-<h2>The MIT License (MIT)</h2>
-<h3>Copyright &copy; 2019 Marcos Moura</h3>
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -35,6 +36,7 @@ THE SOFTWARE.
 
 <style lang="scss" scoped>
   pre {
+    margin-top: 32px;
     font-family: inherit;
     white-space: pre-line;
   }
