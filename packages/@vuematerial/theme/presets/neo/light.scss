@@ -2,8 +2,8 @@
 
 @include md-register-theme("neo", (
   background-variant: #f8f8f8,
-  primary: #0092D6,
-  accent: #28C76F
+  primary: md-get-palette-color(blue, A400),
+  accent: md-get-palette-color(green, A200)
 ));
 
 $md-field-radius: 8px;

@@ -81,14 +81,14 @@
         color: rgba(#000, .87) !important;
 
         &:hover {
-          color: #0092D6 !important;
+          color: md-get-palette-color(blue, A400) !important;
           text-decoration: none !important;
         }
 
         &.router-link-exact-active {
           font-weight: 700;
-          background-color: lighten(#0092D6, 52%);
-          color: #0092D6 !important;
+          background-color: md-get-palette-color(blue, 50);
+          color: md-get-palette-color(blue, A400) !important;
         }
       }
     }
