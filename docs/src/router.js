@@ -41,6 +41,11 @@ export default new Router({
       component: importPage('Components/Avatar')
     },
     {
+      path: '/components/button',
+      name: 'components/button',
+      component: importPage('Components/Button')
+    },
+    {
       path: '/components/content',
       name: 'components/content',
       component: importPage('Components/Content')

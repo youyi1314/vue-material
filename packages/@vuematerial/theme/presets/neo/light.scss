@@ -9,14 +9,16 @@
 $md-field-radius: 8px;
 
 @import '~@vuematerial/avatar/avatar';
+@import '~@vuematerial/button/button';
 @import '~@vuematerial/content/content';
 @import '~@vuematerial/divider/divider';
 @import '~@vuematerial/elevation/elevation';
-@import '~@vuematerial/ripple/ripple';
 @import '~@vuematerial/field/field';
+@import '~@vuematerial/ripple/ripple';
 
 @import '~@vuematerial/avatar/theme.scss';
 @import '~@vuematerial/base/theme.scss';
+@import '~@vuematerial/button/theme.scss';
 @import '~@vuematerial/content/theme.scss';
 @import '~@vuematerial/divider/theme.scss';
 @import '~@vuematerial/field/theme.scss';

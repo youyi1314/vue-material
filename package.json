@@ -23,10 +23,15 @@
     "clean": "lerna clean; rm -rf node_modules yarn.lock;",
     "dev": "cd docs; yarn dev",
     "docs-test": "cd docs; yarn test",
+    "lint": "eslint packages/**/*.js",
     "docs-lint": "cd docs; yarn lint",
     "docs-lint-fix": "yarn docs-lint --fix"
   },
   "devDependencies": {
+		"@vue/cli-plugin-eslint": "^3.0.0-beta.11",
+		"@vue/eslint-config-standard": "^3.0.0-beta.11",
+		"babel-eslint": "^8.2.3",
+		"eslint-plugin-jest": "^21.15.2",
     "lerna": "3.0.0-beta.21",
     "lint-staged": "^7.1.2",
     "scripty": "^1.7.2",

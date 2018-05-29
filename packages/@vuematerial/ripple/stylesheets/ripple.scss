@@ -17,10 +17,10 @@
   background: currentColor;
   border-radius: 50%;
   opacity: 0;
-  transform: scale(2) translateZ(0);
+  transform: scale(2.5) translateZ(0);
 
   &.md-centered {
-    animation-duration: 1.2s;
+    animation-duration: 1.8s;
     top: 50%;
     left: 50%;
   }
@@ -37,11 +37,11 @@
   will-change: opacity, transform;
 
   &.md-centered {
-    transition-duration: 1.2s;
+    transition-duration: 1.8s;
   }
 }
 
 .md-ripple-enter {
   opacity: .26;
-  transform: scale(.26) translateZ(0);
+  transform: scale(.4) translateZ(0);
 }

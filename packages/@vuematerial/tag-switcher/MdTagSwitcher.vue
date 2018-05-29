@@ -3,17 +3,16 @@
   import MdComponent from '@vuematerial/core/MdComponent'
 
   @Component({
-    functional: true
   })
-  export default class MdContent extends MdComponent {
+  export default class MdTagSwitcher extends MdComponent {
     @Prop(String, { default: 'div' })
     mdTag
 
-    render (createElement, { props, children, data, listeners }) {
-      return createElement(props.mdTag, {
-        ...data,
-        on: listeners
-      }, children)
+    render (createElement) {
+      return createElement(this.$props.mdTag, {
+        attrs: this.$attrs,
+        on: this.$listeners
+      }, this.$slots.default)
     }
   }
 </script>

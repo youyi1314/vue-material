@@ -14,6 +14,7 @@
         <RouterLink to="/components">Components</RouterLink>
         <div class="app-sidebar-nav-group">
           <RouterLink to="/components/avatar">Avatar</RouterLink>
+          <RouterLink to="/components/button">Button</RouterLink>
           <RouterLink to="/components/content">Content</RouterLink>
           <RouterLink to="/components/divider">Divider</RouterLink>
           <RouterLink to="/components/field">Field</RouterLink>
