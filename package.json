@@ -23,7 +23,7 @@
     "clean": "lerna clean; rm -rf node_modules yarn.lock;",
     "dev": "cd docs; yarn dev",
     "docs-test": "cd docs; yarn test",
-    "lint": "eslint packages/**/*.js",
+    "lint": "eslint {packages,docs,scripts}/**/*.{js,vue}",
     "docs-lint": "cd docs; yarn lint",
     "docs-lint-fix": "yarn docs-lint --fix"
   },
