@@ -1,7 +1,7 @@
 <template>
   <MdTagSwitcher
+    class="md-content"
     :md-tag="mdTag"
-    :class="['md-content', $materialTheme.name]"
     v-on="$listeners"
     v-bind="$attrs"
   >
@@ -10,8 +10,7 @@
 </template>
 
 <script>
-  import { Component, Prop } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop } from 'vue-property-decorator'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
 
   @Component({
@@ -19,7 +18,7 @@
       MdTagSwitcher
     }
   })
-  export default class MdContent extends MdComponent {
+  export default class MdContent extends Vue {
     @Prop({ type: String, default: 'div' })
     mdTag
   }

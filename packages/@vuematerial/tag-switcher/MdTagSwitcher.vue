@@ -1,18 +1,18 @@
 <script>
-  import { Component, Prop } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop } from 'vue-property-decorator'
 
   @Component({
+    functional: true
   })
-  export default class MdTagSwitcher extends MdComponent {
+  export default class MdTagSwitcher extends Vue {
     @Prop(String, { default: 'div' })
     mdTag
 
-    render (createElement) {
-      return createElement(this.$props.mdTag, {
-        attrs: this.$attrs,
-        on: this.$listeners
-      }, this.$slots.default)
+    render (createElement, { props, data, listeners, children }) {
+      return createElement(props.mdTag, {
+        ...data,
+        on: listeners
+      }, children)
     }
   }
 </script>

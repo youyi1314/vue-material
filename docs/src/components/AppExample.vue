@@ -1,7 +1,7 @@
 <template>
-  <div class="app-example">
+  <MdContent class="app-example">
     <slot />
-  </div>
+  </MdContent>
 </template>
 
 <script>
@@ -17,7 +17,6 @@
     padding: 16px;
     border: 1px solid rgba(#000, .12);
     border-radius: 8px;
-    background-color: #fff;
 
     + .app-example {
       margin-top: 40px;

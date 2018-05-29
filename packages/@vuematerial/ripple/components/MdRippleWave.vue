@@ -5,11 +5,10 @@
 </template>
 
 <script>
-  import { Component, Prop } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop } from 'vue-property-decorator'
 
   @Component
-  export default class MdRippleWave extends MdComponent {
+  export default class MdRippleWave extends Vue {
     @Prop
     waveClasses
 

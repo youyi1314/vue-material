@@ -2,7 +2,7 @@
   <MdTagSwitcher
     v-on="$listeners"
     v-bind="attributes"
-    :class="['md-button', buttonClasses, $materialTheme.name]"
+    :class="['md-button', buttonClasses]"
     :md-tag="buttonTag"
     :type="buttonType"
     @touchstart="onTouchStart()"
@@ -16,8 +16,7 @@
 </template>
 
 <script>
-  import { Component, Prop } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop } from 'vue-property-decorator'
   import MdRouterLinkProps from '@vuematerial/core/MdRouterLinkProps'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
   import MdButtonContent from './MdButtonContent'
@@ -30,7 +29,7 @@
     }
   })
 
-  export default class MdButton extends MdComponent {
+  export default class MdButton extends Vue {
     @Prop(String)
     href
 

@@ -49,6 +49,7 @@
     &.md-fab {
       &[disabled] {
         @include md-theme-property(background-color, disabled-background, background);
+        @include md-theme-property(color, text-primary, disabled-background);
       }
 
       &:not([disabled]) {
@@ -67,6 +68,7 @@
     &[disabled] {
       @include md-theme-property(color, disabled, background);
       @include md-icon-on-buttons(icon-disabled, background);
+      @include md-theme-property(color, text-primary, background);
     }
   }
 }

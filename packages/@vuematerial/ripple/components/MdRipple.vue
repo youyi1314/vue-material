@@ -19,8 +19,7 @@
 </template>
 
 <script>
-  import { Component, Prop, Watch } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
   import uuid from '@vuematerial/core/MdUuid'
   import MdRippleWave from './MdRippleWave'
   import raf from 'raf'
@@ -30,7 +29,7 @@
       MdRippleWave
     }
   })
-  export default class MdRipple extends MdComponent {
+  export default class MdRipple extends Vue {
     /* Props */
     @Prop
     mdActive

@@ -10,8 +10,7 @@
 </template>
 
 <script>
-  import { Component, Prop } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue, Prop } from 'vue-property-decorator'
   import MdRipple from '@vuematerial/ripple/components/MdRipple'
 
   @Component({
@@ -19,7 +18,7 @@
       MdRipple
     }
   })
-  export default class MdButtonContent extends MdComponent {
+  export default class MdButtonContent extends Vue {
     @Prop(Boolean)
     mdRipple
 

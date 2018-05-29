@@ -63,28 +63,6 @@ export default new Vue({
   },
 
   methods: {
-    getAncestorTheme (component) {
-      if (component) {
-        const currentTheme = component.mdTheme
-        const getParentThemeName = (parent) => {
-          if (parent) {
-            const { mdTheme, $parent } = parent
-
-            if (mdTheme && mdTheme !== currentTheme) {
-              return mdTheme
-            }
-
-            return getParentThemeName($parent)
-          }
-
-          return this.themeName
-        }
-
-        return getParentThemeName(component.$parent)
-      }
-
-      return ''
-    },
     getThemeName (theme) {
       const themeName = theme || this.themeName
 

@@ -84,30 +84,6 @@
     $md-theme-palette: map-merge($md-theme-palette, $palette) !global;
     $md-current-theme: $theme !global;
 
-    &.md-theme-#{$theme} {
-      @content;
-    }
-  }
-}
-
-
-/**
- * Theme pieces of a given scss code for all pre registered themes based on parent.
- * ---
- * Usage example:
- *
- * .md-foo {
- *   @include md-theme-component-relative() {
- *     @include md-theme-property(background, primary);
- *   }
- * }
- */
-
-@mixin md-theme-component-relative () {
-  @each $theme, $palette in $md-themes {
-    $md-theme-palette: map-merge($md-theme-palette, $palette) !global;
-    $md-current-theme: $theme !global;
-
     .md-theme-#{$theme} & {
       @content;
     }

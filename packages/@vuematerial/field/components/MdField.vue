@@ -1,5 +1,5 @@
 <template>
-  <div :class="['md-field', $materialTheme.name]">
+  <div class="md-field">
     <slot />
 
     <div class="md-field-notch">
@@ -10,11 +10,10 @@
 </template>
 
 <script>
-  import { Component } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class MdField extends MdComponent {
+  export default class MdField extends Vue {
 
   }
 </script>

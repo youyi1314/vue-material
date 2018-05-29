@@ -1,10 +1,9 @@
 <template>
-  <MdTagSwitcher :md-tag="htmlTag" :class="['md-divider', $materialTheme.name]" />
+  <MdTagSwitcher class="md-divider" :md-tag="htmlTag" />
 </template>
 
 <script>
-  import { Component } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
 
   @Component({
@@ -12,7 +11,7 @@
       MdTagSwitcher
     }
   })
-  export default class MdDivider extends MdComponent {
+  export default class MdDivider extends Vue {
     get htmlTag () {
       if (this.$parent.$options._componentTag === 'md-list') {
         return 'li'

@@ -3,18 +3,8 @@
 @include md-register-theme("neo", (
   background-variant: #f8f8f8,
   primary: md-get-palette-color(blue, A400),
-  accent: md-get-palette-color(green, A200)
+  accent: md-get-palette-color(grey, 800)
 ));
-
-$md-field-radius: 8px;
-
-@import '~@vuematerial/avatar/avatar';
-@import '~@vuematerial/button/button';
-@import '~@vuematerial/content/content';
-@import '~@vuematerial/divider/divider';
-@import '~@vuematerial/elevation/elevation';
-@import '~@vuematerial/field/field';
-@import '~@vuematerial/ripple/ripple';
 
 @import '~@vuematerial/avatar/theme.scss';
 @import '~@vuematerial/base/theme.scss';
@@ -22,6 +12,5 @@ $md-field-radius: 8px;
 @import '~@vuematerial/content/theme.scss';
 @import '~@vuematerial/divider/theme.scss';
 @import '~@vuematerial/field/theme.scss';
-
 
 @import './fonts/fonts.scss';

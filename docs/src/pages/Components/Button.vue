@@ -15,7 +15,7 @@
     <AppExample>
       <MdButton class="md-fab">&lt;3</MdButton>
       <MdButton class="md-fab md-primary">&lt;3</MdButton>
-      <MdButton class="md-fab md-accent">&lt;3</MdButton>
+      <MdButton class="md-fab md-transparent">&lt;3</MdButton>
     </AppExample>
 
     <AppExample>

@@ -1,13 +1,12 @@
 <template>
-  <div :class="['md-avatar', $materialTheme.name]">
+  <div class="md-avatar">
     <slot />
   </div>
 </template>
 
 <script>
-  import { Component } from 'vue-property-decorator'
-  import MdComponent from '@vuematerial/core/MdComponent'
+  import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class MdAvatar extends MdComponent {}
+  export default class MdAvatar extends Vue {}
 </script>

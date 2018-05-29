@@ -1047,9 +1047,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@vue/babel-preset-app@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.0.0-beta.12.tgz#be386c536c59a0cbc771495fc6ac6ee4ea806e8c"
+"@vue/babel-preset-app@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.0.0-beta.14.tgz#eeacf141d4f6c9f260379ef3a38876945827929f"
   dependencies:
     "@babel/plugin-syntax-jsx" "7.0.0-beta.47"
     "@babel/plugin-transform-runtime" "7.0.0-beta.47"
@@ -1060,30 +1060,30 @@
     babel-plugin-dynamic-import-node "^1.2.0"
     babel-plugin-transform-vue-jsx "^4.0.1"
 
-"@vue/cli-overlay@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.0-beta.12.tgz#944a99c3829f3dbc5520e3134176cb34db3f88af"
+"@vue/cli-overlay@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.0-beta.14.tgz#75d606eb4a577a9254259e59353a43672811e16f"
 
-"@vue/cli-plugin-babel@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.0-beta.12.tgz#220fd36ed2bbdcc5ebd0de867d7482396293dbb9"
+"@vue/cli-plugin-babel@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.0-beta.14.tgz#ffac169f45c71eec1235bf9c08454f20845c08d5"
   dependencies:
     "@babel/core" "7.0.0-beta.47"
-    "@vue/babel-preset-app" "^3.0.0-beta.12"
+    "@vue/babel-preset-app" "^3.0.0-beta.14"
     babel-loader "^8.0.0-0"
 
-"@vue/cli-plugin-pwa@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-pwa/-/cli-plugin-pwa-3.0.0-beta.12.tgz#bc714d74bdc64f3be2151d6ec5353acec0aae7a6"
+"@vue/cli-plugin-pwa@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-pwa/-/cli-plugin-pwa-3.0.0-beta.14.tgz#33722711a801e742ebf605222141d30642c127b0"
   dependencies:
     workbox-webpack-plugin "^3.2.0"
 
-"@vue/cli-service@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.0-beta.12.tgz#1e4deb7fb49fdd6f748eee6129a34482570f1ffc"
+"@vue/cli-service@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.0-beta.14.tgz#a764032d78db11144a09c1ca6fe6bc05d73f24b6"
   dependencies:
-    "@vue/cli-overlay" "^3.0.0-beta.12"
-    "@vue/cli-shared-utils" "^3.0.0-beta.12"
+    "@vue/cli-overlay" "^3.0.0-beta.14"
+    "@vue/cli-shared-utils" "^3.0.0-beta.14"
     "@vue/preload-webpack-plugin" "^1.0.0"
     "@vue/web-component-wrapper" "^1.2.0"
     acorn "^5.5.3"
@@ -1092,6 +1092,7 @@
     cache-loader "^1.2.2"
     case-sensitive-paths-webpack-plugin "^2.1.2"
     chalk "^2.4.1"
+    clipboardy "^1.2.3"
     cliui "^4.1.0"
     copy-webpack-plugin "^4.5.1"
     css-loader "^0.28.11"
@@ -1101,6 +1102,7 @@
     fs-extra "^6.0.1"
     get-value "^3.0.1"
     globby "^8.0.1"
+    hash-sum "^1.0.2"
     html-webpack-plugin "^3.2.0"
     launch-editor-middleware "^2.2.1"
     lodash.defaultsdeep "^4.6.0"
@@ -1128,14 +1130,13 @@
     webpack-merge "^4.1.2"
     yorkie "^1.0.3"
 
-"@vue/cli-shared-utils@^3.0.0-beta.12":
-  version "3.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-3.0.0-beta.12.tgz#9d4bfe3e622d09ceab860573116b3a8acd5151c9"
+"@vue/cli-shared-utils@^3.0.0-beta.14":
+  version "3.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-3.0.0-beta.14.tgz#25e089f972da57d21f022c7319be07c3535522a0"
   dependencies:
     chalk "^2.3.0"
     cmd-shim "^2.0.2"
     execa "^0.10.0"
-    hash-sum "^1.0.2"
     joi "^12.0.0"
     node-ipc "^9.1.1"
     opn "^5.2.0"
@@ -1162,7 +1163,7 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@vue/preload-webpack-plugin/-/preload-webpack-plugin-1.0.0.tgz#08f156532909824da2aad258e151742d1e8f822e"
 
-"@vue/test-utils@^1.0.0-beta.12":
+"@vue/test-utils@^1.0.0-beta.14":
   version "1.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.16.tgz#dcf7a30304391422e382b5f97db6eb9508112906"
   dependencies:
@@ -1392,6 +1393,10 @@ anymatch@^2.0.0:
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
+
+arch@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/arch/-/arch-2.1.0.tgz#3613aa46149064b3c1f0607919bf1d4786e82889"
 
 are-we-there-yet@~1.1.2:
   version "1.1.5"
@@ -2059,6 +2064,13 @@ cli-cursor@^2.1.0:
 cli-spinners@^1.0.1, cli-spinners@^1.1.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.3.1.tgz#002c1990912d0d59580c93bd36c056de99e4259a"
+
+clipboardy@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/clipboardy/-/clipboardy-1.2.3.tgz#0526361bf78724c1f20be248d428e365433c07ef"
+  dependencies:
+    arch "^2.1.0"
+    execa "^0.8.0"
 
 cliui@^3.2.0:
   version "3.2.0"
