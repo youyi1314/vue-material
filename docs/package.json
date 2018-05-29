@@ -17,8 +17,6 @@
 	"scripts": {
 		"dev": "vue-cli-service serve --open",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
-		"fix": "yarn lint --fix",
 		"test": "vue-cli-service test:unit"
 	},
 	"dependencies": {
@@ -43,19 +41,15 @@
 		"vuex-class": "^0.3.1"
 	},
 	"devDependencies": {
-		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.48",
-		"@babel/plugin-proposal-decorators": "^7.0.0-beta.48",
-		"@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.48",
-		"@babel/preset-stage-2": "^7.0.0-beta.48",
-		"@vue/cli-plugin-babel": "^3.0.0-beta.11",
-		"@vue/cli-plugin-eslint": "^3.0.0-beta.11",
-		"@vue/cli-plugin-pwa": "^3.0.0-beta.11",
-		"@vue/cli-plugin-unit-jest": "^3.0.0-beta.11",
-		"@vue/cli-service": "^3.0.0-beta.11",
-		"@vue/eslint-config-standard": "^3.0.0-beta.11",
-		"@vue/test-utils": "^1.0.0-beta.11",
+		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-decorators": "^7.0.0-beta.49",
+		"@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
+		"@babel/preset-stage-2": "^7.0.0-beta.49",
+		"@vue/cli-plugin-babel": "^3.0.0-beta.12",
+		"@vue/cli-plugin-pwa": "^3.0.0-beta.12",
+		"@vue/cli-service": "^3.0.0-beta.12",
+		"@vue/test-utils": "^1.0.0-beta.12",
 		"babel-eslint": "^8.2.3",
-		"eslint-plugin-jest": "^21.15.2",
 		"node-sass": "^4.9.0",
 		"sass-extract": "^2.1.0",
 		"sass-extract-loader": "^1.1.0",
