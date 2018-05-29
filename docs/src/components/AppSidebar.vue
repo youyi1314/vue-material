@@ -17,6 +17,7 @@
           <RouterLink to="/components/content">Content</RouterLink>
           <RouterLink to="/components/divider">Divider</RouterLink>
           <RouterLink to="/components/field">Field</RouterLink>
+          <RouterLink to="/components/ripple">Ripple</RouterLink>
         </div>
 
         <RouterLink to="/about">About</RouterLink>

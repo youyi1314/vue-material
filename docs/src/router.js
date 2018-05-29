@@ -55,6 +55,11 @@ export default new Router({
       name: 'components/field',
       component: importPage('Components/Field')
     },
+    {
+      path: '/components/ripple',
+      name: 'components/ripple',
+      component: importPage('Components/Ripple')
+    },
 
     /* STYLE */
     {

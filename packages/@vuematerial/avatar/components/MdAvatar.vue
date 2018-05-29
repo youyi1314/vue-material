@@ -1,5 +1,5 @@
 <template>
-  <div :class="['md-avatar', $material.theme.name]">
+  <div :class="['md-avatar', $materialTheme.name]">
     <slot />
   </div>
 </template>

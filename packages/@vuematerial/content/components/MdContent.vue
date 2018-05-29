@@ -1,7 +1,7 @@
 <template>
   <MdTagSwitcher
     :md-tag="mdTag"
-    :class="['md-content', $material.theme.name]"
+    :class="['md-content', $materialTheme.name]"
     v-on="$listeners"
     v-bind="$attrs"
   >

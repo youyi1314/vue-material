@@ -1,5 +1,5 @@
 <template>
-  <MdTagSwitcher :md-tag="htmlTag" :class="['md-divider', $material.theme.name]" />
+  <MdTagSwitcher :md-tag="htmlTag" :class="['md-divider', $materialTheme.name]" />
 </template>
 
 <script>

@@ -1,9 +1,10 @@
+import './hooks'
 import Vue from 'vue'
+import VueMaterial from 'vue-material'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import i18n from './i18n'
-import VueMaterial from 'vue-material'
 import { registerServiceWorker } from './worker'
 import './components'
 

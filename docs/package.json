@@ -29,6 +29,7 @@
 		"@vuematerial/elevation": "^2.0.0",
 		"@vuematerial/field": "^2.0.0",
 		"@vuematerial/motion": "^2.0.0",
+		"@vuematerial/ripple": "^2.0.0",
 		"@vuematerial/theme": "^2.0.0",
 		"register-service-worker": "^1.0.0",
 		"vue": "^2.5.16",

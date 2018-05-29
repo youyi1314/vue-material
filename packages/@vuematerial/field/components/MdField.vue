@@ -1,5 +1,5 @@
 <template>
-  <div :class="['md-field', $material.theme.name]">
+  <div :class="['md-field', $materialTheme.name]">
     <slot />
 
     <div class="md-field-notch">
