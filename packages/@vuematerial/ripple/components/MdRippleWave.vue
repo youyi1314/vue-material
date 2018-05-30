@@ -1,6 +1,6 @@
 <template>
-  <transition name="md-ripple" @after-enter="onRippleEnd">
-    <span v-if="isAnimating" />
+  <transition name="md-ripple" @after-enter="onAfterEnd()">
+    <span class="md-ripple-wave" />
   </transition>
 </template>
 
@@ -8,18 +8,14 @@
   import { Component, Vue, Prop } from 'vue-property-decorator'
 
   @Component
-  export default class MdRippleWave extends Vue {
-    @Prop
-    waveClasses
+  export default class MdRipple extends Vue {
+    @Prop(String)
+    id
 
-    @Prop
-    waveStyles
-
-    isAnimating = true
-
-    onRippleEnd () {
-      this.isAnimating = false
-      this.$emit('md-end')
+    onAfterEnd () {
+      if (this.id) {
+        this.$emit('md-ripple-end', this.id)
+      }
     }
   }
 </script>

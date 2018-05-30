@@ -41,5 +41,11 @@ export default (Vue) => {
   if (!Vue.material) {
     Vue.material = init()
     Vue.prototype.$material = Vue.material
+
+    if (MdThemeFactory.enabled && MdThemeFactory.metaColors) {
+      window.addEventListener('load', () => {
+        MdThemeFactory.setHtmlMetaColors(MdThemeFactory.fullThemeName)
+      })
+    }
   }
 }

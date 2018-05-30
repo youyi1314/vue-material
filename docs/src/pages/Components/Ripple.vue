@@ -1,8 +1,11 @@
 <template>
   <AppContainer page="Ripple">
     <AppExample>
+      <MdButton @click="triggerActive()">Trigger</MdButton>
+      <div class="test" />
+
       <div class="ripple-container">
-        <MdRipple>Click here</MdRipple>
+        <MdRipple :md-active.sync="trigger">Click here</MdRipple>
       </div>
 
       <div class="ripple-container">
@@ -17,7 +20,11 @@
 
   @Component
   export default class PageRipple extends Vue {
+    trigger = false
 
+    triggerActive () {
+      this.trigger = true
+    }
   }
 </script>
 
@@ -36,5 +43,15 @@
       border-radius: 4px;
       background-color: #cacaca;
     }
+  }
+
+  .test {
+    padding: 24px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3129381293;
+    pointer-events: none;
+    background-color: #fff;
   }
 </style>

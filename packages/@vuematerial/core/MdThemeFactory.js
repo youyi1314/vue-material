@@ -71,16 +71,37 @@ export default new Vue({
     setMicrosoftColors (primaryColor) {
       if (msColor) {
         msColor.setAttribute('content', primaryColor)
+      } else {
+        msColor = document.createElement('meta')
+
+        msColor.name = 'msapplication-TileColor'
+        msColor.content = primaryColor
+
+        document.head.appendChild(msColor)
       }
     },
     setThemeColors (primaryColor) {
       if (themeColor) {
         themeColor.setAttribute('content', primaryColor)
+      } else {
+        themeColor = document.createElement('meta')
+
+        themeColor.name = 'theme-color'
+        themeColor.content = primaryColor
+
+        document.head.appendChild(themeColor)
       }
     },
     setMaskColors (primaryColor) {
       if (maskIcon) {
         maskIcon.setAttribute('color', primaryColor)
+      } else {
+        maskIcon = document.createElement('meta')
+
+        maskIcon.rel = 'mask-icon'
+        maskIcon.color = primaryColor
+
+        document.head.appendChild(maskIcon)
       }
     },
     setHtmlMetaColors (themeName) {
@@ -89,26 +110,18 @@ export default new Vue({
       if (themeName) {
         const computedStyle = window.getComputedStyle(document.documentElement)
 
-        primaryColor = computedStyle.getPropertyValue(`--${themeName}-primary`)
+        primaryColor = computedStyle.getPropertyValue(`--${themeName}-primary`).trim()
       }
 
       if (primaryColor) {
+        msColor = document.querySelector('[name="msapplication-TileColor"]')
+        themeColor = document.querySelector('[name="theme-color"]')
+        maskIcon = document.querySelector('[rel="mask-icon"]')
+
         this.setMicrosoftColors(primaryColor)
         this.setThemeColors(primaryColor)
         this.setMaskColors(primaryColor)
       }
-    }
-  },
-
-  mounted () {
-    msColor = document.querySelector('[name="msapplication-TileColor"]')
-    themeColor = document.querySelector('[name="theme-color"]')
-    maskIcon = document.querySelector('[rel="mask-icon"]')
-
-    if (this.enabled && this.metaColors) {
-      window.addEventListener('load', () => {
-        this.setHtmlMetaColors(this.fullThemeName)
-      })
     }
   }
 })

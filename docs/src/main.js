@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   router.onReady(() => {
     app.$material.theming.themeName = 'neo'
+    app.$material.theming.metaColors = true
     app.$mount('#app')
     registerServiceWorker()
   })

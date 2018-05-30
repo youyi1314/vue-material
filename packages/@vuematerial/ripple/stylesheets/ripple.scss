@@ -16,11 +16,11 @@
   pointer-events: none;
   background: currentColor;
   border-radius: 50%;
-  opacity: 0;
-  transform: scale(2.5) translateZ(0);
+  opacity: .2;
+  transform: scale(2) translateZ(0);
 
-  &.md-centered {
-    animation-duration: 1.8s;
+  &.md-centered,
+  &.md-force-centered {
     top: 50%;
     left: 50%;
   }
@@ -31,17 +31,30 @@
   }
 }
 
-.md-ripple-enter-active {
-  transition: .8s $md-motion-open-timing;
+.md-ripple-enter-active,
+.md-ripple-leave-active {
+  transition: .55s $md-motion-open-timing;
   transition-property: opacity, transform;
   will-change: opacity, transform;
 
+  &.md-force-centered {
+    opacity: 0;
+  }
+
   &.md-centered {
-    transition-duration: 1.8s;
+    transition-duration: 1s;
   }
 }
 
 .md-ripple-enter {
-  opacity: .26;
-  transform: scale(.4) translateZ(0);
+  transform: scale(.7) translateZ(0);
+  opacity: .1;
+
+  &.md-force-centered {
+    opacity: .2;
+  }
+}
+
+.md-ripple-leave-active {
+  opacity: 0;
 }

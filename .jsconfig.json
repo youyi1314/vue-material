@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "checkJs": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@/*": ["./docs/src/*"]
     },

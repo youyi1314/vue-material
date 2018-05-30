@@ -3,26 +3,55 @@
     <aside class="app-sidebar">
       <header class="app-sidebar-header">
         <h1 class="app-sidebar-title">
-          <RouterLink to="/">{{ $t('appName') }}</RouterLink>
+          <MdRipple>
+            <RouterLink to="/">{{ $t('appName') }}</RouterLink>
+          </MdRipple>
         </h1>
       </header>
 
       <nav class="app-sidebar-nav">
-        <RouterLink to="/style">Style</RouterLink>
+        <RouterLink to="/style">
+          <MdRipple>Style</MdRipple>
+        </RouterLink>
         <div class="app-sidebar-nav-group" />
 
-        <RouterLink to="/components">Components</RouterLink>
+        <RouterLink to="/components">
+          <MdRipple>Components</MdRipple>
+        </RouterLink>
+
         <div class="app-sidebar-nav-group">
-          <RouterLink to="/components/avatar">Avatar</RouterLink>
-          <RouterLink to="/components/button">Button</RouterLink>
-          <RouterLink to="/components/content">Content</RouterLink>
-          <RouterLink to="/components/divider">Divider</RouterLink>
-          <RouterLink to="/components/field">Field</RouterLink>
-          <RouterLink to="/components/ripple">Ripple</RouterLink>
+          <RouterLink to="/components/avatar">
+            <MdRipple>Avatar</MdRipple>
+          </RouterLink>
+
+          <RouterLink to="/components/button">
+            <MdRipple>Button</MdRipple>
+          </RouterLink>
+
+          <RouterLink to="/components/content">
+            <MdRipple>Content</MdRipple>
+          </RouterLink>
+
+          <RouterLink to="/components/divider">
+            <MdRipple>Divider</MdRipple>
+          </RouterLink>
+
+          <RouterLink to="/components/field">
+            <MdRipple>Field</MdRipple>
+          </RouterLink>
+
+          <RouterLink to="/components/ripple">
+            <MdRipple>Ripple</MdRipple>
+          </RouterLink>
         </div>
 
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/license">License</RouterLink>
+        <RouterLink to="/about">
+          <MdRipple>About</MdRipple>
+        </RouterLink>
+
+        <RouterLink to="/license">
+          <MdRipple>License</MdRipple>
+        </RouterLink>
       </nav>
     </aside>
   </Transition>
@@ -62,7 +91,7 @@
       }
     }
 
-    &-header {
+    &-header .md-ripple {
       height: 56px;
       display: flex;
       align-items: center;
@@ -75,20 +104,23 @@
       flex-direction: column;
 
       a {
-        margin: 2px 0;
-        padding: 4px 8px;
-        border-radius: 4px;
-        color: rgba(#000, .87) !important;
+        text-decoration: none !important;
 
-        &:hover {
-          color: md-get-palette-color(blue, A400) !important;
-          text-decoration: none !important;
-        }
-
-        &.router-link-exact-active {
-          font-weight: 700;
+        &.router-link-exact-active .md-ripple {
           background-color: md-get-palette-color(blue, 50);
           color: md-get-palette-color(blue, A400) !important;
+          font-weight: 700;
+        }
+
+        .md-ripple {
+          margin: 2px 0;
+          padding: 4px 8px;
+          border-radius: 4px;
+          color: rgba(#000, .87) !important;
+
+          &:hover {
+            color: md-get-palette-color(blue, A400) !important;
+          }
         }
       }
     }
@@ -98,7 +130,7 @@
       display: flex;
       flex-direction: column;
 
-      a {
+      a .md-ripple {
         padding-left: 24px;
       }
     }
