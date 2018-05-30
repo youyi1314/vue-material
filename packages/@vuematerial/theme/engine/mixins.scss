@@ -37,8 +37,38 @@
  * @param {map} $palette [$md-default-palette] —  The theme palette
  */
 
+@function md-generate-base-palette($palette) {
+  $primary-dark: map-get($palette, primary-dark);
+  $primary-light: map-get($palette, primary-light);
+  $accent-dark: map-get($palette, accent-dark);
+  $accent-light: map-get($palette, accent-light);
+
+  @if $primary-dark != "" {
+    $primary-dark: darken(map-get($palette, primary), 7%)
+  }
+
+  @if $primary-light != "" {
+    $primary-light: lighten(map-get($palette, primary), 14%)
+  }
+
+  @if $accent-dark != "" {
+    $accent-dark: darken(map-get($palette, accent), 7%)
+  }
+
+  @if $accent-light != "" {
+    $accent-light: lighten(map-get($palette, accent), 14%)
+  }
+
+  @return map-merge($palette, (
+    primary-dark: $primary-dark,
+    primary-light: $primary-light,
+    accent-dark: $accent-dark,
+    accent-light: $accent-light
+  ));
+}
+
 @mixin md-register-theme ($name, $palette: $md-default-palette) {
-  $palette: map-merge($md-default-palette, $palette);
+  $palette: map-merge($md-default-palette, md-generate-base-palette($palette));
   $theme: map-merge($md-themes, (
     #{$name}: $palette
   ));
@@ -166,20 +196,30 @@
  * @param {string} $darken —  The darken amount to apply to the color
  */
 
-@mixin md-theme-property-darken ($property, $type, $background: "", $darken: "") {
+@mixin md-theme-property-darken ($property, $type, $background: "") {
   $value: md-theme($type, $background);
+  $value: darken($value, 7%);
   $variant: null;
 
   @if $background != "" {
     $variant: -on-#{$background};
   }
 
-  @if $darken != "" {
-    $value: darken($value, $darken);
+  #{$property}: $value;
+  #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}-darken-#{$variant}, $value);
+}
+
+@mixin md-theme-property-lighten ($property, $type, $background: "") {
+  $value: md-theme($type, $background);
+  $value: lighten($value, 14%);
+  $variant: null;
+
+  @if $background != "" {
+    $variant: -on-#{$background};
   }
 
   #{$property}: $value;
-  #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $value);
+  #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}-lighten-#{$variant}, $value);
 }
 
 /**

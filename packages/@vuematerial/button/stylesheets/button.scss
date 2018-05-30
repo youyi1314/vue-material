@@ -42,14 +42,6 @@
   &:not([disabled]) {
     cursor: pointer;
 
-    &:hover,
-    &.md-focused {
-      &:before {
-        background-color: currentColor;
-        opacity: .12;
-      }
-    }
-
     &.md-focused {
       &.md-primary,
       &.md-accent {

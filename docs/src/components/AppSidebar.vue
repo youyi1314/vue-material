@@ -107,7 +107,7 @@
         text-decoration: none !important;
 
         &.router-link-exact-active .md-ripple {
-          background-color: md-get-palette-color(blue, 50);
+          background-color: rgba(md-get-palette-color(blue, A400), .12);
           color: md-get-palette-color(blue, A400) !important;
           font-weight: 700;
         }

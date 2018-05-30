@@ -210,6 +210,22 @@
   #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $value);
 }
 
+@mixin md-theme-property-lighten ($property, $type, $background: "", $lighten: "") {
+  $value: md-theme($type, $background);
+  $variant: null;
+
+  @if $background != "" {
+    $variant: -on-#{$background};
+  }
+
+  @if $lighten != "" {
+    $value: lighten($value, $lighten);
+  }
+
+  #{$property}: $value;
+  #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $value);
+}
+
 /**
  * Theme a single css property by
  * ---
