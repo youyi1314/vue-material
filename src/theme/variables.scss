@@ -61,7 +61,7 @@ $md-current-theme: null;
 $md-color-levels: (
   light: (
     background: #fff,
-    background-variant: #fafafa,
+    surface: #fafafa,
     text-primary: rgba(#000, .87),
     text-accent: rgba(#000, .54),
     text-hint: rgba(#000, .38),
@@ -77,7 +77,7 @@ $md-color-levels: (
   ),
   dark: (
     background: #424242,
-    background-variant: #303030,
+    surface: #303030,
     text-primary: #fff,
     text-accent: rgba(#fff, .7),
     text-hint: rgba(#fff, .5),

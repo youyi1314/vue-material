@@ -52,12 +52,12 @@
 
       &.md-error {
         .md-button-content {
-          @include md-theme-property-by-hue(color, red, A400, stepper, error);
+          @include md-theme-property(color, error);
         }
 
         .md-icon svg {
-          @include md-theme-property-by-hue(color, red, A400, stepper, error);
-          @include md-theme-property-by-hue(fill, red, A400, stepper, error);
+          @include md-theme-property(color, error);
+          @include md-theme-property(fill, error);
         }
       }
     }

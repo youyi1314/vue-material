@@ -13,9 +13,9 @@
  */
 
 $md-default-palette: (
-  primary: md-get-palette-color(blue, A200),
-  accent: md-get-palette-color(red, A200),
-  theme: "light"
+  primary: #6200ee,
+  accent: #a3dac6,
+  theme: light
 ) !default;
 
 
@@ -61,7 +61,7 @@ $md-current-theme: null;
 $md-color-levels: (
   light: (
     background: #fff,
-    background-variant: #fafafa,
+    surface: #fff,
     text-primary: rgba(#000, .87),
     text-accent: rgba(#000, .54),
     text-hint: rgba(#000, .38),
@@ -73,11 +73,12 @@ $md-color-levels: (
     divider: rgba(#000, .12),
     scrollbar: #757575,
     scrollbar-background: darken(#eee, 5%),
-    tooltip: #616161
+    tooltip: #616161,
+    error: #b00020
   ),
   dark: (
     background: #424242,
-    background-variant: #303030,
+    surface: #303030,
     text-primary: #fff,
     text-accent: rgba(#fff, .7),
     text-hint: rgba(#fff, .5),
@@ -89,6 +90,7 @@ $md-color-levels: (
     divider: rgba(#fff, .12),
     scrollbar: #9E9E9E,
     scrollbar-background: #212121,
-    tooltip: #fff
+    tooltip: #fff,
+    error: #b00020
   )
 );

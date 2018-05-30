@@ -26,8 +26,8 @@
 
   html {
     @include md-theme-component() {
-      @include md-theme-property(background-color, background-variant);
-      @include md-theme-property(color, text-primary, background-variant);
+      @include md-theme-property(background-color, surface);
+      @include md-theme-property(color, text-primary, surface);
     }
   }
 
@@ -37,7 +37,7 @@
   .md-display-3,
   .md-display-4 {
     @include md-theme-component-relative() {
-      @include md-theme-property(color, text-accent, background-variant);
+      @include md-theme-property(color, text-accent, surface);
     }
   }
 
@@ -45,11 +45,11 @@
     @include md-theme-component() {
       &::-webkit-scrollbar-corner,
       &::-webkit-scrollbar-track {
-        @include md-theme-property(background, scrollbar-background, background-variant);
+        @include md-theme-property(background, scrollbar-background, surface);
       }
 
       &::-webkit-scrollbar-thumb {
-        @include md-theme-property(background, scrollbar, background-variant);
+        @include md-theme-property(background, scrollbar, surface);
       }
     }
   }

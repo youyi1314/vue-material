@@ -1,8 +1,10 @@
 @import '../../engine/engine.scss';
 
 @include md-register-theme("default", (
-  primary: md-get-palette-color(deeppurple, A700),
-  accent: md-get-palette-color(teal, A200)
+  background: #fff,
+  surface: #fff,
+  primary: #6200ee,
+  accent: #a3dac6
 ));
 
 @import '~@vuematerial/avatar/theme.scss';

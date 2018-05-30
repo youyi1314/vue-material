@@ -26,7 +26,7 @@
 
 .md-toolbar {
   @include md-theme-component() {
-    @include md-theme-property(color, text-primary, background-variant);
+    @include md-theme-property(color, text-primary, surface);
 
     @if md-get-theme-mode() == light {
       @include md-theme-property-by-hue(background-color, grey, 100, toolbar, background);
@@ -34,8 +34,8 @@
       @include md-theme-property-by-hue(background-color, grey, 900, toolbar, background);
     }
 
-    @include md-toolbar-icon(text-primary, background-variant);
-    @include md-toolbar-title(text-primary, background-variant);
+    @include md-toolbar-icon(text-primary, surface);
+    @include md-toolbar-title(text-primary, surface);
 
     &.md-primary {
       @include md-theme-property(background-color, primary);
