@@ -9,6 +9,16 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum pariatur aspernatur sed libero, tempora voluptate reprehenderit harum, unde delectus nostrum quaerat mollitia perferendis consequuntur corrupti optio necessitatibus autem? Esse, illum.
       </MdContent>
     </AppExample>
+
+    <AppExample>
+      <MdContent class="md-primary">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum pariatur aspernatur sed libero, tempora voluptate reprehenderit harum, unde delectus nostrum quaerat mollitia perferendis consequuntur corrupti optio necessitatibus autem? Esse, illum.
+      </MdContent>
+
+      <MdContent class="md-accent">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum pariatur aspernatur sed libero, tempora voluptate reprehenderit harum, unde delectus nostrum quaerat mollitia perferendis consequuntur corrupti optio necessitatibus autem? Esse, illum.
+      </MdContent>
+    </AppExample>
   </AppContainer>
 </template>
 
@@ -22,5 +32,12 @@
 </script>
 
 <style lang="scss" scoped>
+  .app-example .md-content {
+    padding: 16px;
+    margin-bottom: 0;
 
+    + .md-content {
+      margin-top: 24px;
+    }
+  }
 </style>
