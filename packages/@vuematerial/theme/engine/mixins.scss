@@ -146,13 +146,19 @@
  * }
  */
 
-@mixin md-theme-component () {
+@mixin md-theme-component ($root: false) {
   @each $theme, $palette in $md-themes {
     $md-theme-palette: map-merge($md-theme-palette, $palette) !global;
     $md-current-theme: $theme !global;
 
-    .md-theme-#{$theme} & {
-      @content;
+    @if $root == true {
+      .md-theme-#{$theme} {
+        @content;
+      }
+    } @else {
+      .md-theme-#{$theme} & {
+        @content;
+      }
     }
   }
 }

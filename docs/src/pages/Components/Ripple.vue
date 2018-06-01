@@ -41,10 +41,11 @@
   .example .md-content {
     width: 150px;
     height: 200px;
-    margin: 0 24px;
+    margin-right: 24px;
     display: inline-block;
-    vertical-align: top;
+    overflow: hidden;
     border-radius: 6px;
+    vertical-align: top;
 
     .md-ripple {
       display: inline-flex;
@@ -56,5 +57,9 @@
   .md-avatar /deep/ .md-ripple-wave {
     background-color: #fff;
     opacity: .5;
+  }
+
+  .md-button {
+    margin: 0 0 24px;
   }
 </style>

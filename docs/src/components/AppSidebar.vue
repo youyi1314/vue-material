@@ -56,6 +56,7 @@
 
       <div class="theme-selector">
         <MdButton class="md-raised md-primary" @click="setTheme('neo')">Neo</MdButton>
+        <MdButton class="md-raised md-primary" @click="setTheme('neo-dark')">Neo Dark</MdButton>
         <MdButton class="md-raised md-primary" @click="setTheme('default')">Default</MdButton>
         <MdButton class="md-raised md-primary" @click="setTheme('rally')">Rally</MdButton>
         <MdButton class="md-raised md-primary" @click="setTheme('crane')">Crane</MdButton>

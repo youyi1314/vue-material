@@ -63,9 +63,7 @@
  */
 
 @mixin md-neo-font-theme () {
-  body {
-    @include md-theme-component() {
-      font-family: 'HK Grotesk';
-    }
+  @include md-theme-component(true) {
+    font-family: 'HK Grotesk';
   }
 }
