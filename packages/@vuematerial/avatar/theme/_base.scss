@@ -1,0 +1,24 @@
+@function md-avatar-font-size($size) {
+  @return $size - 16px;
+}
+
+.md-avatar {
+  @include md-theme-component() {
+    @include md-avatar-icon-spec(icon-disabled);
+    @include md-theme-override-property(width, avatar-size, avatar-size);
+    @include md-theme-override-property(min-width, avatar-size, avatar-size);
+    @include md-theme-override-property(border-radius, avatar-size, avatar-size);
+    @include md-theme-override-property(height, avatar-radius, avatar-radius);
+    @include md-theme-override-property(font-size, avatar-size, avatar-size, md-avatar-font-size);
+
+    &.md-primary {
+      @include md-theme-property(background-color, primary);
+      @include md-avatar-icon-spec(primary);
+    }
+
+    &.md-accent {
+      @include md-theme-property(background-color, accent);
+      @include md-avatar-icon-spec(accent);
+    }
+  }
+}

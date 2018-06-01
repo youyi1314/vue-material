@@ -1,0 +1,37 @@
+@import "~@vuematerial/motion/variables";
+
+.md-avatar {
+  margin: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  transition: $md-motion-default;
+  transition-property: color, background-color;
+  will-change: color, background-color;
+  letter-spacing: -.05em;
+  vertical-align: middle;
+
+  .md-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .md-ripple {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}

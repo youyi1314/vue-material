@@ -1,12 +1,6 @@
 <template>
   <AppContainer page="Avatar">
     <AppExample>
-      <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
-
-      <MdAvatar class="md-avatar-icon">B</MdAvatar>
-
-      <MdAvatar class="md-avatar-icon md-large">CC</MdAvatar>
-
       <MdAvatar class="md-small">
         <img src="/img/examples/avatar.jpg" alt="People">
       </MdAvatar>
@@ -19,6 +13,18 @@
         <img src="/img/examples/avatar.jpg" alt="Avatar">
       </MdAvatar>
     </AppExample>
+
+    <AppExample>
+      <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
+      <MdAvatar class="md-avatar-icon">B</MdAvatar>
+      <MdAvatar class="md-avatar-icon md-large">CC</MdAvatar>
+    </AppExample>
+
+    <AppExample>
+      <MdAvatar class="md-avatar-icon md-small">A</MdAvatar>
+      <MdAvatar class="md-avatar-icon md-primary">B</MdAvatar>
+      <MdAvatar class="md-avatar-icon md-accent md-large">CC</MdAvatar>
+    </AppExample>
   </AppContainer>
 </template>
 
@@ -30,5 +36,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .md-avatar {
+    margin: 8px;
+  }
 </style>

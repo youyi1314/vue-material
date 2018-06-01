@@ -1,4 +1,4 @@
-@import '../stylesheets/variables';
-@import './_mixins';
+@import './variables';
+@import './mixins';
 
 @include md-add-default-theme-overrides($md-button-default);

@@ -227,9 +227,10 @@
  * @param {string} $property —  The css property
  * @param {string} $var —  override value declared when creating a theme
  * @param {string} $name —  A meaningful name to be used ass css variable
+ * @param {function} $calc —  a simple calculation with the value - Only supports one operation
  */
 
-@mixin md-theme-override-property ($property, $var, $name) {
+@mixin md-theme-override-property ($property, $var, $name, $calc: null) {
   $value: map-get($md-theme-overrides, $var);
   $defaultValue: map-get($md-theme-overrides, $name);
 
@@ -238,6 +239,10 @@
   }
 
   @if $value != null {
+    @if $calc != null {
+      $value: call($calc, $value);
+    }
+
     #{$property}: $value;
 
     @if $md-css-variables == true {

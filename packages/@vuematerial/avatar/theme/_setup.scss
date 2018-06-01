@@ -1,0 +1,4 @@
+@import './variables';
+@import './mixins';
+
+@include md-add-default-theme-overrides($md-avatar-default);
