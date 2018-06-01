@@ -85,14 +85,15 @@
 @mixin md-register-theme ($name, $palette: $md-default-palette, $overrides: (), $css-variables: false) {
   @include md-reset-theme-variables;
 
+  /* Double if to avoid weird evaluation of sass "or" operator */
   @if $palette != null {
     @if (length(map-keys($palette)) > 0) {
       $palette: map-merge($md-default-palette, md-generate-base-palette($palette));
     } @else {
-      $palette: $md-default-palette;
+      $palette: map-merge($md-default-palette, md-generate-base-palette($md-default-palette));
     }
   } @else {
-    $palette: $md-default-palette;
+    $palette: map-merge($md-default-palette, md-generate-base-palette($md-default-palette));
   }
 
   $theme: map-merge($md-themes, (
