@@ -12,7 +12,7 @@
   pointer-events: none;
   background: currentColor;
   border-radius: 50%;
-  opacity: .26;
+  opacity: .12;
   transform: scale(2.3) translateZ(0);
 
   &.md-centered,
@@ -47,7 +47,7 @@
   opacity: .1;
 
   &.md-force-centered {
-    opacity: .26;
+    opacity: .12;
   }
 }
 

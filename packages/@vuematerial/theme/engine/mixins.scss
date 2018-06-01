@@ -44,7 +44,7 @@
     @return lighten($color, 15%);
   }
 
-  @return darken($color, 10%);
+  @return darken($color, 8%);
 }
 
 @function md-generate-base-palette($palette) {
