@@ -4,8 +4,10 @@
 
 .md-button-clean {
   margin: 0;
-  padding: 0;
-  display: inline-block;
+  padding: 0 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   outline: none;
@@ -41,19 +43,6 @@
 
   &:not([disabled]) {
     cursor: pointer;
-
-    &.md-focused {
-      &.md-primary,
-      &.md-accent {
-        &:before {
-          opacity: .2;
-        }
-      }
-    }
-
-    &.md-ripple-off:active:before {
-      opacity: .2;
-    }
   }
 
   &.md-plain.md-button.md-raised:not([disabled]) {
@@ -74,19 +63,6 @@
     border: 0;
   }
 
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: $md-motion-default;
-    will-change: background-color, opacity;
-    content: " ";
-  }
-
   &.md-dense {
     height: $md-button-dense-height;
     font-size: 13px;
@@ -98,40 +74,17 @@
     &:active {
       @include md-elevation(8);
     }
-
-    &.md-ripple-off:active:before {
-      opacity: .2;
-    }
   }
 
   + .md-button {
     margin-left: 0;
   }
-
-  .md-ripple {
-    padding: 0 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.md-button-spaced .md-ripple {
-  padding: 0 16px;
 }
 
 .md-icon-button,
 .md-fab {
   border-radius: 50%;
   z-index: 10;
-
-  &:before {
-    border-radius: 50%;
-  }
-
-  .md-ripple {
-    border-radius: 50%;
-  }
 }
 
 .md-icon-button,
@@ -167,6 +120,7 @@
 
   width: $md-button-fab-size;
   height: $md-button-fab-size;
+  padding: 0;
   min-width: 0;
   overflow: hidden;
 
@@ -219,10 +173,6 @@
 
   &.md-fixed {
     position: fixed;
-  }
-
-  .md-ripple {
-    padding: 0;
   }
 }
 

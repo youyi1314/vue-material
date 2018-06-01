@@ -1,12 +1,14 @@
 <template>
-  <div
+  <MdTagSwitcher
+    v-bind="mdAttrs || $attrs"
+    v-on="$listeners"
+    :md-tag="mdTag"
     :class="['md-ripple', { 'md-centered': mdCentered }]"
     v-if="!isDisabled"
     @mousedown.passive="onMouseDown"
     @mouseout.passive="onMouseOut"
     @mouseup.passive="onMouseUp"
     @touchstart.passive="onTouchStart"
-    @touchmove.passive="onTouchMove"
     @touchend.passive="onTouchEnd"
   >
     <slot />
@@ -19,33 +21,42 @@
       :id="triggered ? id : ''"
       @md-ripple-end="clearTriggeredWave"
     />
-  </div>
+  </MdTagSwitcher>
 
-  <div class="md-ripple md-disabled" v-else>
+  <MdTagSwitcher :md-tag="mdTag" class="md-ripple md-disabled" v-else>
     <slot />
-  </div>
+  </MdTagSwitcher>
 </template>
 
 <script>
   import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
   import uuid from '@vuematerial/core/MdUuid'
+  import isObjectEmpty from '@vuematerial/core/isObjectEmpty'
+  import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
   import raf from 'raf'
   import MdRippleWave from './MdRippleWave'
 
   @Component({
     components: {
-      MdRippleWave
+      MdRippleWave,
+      MdTagSwitcher
     }
   })
   export default class MdRipple extends Vue {
-    @Prop({ Boolean, default: false })
+    @Prop({ type: Boolean, default: false })
     mdActive
 
-    @Prop({ Boolean, default: false })
+    @Prop({ type: Boolean, default: false })
     mdDisabled
 
-    @Prop({ Boolean, default: false })
+    @Prop({ type: Boolean, default: false })
     mdCentered
+
+    @Prop({ type: String, default: 'div' })
+    mdTag
+
+    @Prop({ type: Object, default: () => ({}) })
+    mdAttrs
 
     waves = {}
     lastWave = null
@@ -141,7 +152,9 @@
     }
 
     onMouseOut () {
-      this.$set(this, 'waves', {})
+      if (!isObjectEmpty(this.waves)) {
+        this.$set(this, 'waves', {})
+      }
     }
 
     onMouseUp () {

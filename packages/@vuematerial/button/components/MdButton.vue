@@ -1,18 +1,14 @@
 <template>
-  <MdTagSwitcher
-    v-on="$listeners"
-    v-bind="attributes"
+  <MdRipple
     :class="['md-button', buttonClasses]"
+    :md-attrs="attributes"
     :md-tag="buttonTag"
     :type="buttonType"
-    @touchstart="onTouchStart()"
-    @touchmove="onTouchMove()"
-    @mousedown="onMouseDown()"
   >
-    <MdButtonContent v-bind="{ mdRipple, disabled }" :md-ripple-active="rippleActive">
+    <span class="md-button-content">
       <slot />
-    </MdButtonContent>
-  </MdTagSwitcher>
+    </span>
+  </MdRipple>
 </template>
 
 <script>
@@ -111,30 +107,6 @@
       return this.$router && this.to
     }
 
-    onTouchStart (event) {
-      if (this.hasRipple) {
-        this.rippleActive = event
-      }
-
-      this.$listeners.touchstart && this.$listeners.touchstart(event)
-    }
-
-    onTouchMove (event) {
-      if (this.hasRipple) {
-        this.rippleActive = event
-      }
-
-      this.$listeners.touchmove && this.$listeners.touchmove(event)
-    }
-
-    onMouseDown (event) {
-      if (this.hasRipple) {
-        this.rippleActive = event
-      }
-
-      this.$listeners.mousedown && this.$listeners.mousedown(event)
-    }
-
     beforeCreate () {
       const newProps = MdRouterLinkProps(this, this.$options.props)
 
@@ -142,9 +114,5 @@
 
       this.$options.props = newProps
     }
-  /*
-    'update:mdRippleActive': (active) => {
-      this.rippleActive = active
-    } */
   }
 </script>

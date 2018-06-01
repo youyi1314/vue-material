@@ -11,7 +11,7 @@
     render (createElement, { props, data, listeners, children }) {
       return createElement(props.mdTag, {
         ...data,
-        on: listeners
+        nativeOn: listeners
       }, children)
     }
   }
