@@ -16,6 +16,7 @@
   border-radius: 0;
   transition: $md-motion-default;
   font-family: inherit;
+  font-size: 14px;
   line-height: normal;
   text-decoration: none;
   vertical-align: top;
@@ -24,12 +25,8 @@
 
 .md-button {
   @extend .md-button-clean;
-  min-width: $md-button-min-width;
-  height: $md-button-height;
   margin: 6px 8px;
   user-select: none;
-  border-radius: $md-button-radius;
-  font-size: $md-button-font-size;
   font-weight: 500;
   text-transform: uppercase;
 
@@ -64,7 +61,6 @@
   }
 
   &.md-dense {
-    height: $md-button-dense-height;
     font-size: 13px;
   }
 
@@ -99,17 +95,6 @@
 }
 
 .md-icon-button {
-  width: $md-button-icon-size;
-  min-width: $md-button-icon-size;
-  height: $md-button-icon-size;
-  margin: 0 6px;
-
-  &.md-dense {
-    width: $md-button-dense-height;
-    min-width: $md-button-dense-height;
-    height: $md-button-dense-height;
-  }
-
   .md-ripple-enter-active {
     transition-duration: 1.2s;
   }
@@ -118,20 +103,11 @@
 .md-fab {
   @include md-elevation(6);
 
-  width: $md-button-fab-size;
-  height: $md-button-fab-size;
   padding: 0;
-  min-width: 0;
   overflow: hidden;
 
   &:active {
     @include md-elevation(12);
-  }
-
-  &.md-mini,
-  &.md-dense {
-    width: $md-button-fab-size-mini;
-    height: $md-button-fab-size-mini;
   }
 
   &.md-fab-top-right,

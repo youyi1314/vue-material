@@ -1,3 +1,7 @@
+@import './stylesheets/variables';
+
+@include md-add-default-theme-overrides($md-button-default);
+
 @mixin md-icon-on-buttons ($state, $type) {
   .md-icon-font {
     @include md-theme-property(color, $state, $type);
@@ -10,8 +14,27 @@
 
 .md-button {
   @include md-theme-component() {
-    @include md-theme-override-property(border-radius, global-radius, button-radius);
     @include md-theme-property(color, text-primary, background);
+    @include md-theme-override-property(min-width, button-min-width, button-min-width);
+    @include md-theme-override-property(height, button-height, button-height);
+    @include md-theme-override-property(border-radius, global-radius, button-radius);
+    @include md-theme-override-property(font-size, button-font-size, button-font-size);
+
+    &.md-dense {
+      @include md-theme-override-property(height, button-dense-height, button-dense-height);
+    }
+
+    .md-icon-button {
+      @include md-theme-override-property(width, button-icon-size, button-icon-size);
+      @include md-theme-override-property(min-width, button-icon-size, button-icon-size);
+      @include md-theme-override-property(height, button-icon-size, button-icon-size);
+
+      &.md-dense {
+        @include md-theme-override-property(width, button-dense-height, button-dense-height);
+        @include md-theme-override-property(min-width, button-dense-height, button-dense-height);
+        @include md-theme-override-property(height, button-dense-height, button-dense-height);
+      }
+    }
 
     &.md-primary {
       @include md-theme-property(color, primary, background);
@@ -58,7 +81,16 @@
     }
 
     &.md-fab {
-      @include md-theme-override-property(border-radius, fab-radius, button-fab-radius);
+      @include md-theme-override-property(width, button-fab-size, button-fab-size);
+      @include md-theme-override-property(min-width, button-fab-size, button-fab-size);
+      @include md-theme-override-property(height, button-fab-size, button-fab-size);
+      @include md-theme-override-property(border-radius, button-fab-radius, button-fab-radius);
+
+      &.md-mini,
+      &.md-dense {
+        @include md-theme-override-property(width, button-fab-size-mini, button-fab-size-mini);
+        @include md-theme-override-property(height, button-fab-size-mini, button-fab-size-mini);
+      }
 
       &[disabled] {
         @include md-theme-property(background-color, disabled-background, background);

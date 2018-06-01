@@ -94,8 +94,6 @@
         delete newProps.mdRipple
         delete newProps.type
 
-        console.log(newProps)
-
         return newProps
       }
 

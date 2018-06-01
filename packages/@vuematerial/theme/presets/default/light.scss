@@ -1,6 +1,9 @@
 @import '../../engine/engine.scss';
 
-@include md-register-theme('default');
+@include md-register-theme('default', null, (
+  global-radius: 40px,
+  button-height: 40px
+));
 
 @import '~@vuematerial/avatar/theme.scss';
 @import '~@vuematerial/base/theme.scss';

@@ -1,11 +1,11 @@
-$md-button-min-width: 64px !default;
-$md-button-height: 36px !default;
-$md-button-radius: 4px !default;
-$md-button-font-size: 14px !default;
-
-$md-button-dense-height: 32px !default;
-
-$md-button-icon-size: 40px !default;
-
-$md-button-fab-size: 56px !default;
-$md-button-fab-size-mini: $md-button-icon-size !default;
+$md-button-default: (
+  button-min-width: 64px,
+  button-height: 36px,
+  button-dense-height: 32px,
+  button-radius: 2px,
+  button-font-size: 14px,
+  button-icon-size: 40px,
+  button-fab-radius: 50%,
+  button-fab-size: 56px,
+  button-fab-size-mini: 40px
+);

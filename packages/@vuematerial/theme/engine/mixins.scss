@@ -77,8 +77,24 @@
   ));
 }
 
+@mixin md-reset-theme-variables () {
+  $md-theme-overrides: () !global;
+  $md-css-variables: false !global;
+}
+
 @mixin md-register-theme ($name, $palette: $md-default-palette, $overrides: (), $css-variables: false) {
-  $palette: map-merge($md-default-palette, md-generate-base-palette($palette));
+  @include md-reset-theme-variables;
+
+  @if $palette != null {
+    @if (length(map-keys($palette)) > 0) {
+      $palette: map-merge($md-default-palette, md-generate-base-palette($palette));
+    } @else {
+      $palette: $md-default-palette;
+    }
+  } @else {
+    $palette: $md-default-palette;
+  }
+
   $theme: map-merge($md-themes, (
     #{$name}: $palette
   ));
@@ -209,17 +225,26 @@
  * @access public
  * @param {string} $property —  The css property
  * @param {string} $var —  override value declared when creating a theme
- * @param {string} $name —  a meaningful name to be provided as css variable
+ * @param {string} $name —  A meaningful name to be used ass css variable
  */
 
 @mixin md-theme-override-property ($property, $var, $name) {
   $value: map-get($md-theme-overrides, $var);
+  $defaultValue: map-get($md-theme-overrides, $name);
+
+  @if ($value == null) {
+    $value: $defaultValue;
+  }
 
   @if $value != null {
     #{$property}: $value;
 
     @if $md-css-variables == true {
-      #{$property}: var(--md-theme-#{$md-current-theme}-$name, $value);
+      #{$property}: var(--md-theme-#{$md-current-theme}-#{$name}, $value);
     }
   }
+}
+
+@mixin md-add-default-theme-overrides ($overrides) {
+  $md-theme-overrides: map-merge($overrides, $md-theme-overrides) !global;
 }

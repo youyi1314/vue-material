@@ -6,8 +6,7 @@ $theme-colors: (
   accent: md-get-palette-color(bluegrey, 800)
 );
 $theme-overrides: (
-  global-radius: 8px,
-  fab-radius: 50%
+  global-radius: 6px
 );
 $generate-css-variables: false;
 
