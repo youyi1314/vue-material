@@ -1,6 +1,6 @@
 export default {
   pageRipple: {
     title: 'Ripple',
-    description: 'Ripples'
+    description: 'A ripple overlay signifies a pressed state.'
   }
 }

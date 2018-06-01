@@ -1,5 +1,7 @@
 <template>
   <AppContainer page="Ripple">
+    <p>A ripple can be applied to an entire component or elements within a component, or as a circular shape over part of the component.</p>
+
     <AppExample>
       <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
 
