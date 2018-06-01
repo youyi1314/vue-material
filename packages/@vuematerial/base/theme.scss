@@ -23,11 +23,9 @@ a:not(.md-button) {
   }
 }
 
-body {
-  @include md-theme-component() {
-    @include md-theme-property(background-color, background);
-    @include md-theme-property(color, text-primary, background);
-  }
+@include md-theme-component(true) {
+  @include md-theme-property(background-color, background);
+  @include md-theme-property(color, text-primary, background);
 }
 
 .md-caption,
