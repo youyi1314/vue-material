@@ -12,6 +12,37 @@
   }
 }
 
+@mixin md-button-plain () {
+  @if md-get-theme-mode() == light {
+    color: #000;
+    background-color: #fff;
+
+    .md-icon-font {
+      color: #000;
+    }
+
+    .md-icon-image {
+      fill: #000;
+    }
+  } @else {
+    color: #fff;
+    background-color: #212121;
+
+    .md-icon-font {
+      color: #fff;
+    }
+
+    .md-icon-image {
+      fill: #fff;
+    }
+  }
+
+  .md-ripple-wave {
+    background-color: currentColor;
+    opacity: .26;
+  }
+}
+
 .md-button {
   @include md-theme-component() {
     @include md-theme-property(color, text-primary, background);
@@ -24,7 +55,7 @@
       @include md-theme-override-property(height, button-dense-height, button-dense-height);
     }
 
-    .md-icon-button {
+    &.md-icon-button {
       @include md-theme-override-property(width, button-icon-size, button-icon-size);
       @include md-theme-override-property(min-width, button-icon-size, button-icon-size);
       @include md-theme-override-property(height, button-icon-size, button-icon-size);
@@ -47,36 +78,34 @@
     }
 
     &.md-raised {
-      &[disabled] {
-        @include md-theme-property(background-color, disabled-background, background);
-        @include md-theme-property(color, disabled);
+      @include md-theme-property(background-color, background);
+      @include md-theme-property(color, text-primary, background);
+
+      &.md-primary {
+        @include md-theme-property(color, text-primary, primary);
+        @include md-theme-property(background-color, primary);
+        @include md-icon-on-buttons(text-primary, primary);
+
+        .md-ripple-wave {
+          @include md-theme-property(background-color, primary-light);
+          opacity: 1;
+        }
       }
 
-      &:not([disabled]) {
-        @include md-theme-property(background-color, background);
-        @include md-theme-property(color, text-primary, background);
+      &.md-accent {
+        @include md-theme-property(color, text-primary, accent);
+        @include md-theme-property(background-color, accent);
+        @include md-icon-on-buttons(text-primary, accent);
 
-        &.md-primary {
-          @include md-theme-property(color, text-primary, primary);
-          @include md-theme-property(background-color, primary);
-          @include md-icon-on-buttons(text-primary, primary);
-
-          .md-ripple-wave {
-            @include md-theme-property(background-color, primary-light);
-            opacity: 1;
-          }
+        .md-ripple-wave {
+          @include md-theme-property(background-color, accent-dark);
+          opacity: 1;
         }
+      }
 
-        &.md-accent {
-          @include md-theme-property(color, text-primary, accent);
-          @include md-theme-property(background-color, accent);
-          @include md-icon-on-buttons(text-primary, accent);
-
-          .md-ripple-wave {
-            @include md-theme-property(background-color, accent-dark);
-            opacity: 1;
-          }
-        }
+      &[disabled] {
+        @include md-theme-property(background-color, disabled-background, background);
+        @include md-theme-property(color, disabled, background);
       }
     }
 
@@ -85,6 +114,20 @@
       @include md-theme-override-property(min-width, button-fab-size, button-fab-size);
       @include md-theme-override-property(height, button-fab-size, button-fab-size);
       @include md-theme-override-property(border-radius, button-fab-radius, button-fab-radius);
+      @include md-theme-property(background-color, accent);
+      @include md-theme-property(color, text-primary, accent);
+      @include md-icon-on-buttons(text-primary, accent);
+
+      &.md-primary {
+        @include md-theme-property(background-color, primary);
+        @include md-icon-on-buttons(text-primary, primary);
+        @include md-theme-property(color, text-primary, primary);
+
+        .md-ripple-wave {
+          @include md-theme-property(background-color, primary-light);
+          opacity: 1;
+        }
+      }
 
       &.md-mini,
       &.md-dense {
@@ -94,36 +137,21 @@
 
       &[disabled] {
         @include md-theme-property(background-color, disabled-background, background);
-        @include md-theme-property(color, text-primary, disabled-background);
       }
 
-      &:not([disabled]) {
-        @include md-theme-property(background-color, accent);
-        @include md-icon-on-buttons(text-primary, accent);
-        @include md-theme-property(color, text-primary, accent);
-
-        .md-ripple-wave {
-          @include md-theme-property(background-color, accent-dark);
-          opacity: 1;
-        }
-
-        &.md-primary {
-          @include md-theme-property(background-color, primary);
-          @include md-icon-on-buttons(text-primary, primary);
-          @include md-theme-property(color, text-primary, primary);
-
-          .md-ripple-wave {
-            @include md-theme-property(background-color, primary-light);
-            opacity: 1;
-          }
-        }
+      .md-ripple-wave {
+        @include md-theme-property(background-color, accent-dark);
+        opacity: 1;
       }
+    }
+
+    &.md-plain {
+      @include md-button-plain;
     }
 
     &[disabled] {
       @include md-theme-property(color, disabled, background);
       @include md-icon-on-buttons(icon-disabled, background);
-      @include md-theme-property(color, text-primary, background);
     }
   }
 }

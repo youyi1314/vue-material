@@ -4,18 +4,21 @@
       <MdButton>Default</MdButton>
       <MdButton class="md-primary">Primary</MdButton>
       <MdButton class="md-accent">Accent</MdButton>
+      <MdButton class="md-accent" disabled>Disabled</MdButton>
     </AppExample>
 
     <AppExample>
       <MdButton class="md-raised">Default</MdButton>
       <MdButton class="md-raised md-primary">Primary</MdButton>
       <MdButton class="md-raised md-accent">Accent</MdButton>
+      <MdButton class="md-raised md-accent" disabled>Disabled</MdButton>
     </AppExample>
 
     <AppExample>
       <MdButton class="md-fab">&lt;3</MdButton>
       <MdButton class="md-fab md-primary">&lt;3</MdButton>
-      <MdButton class="md-fab md-transparent">&lt;3</MdButton>
+      <MdButton class="md-fab md-plain">&lt;3</MdButton>
+      <MdButton class="md-fab" disabled>:(</MdButton>
     </AppExample>
 
     <AppExample>

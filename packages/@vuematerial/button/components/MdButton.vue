@@ -1,6 +1,7 @@
 <template>
   <MdRipple
-    :class="['md-button', buttonClasses]"
+    class="md-button"
+    :class="buttonClasses"
     :md-attrs="attributes"
     :md-tag="buttonTag"
     :type="buttonType"

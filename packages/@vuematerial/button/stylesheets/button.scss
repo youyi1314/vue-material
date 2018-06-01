@@ -4,13 +4,14 @@
 
 .md-button-clean {
   margin: 0;
-  padding: 0 16px;
+  padding: 0 8px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
   outline: none;
+  cursor: pointer;
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -30,45 +31,49 @@
   font-weight: 500;
   text-transform: uppercase;
 
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: $md-motion-default;
+    content: ' ';
+  }
+
   &:active {
     outline: none;
   }
 
-  &[disabled] {
-    pointer-events: none;
-  }
-
-  &:not([disabled]) {
-    cursor: pointer;
-  }
-
-  &.md-plain.md-button.md-raised:not([disabled]) {
-    color: rgba(#000, .87);
-    background-color: #fff;
-
-    .md-icon-font {
-      color: rgba(#000, .87);
-    }
-
-    .md-icon-image {
-      fill: rgba(#000, .87);
-    }
-  }
-
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  &:hover:before {
+    opacity: .08;
   }
 
   &.md-dense {
     font-size: 13px;
   }
 
-  &.md-raised:not([disabled]) {
+  &.md-raised {
     @include md-elevation(2);
+
+    padding: 0 16px;
 
     &:active {
       @include md-elevation(8);
+    }
+
+    &.md-primary,
+    &.md-accent {
+      &:hover:before {
+        opacity: .16;
+      }
     }
   }
 
@@ -108,6 +113,12 @@
 
   &:active {
     @include md-elevation(12);
+  }
+
+  &.md-primary {
+    &:hover:before {
+      opacity: .16;
+    }
   }
 
   &.md-fab-top-right,
@@ -155,4 +166,17 @@
 .md-button-content {
   position: relative;
   z-index: 2;
+}
+
+.md-button[disabled] {
+  cursor: default;
+
+  &,
+  &:active {
+    box-shadow: none;
+  }
+
+  &:hover:before {
+    content: none;
+  }
 }
