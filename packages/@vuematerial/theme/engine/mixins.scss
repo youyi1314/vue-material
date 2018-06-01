@@ -53,19 +53,19 @@
   $accent-dark: map-get($palette, accent-dark);
   $accent-light: map-get($palette, accent-light);
 
-  @if $primary-dark != "" {
+  @if $primary-dark == null {
     $primary-dark: md-generate-base-palette-color(map-get($palette, primary))
   }
 
-  @if $primary-light != "" {
+  @if $primary-light == null {
     $primary-light: md-generate-base-palette-color(map-get($palette, primary))
   }
 
-  @if $accent-dark != "" {
+  @if $accent-dark == null {
     $accent-dark: md-generate-base-palette-color(map-get($palette, accent))
   }
 
-  @if $accent-light != "" {
+  @if $accent-light == null {
     $accent-light: md-generate-base-palette-color(map-get($palette, accent))
   }
 
