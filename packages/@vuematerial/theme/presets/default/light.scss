@@ -1,11 +1,6 @@
 @import '../../engine/engine.scss';
 
-@include md-register-theme("default", (
-  background: #fff,
-  surface: #fff,
-  primary: #6200ee,
-  accent: #03dac6
-));
+@include md-register-theme('default');
 
 @import '~@vuematerial/avatar/theme.scss';
 @import '~@vuematerial/base/theme.scss';

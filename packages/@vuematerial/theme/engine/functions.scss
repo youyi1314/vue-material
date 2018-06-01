@@ -90,9 +90,14 @@
  */
 
 @function md-get-color-by-theme($color-theme, $type) {
-  $theme: map-get($md-color-levels, $color-theme);
+  $scheme: map-get($md-color-levels, $color-theme);
+  $global-property: map-get($md-theme-palette, $type);
 
-  @return map-get($theme, $type);
+  @if $global-property != null {
+    @return $global-property;
+  }
+
+  @return map-get($scheme, $type);
 }
 
 

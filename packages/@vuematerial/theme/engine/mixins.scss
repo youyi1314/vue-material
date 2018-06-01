@@ -44,7 +44,7 @@
     @return lighten($color, 15%);
   }
 
-  @return darken($color, 7%);
+  @return darken($color, 10%);
 }
 
 @function md-generate-base-palette($palette) {
@@ -77,19 +77,23 @@
   ));
 }
 
-@mixin md-register-theme ($name, $palette: $md-default-palette) {
+@mixin md-register-theme ($name, $palette: $md-default-palette, $overrides: (), $css-variables: false) {
   $palette: map-merge($md-default-palette, md-generate-base-palette($palette));
   $theme: map-merge($md-themes, (
     #{$name}: $palette
   ));
 
-  :root {
-    @each $type, $value in $palette {
-      --md-theme-#{$name}-#{$type}: #{$value}
+  @if $css-variables == true {
+    :root {
+      @each $type, $value in $palette {
+        --md-theme-#{$name}-#{$type}: #{$value}
+      }
     }
   }
 
   $md-themes: $theme !global;
+  $md-theme-overrides: map-merge($md-theme-overrides, $overrides) !global;
+  $md-css-variables: $css-variables !global;
 }
 
 
@@ -177,5 +181,45 @@
   }
 
   #{$property}: $value;
-  #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $value);
+
+  @if $md-css-variables == true {
+    #{$property}: var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $value);
+  }
+}
+
+
+/**
+ * Override a property based in the current theme
+ * ---
+ * Usage example:
+ *
+ * .md-button {
+ *   min-width: 88px;
+ *   height: 40px;
+ *   display: inline-block;
+ *   border-radius: 2px;
+ *   transition: .3s ease;
+ *
+ *   @include md-theme-component() {
+ *     @include md-theme-override-property(border-radius, 'global-radius', 'button-radius');
+ *   }
+ * }
+ *
+ * ---
+ * @access public
+ * @param {string} $property —  The css property
+ * @param {string} $var —  override value declared when creating a theme
+ * @param {string} $name —  a meaningful name to be provided as css variable
+ */
+
+@mixin md-theme-override-property ($property, $var, $name) {
+  $value: map-get($md-theme-overrides, $var);
+
+  @if $value != null {
+    #{$property}: $value;
+
+    @if $md-css-variables == true {
+      #{$property}: var(--md-theme-#{$md-current-theme}-$name, $value);
+    }
+  }
 }

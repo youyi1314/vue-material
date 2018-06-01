@@ -10,6 +10,7 @@
 
 .md-button {
   @include md-theme-component() {
+    @include md-theme-override-property(border-radius, global-radius, button-radius);
     @include md-theme-property(color, text-primary, background);
 
     &.md-primary {
@@ -57,6 +58,8 @@
     }
 
     &.md-fab {
+      @include md-theme-override-property(border-radius, fab-radius, button-fab-radius);
+
       &[disabled] {
         @include md-theme-property(background-color, disabled-background, background);
         @include md-theme-property(color, text-primary, disabled-background);

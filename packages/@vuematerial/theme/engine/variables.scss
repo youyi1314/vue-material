@@ -94,3 +94,25 @@ $md-color-levels: (
     error: #b00020
   )
 );
+
+
+/**
+ * Properties that could be changed based on theme
+ * ---
+ * @access private
+ * @type map
+ * @group themes
+ */
+
+$md-theme-overrides: () !global;
+
+
+/**
+ * The color contrast values
+ * ---
+ * @access private
+ * @type map
+ * @group themes
+ */
+
+$md-css-variables: false;
