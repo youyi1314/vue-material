@@ -1,6 +1,7 @@
 <template>
   <MdRipple
     class="md-button"
+    v-on="$listeners"
     :class="buttonClasses"
     :md-attrs="attributes"
     :md-tag="buttonTag"

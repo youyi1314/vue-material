@@ -1,7 +1,7 @@
 <template>
   <AppContainer page="Ripple">
     <AppExample>
-      <MdButton class="md-raised" @click="triggerActive()">Trigger</MdButton>
+      <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
       <MdRipple :md-active.sync="trigger">Click here</MdRipple>
       <MdRipple>Click here</MdRipple>
     </AppExample>
