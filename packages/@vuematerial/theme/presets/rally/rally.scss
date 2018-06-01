@@ -1,0 +1,30 @@
+@import '../../engine/engine';
+@import './fonts';
+
+$theme-colors: (
+  theme: dark,
+  background: #33333d,
+  surface: #373740,
+  primary: #1eb980,
+  primary-dark: #045d56,
+  primary-light: #62ecb0,
+  accent: #fff,
+  accent-dark: #ccc,
+  accent-light: #fff
+);
+$theme-overrides: (
+  global-radius: 0,
+  button-radius: 0
+);
+$generate-css-variables: false;
+
+@include md-register-theme('rally', $theme-colors, $theme-overrides, $generate-css-variables);
+
+@import '~@vuematerial/avatar/theme';
+@import '~@vuematerial/base/theme';
+@import '~@vuematerial/button/theme';
+@import '~@vuematerial/content/theme';
+@import '~@vuematerial/divider/theme';
+@import '~@vuematerial/field/theme';
+
+@include md-rally-font-theme;

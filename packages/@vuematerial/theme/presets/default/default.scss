@@ -1,0 +1,24 @@
+@import '../../engine/engine';
+@import './fonts';
+
+$theme-colors: (
+  primary: #6200ee,
+  primary-light: #9e47ff,
+  primary-dark: #0400ba,
+  accent: #03dac6,
+  accent-light: #66fff9,
+  accent-dark: #00a896,
+);
+$theme-overrides: ();
+$generate-css-variables: false;
+
+@include md-register-theme('default', $theme-colors, $theme-overrides, $generate-css-variables);
+
+@import '~@vuematerial/avatar/theme';
+@import '~@vuematerial/base/theme';
+@import '~@vuematerial/button/theme';
+@import '~@vuematerial/content/theme';
+@import '~@vuematerial/divider/theme';
+@import '~@vuematerial/field/theme';
+
+@include md-default-font-theme;

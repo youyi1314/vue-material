@@ -53,6 +53,13 @@
           <MdRipple>License</MdRipple>
         </RouterLink>
       </nav>
+
+      <div class="theme-selector">
+        <MdButton class="md-raised md-primary" @click="setTheme('neo')">Neo</MdButton>
+        <MdButton class="md-raised md-primary" @click="setTheme('default')">Default</MdButton>
+        <MdButton class="md-raised md-primary" @click="setTheme('rally')">Rally</MdButton>
+        <MdButton class="md-raised md-primary" @click="setTheme('crane')">Crane</MdButton>
+      </div>
     </aside>
   </Transition>
 </template>
@@ -61,7 +68,11 @@
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class AppSidebar extends Vue {}
+  export default class AppSidebar extends Vue {
+    setTheme (name) {
+      this.$material.theming.themeName = name
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -133,6 +144,17 @@
       a .md-ripple {
         padding-left: 24px;
       }
+    }
+  }
+
+  .theme-selector {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+
+    .md-button {
+      width: 100%;
+      margin: 8px 0;
     }
   }
 </style>

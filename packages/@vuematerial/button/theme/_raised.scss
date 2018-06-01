@@ -1,8 +1,8 @@
 .md-button {
   @include md-theme-component() {
     &.md-raised {
-      @include md-theme-property(background-color, background);
-      @include md-theme-property(color, text-primary, background);
+      @include md-theme-property(background-color, surface);
+      @include md-theme-property(color, text-primary, surface);
 
       &.md-primary {
         @include md-theme-property(color, text-primary, primary);
@@ -21,14 +21,14 @@
         @include md-icon-on-buttons(text-primary, accent);
 
         .md-ripple-wave {
-          @include md-theme-property(background-color, accent-dark);
+          @include md-theme-property(background-color, accent-light);
           opacity: 1;
         }
       }
 
       &[disabled] {
-        @include md-theme-property(background-color, disabled-background, background);
-        @include md-theme-property(color, disabled, background);
+        @include md-theme-property(background-color, disabled-background, surface);
+        @include md-theme-property(color, disabled, surface);
       }
     }
   }

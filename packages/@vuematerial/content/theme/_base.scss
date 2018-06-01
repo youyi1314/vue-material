@@ -1,7 +1,7 @@
 .md-content {
   @include md-theme-component() {
-    @include md-theme-property(background-color, background);
-    @include md-theme-property(color, text-primary, background);
+    @include md-theme-property(background-color, surface);
+    @include md-theme-property(color, text-primary, surface);
     @include md-theme-override-property(border-radius, content-radius, content-radius);
 
     &.md-primary {
@@ -15,8 +15,8 @@
     }
 
     .md-app & {
-      @include md-theme-property(border-left-color, divider, background);
-      @include md-theme-property(border-right-color, divider, background);
+      @include md-theme-property(border-left-color, divider, surface);
+      @include md-theme-property(border-right-color, divider, surface);
     }
   }
 }

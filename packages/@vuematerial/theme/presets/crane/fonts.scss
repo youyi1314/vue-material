@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+
+@mixin md-crane-font-theme () {
+  body {
+    @include md-theme-component() {
+      font-family: Raleway, sans-serif;
+    }
+  }
+
+  .md-button {
+    @include md-theme-component() {
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+}

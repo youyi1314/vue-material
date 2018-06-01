@@ -37,43 +37,49 @@
  * @param {map} $palette [$md-default-palette] —  The theme palette
  */
 
-@function md-generate-base-palette-color($color) {
+@function md-get-color-by-contrast($color) {
   $color-contrast: md-pick-contrast($color);
 
   @if $color-contrast == 'dark' {
-    @return lighten($color, 15%);
+    @return darken($color, 8%);
   }
 
-  @return darken($color, 8%);
+  @return lighten($color, 15%);
+}
+
+@function md-generate-base-palette-color($palette, $variation, $fallback) {
+  $opposite-color: dark;
+
+  @if str-index($variation, light) {
+    $opposite-color: light;
+  }
+
+  $color: map-get($palette, $variation);
+  $opposite-color: map-get($palette, #{$fallback}-#{$opposite-color});
+
+  @if $color == null {
+    @return md-get-color-by-contrast(map-get($palette, $fallback));
+  }
+
+  $color-contrast: md-pick-contrast($color);
+
+  @if $color-contrast == 'light' {
+    @return $color;
+  }
+
+  @if $opposite-color == null {
+    @return md-get-color-by-contrast(map-get($palette, $fallback));
+  }
+
+  @return $opposite-color;
 }
 
 @function md-generate-base-palette($palette) {
-  $primary-dark: map-get($palette, primary-dark);
-  $primary-light: map-get($palette, primary-light);
-  $accent-dark: map-get($palette, accent-dark);
-  $accent-light: map-get($palette, accent-light);
-
-  @if $primary-dark == null {
-    $primary-dark: md-generate-base-palette-color(map-get($palette, primary))
-  }
-
-  @if $primary-light == null {
-    $primary-light: md-generate-base-palette-color(map-get($palette, primary))
-  }
-
-  @if $accent-dark == null {
-    $accent-dark: md-generate-base-palette-color(map-get($palette, accent))
-  }
-
-  @if $accent-light == null {
-    $accent-light: md-generate-base-palette-color(map-get($palette, accent))
-  }
-
   @return map-merge($palette, (
-    primary-dark: $primary-dark,
-    primary-light: $primary-light,
-    accent-dark: $accent-dark,
-    accent-light: $accent-light
+    primary-dark: md-generate-base-palette-color($palette, primary-dark, primary),
+    primary-light: md-generate-base-palette-color($palette, primary-light, primary),
+    accent-dark: md-generate-base-palette-color($palette, accent-dark, accent),
+    accent-light: md-generate-base-palette-color($palette, accent-light, accent)
   ));
 }
 

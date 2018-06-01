@@ -35,8 +35,10 @@
 </style>
 
 <style lang="scss" src="vue-material/vue-material.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/default/light.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/neo/light.scss"></style>
+<style lang="scss" src="@vuematerial/theme/presets/default/default.scss"></style>
+<style lang="scss" src="@vuematerial/theme/presets/neo/neo.scss"></style>
+<style lang="scss" src="@vuematerial/theme/presets/rally/rally.scss"></style>
+<style lang="scss" src="@vuematerial/theme/presets/crane/crane.scss"></style>
 
 <style lang="scss" scoped>
   .app {

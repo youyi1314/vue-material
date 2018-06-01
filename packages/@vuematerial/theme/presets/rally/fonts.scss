@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar:400,500,700');
+
+@mixin md-rally-font-theme () {
+  body {
+    @include md-theme-component() {
+      font-family: Eczar, serif;
+    }
+  }
+
+  .md-button {
+    @include md-theme-component() {
+      line-height: 40px;
+    }
+  }
+}

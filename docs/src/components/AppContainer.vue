@@ -109,6 +109,10 @@
       .app-footer {
         opacity: 0;
       }
+
+      /deep/ &-content > * {
+        transition: $md-motion-open-slow-duration .15s $md-motion-open-slow-timing;
+      }
     }
 
     &-leave-active {
@@ -185,10 +189,6 @@
     &-description {
       margin: 1rem 0;
       transition: $md-motion-open;
-    }
-
-    /deep/ &-content > * {
-      transition: $md-motion-open-slow-duration .15s $md-motion-open-slow-timing;
     }
   }
 </style>

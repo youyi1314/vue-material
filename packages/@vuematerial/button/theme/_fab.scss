@@ -31,7 +31,7 @@
       }
 
       .md-ripple-wave {
-        @include md-theme-property(background-color, accent-dark);
+        @include md-theme-property(background-color, accent-light);
         opacity: 1;
       }
     }
