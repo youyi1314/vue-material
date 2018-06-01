@@ -1,0 +1,22 @@
+.md-icon-button,
+.md-fab {
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.md-icon-button,
+.md-fab.md-mini,
+.md-fab.md-dense {
+  .md-ripple-wave {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+}
+
+.md-icon-button {
+  .md-ripple-enter-active {
+    transition-duration: 1.2s;
+  }
+}

@@ -1,0 +1,71 @@
+@import "~@vuematerial/motion/variables";
+@import "~@vuematerial/elevation/mixins";
+@import "./variables";
+
+.md-button-clean {
+  margin: 0;
+  padding: 0 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transition: $md-motion-default;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.md-button {
+  @extend .md-button-clean;
+  margin: 6px 8px;
+  user-select: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: $md-motion-default;
+    content: ' ';
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:hover:before {
+    opacity: .08;
+  }
+
+  &.md-dense {
+    font-size: 13px;
+  }
+
+  + .md-button {
+    margin-left: 0;
+  }
+}
+
+.md-button-content {
+  position: relative;
+  z-index: 2;
+}

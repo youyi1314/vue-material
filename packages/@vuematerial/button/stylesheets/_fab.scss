@@ -1,0 +1,57 @@
+.md-button.md-fab {
+  @include md-elevation(6);
+
+  padding: 0;
+  overflow: hidden;
+
+  &:active {
+    @include md-elevation(12);
+  }
+
+  &.md-primary {
+    &:hover:before {
+      opacity: .16;
+    }
+  }
+
+  &.md-fab-top-right,
+  &.md-fab-top-left {
+    position: absolute;
+    top: 24px;
+  }
+
+  &.md-fab-bottom-right,
+  &.md-fab-bottom-left {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  &.md-fab-top-center,
+  &.md-fab-bottom-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.md-fab-top-center {
+    top: 24px;
+  }
+
+  &.md-fab-bottom-center {
+    bottom: 24px;
+  }
+
+  &.md-fab-top-right,
+  &.md-fab-bottom-right {
+    right: 24px;
+  }
+
+  &.md-fab-top-left,
+  &.md-fab-bottom-left {
+    left: 24px;
+  }
+
+  &.md-fixed {
+    position: fixed;
+  }
+}

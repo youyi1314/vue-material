@@ -145,6 +145,10 @@
       }
     }
 
+    &.md-outlined {
+      @include md-theme-override-property(border-width, button-outlined-border-width, button-outlined-border-width);
+    }
+
     &.md-plain {
       @include md-button-plain;
     }
