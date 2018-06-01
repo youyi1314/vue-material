@@ -4,7 +4,6 @@
     :class="buttonClasses"
     :md-attrs="attributes"
     :md-tag="buttonTag"
-    :type="buttonType"
   >
     <span class="md-button-content">
       <slot />
@@ -93,14 +92,18 @@
         }
 
         delete newProps.mdRipple
-        delete newProps.type
+
+        if (newProps.event === 'click') {
+          delete newProps.type
+        }
 
         return newProps
       }
 
       return {
         ...baseProps,
-        ...this.$attrs
+        ...this.$attrs,
+        type: this.type
       }
     }
 

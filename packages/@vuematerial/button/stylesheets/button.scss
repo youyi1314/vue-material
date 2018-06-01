@@ -171,12 +171,12 @@
 .md-button[disabled] {
   cursor: default;
 
+  &:before {
+    content: none;
+  }
+
   &,
   &:active {
     box-shadow: none;
-  }
-
-  &:hover:before {
-    content: none;
   }
 }
