@@ -37,6 +37,16 @@
  * @param {map} $palette [$md-default-palette] —  The theme palette
  */
 
+@function md-generate-base-palette-color($color) {
+  $color-contrast: md-pick-contrast($color);
+
+  @if $color-contrast == 'dark' {
+    @return lighten($color, 15%);
+  }
+
+  @return darken($color, 7%);
+}
+
 @function md-generate-base-palette($palette) {
   $primary-dark: map-get($palette, primary-dark);
   $primary-light: map-get($palette, primary-light);
@@ -44,19 +54,19 @@
   $accent-light: map-get($palette, accent-light);
 
   @if $primary-dark != "" {
-    $primary-dark: darken(map-get($palette, primary), 7%)
+    $primary-dark: md-generate-base-palette-color(map-get($palette, primary))
   }
 
   @if $primary-light != "" {
-    $primary-light: lighten(map-get($palette, primary), 14%)
+    $primary-light: md-generate-base-palette-color(map-get($palette, primary))
   }
 
   @if $accent-dark != "" {
-    $accent-dark: darken(map-get($palette, accent), 7%)
+    $accent-dark: md-generate-base-palette-color(map-get($palette, accent))
   }
 
   @if $accent-light != "" {
-    $accent-light: lighten(map-get($palette, accent), 14%)
+    $accent-light: md-generate-base-palette-color(map-get($palette, accent))
   }
 
   @return map-merge($palette, (
