@@ -132,7 +132,6 @@
 
     &-header {
       padding: 40px 0;
-      background: #f8f8f8;
       transition: $md-motion-default;
       transition-property: background-color;
 

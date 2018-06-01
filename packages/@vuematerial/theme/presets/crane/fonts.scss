@@ -10,7 +10,6 @@
   .md-button {
     @include md-theme-component() {
       line-height: 32px;
-      font-weight: 600;
     }
   }
 }
