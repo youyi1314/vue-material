@@ -1,8 +1,9 @@
 <template>
   <AppContainer page="Divider">
     <AppExample>
-      <MdDivider/>
-      <MdDivider/>
+      <MdDivider />
+      <MdDivider class="md-primary" />
+      <MdDivider class="md-accent" />
     </AppExample>
   </AppContainer>
 </template>

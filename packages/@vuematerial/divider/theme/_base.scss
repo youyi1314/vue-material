@@ -1,0 +1,14 @@
+.md-divider {
+  @include md-theme-component() {
+    @include md-theme-property(border-top-color, divider);
+    @include md-theme-override-property(border-top-width, divider-height, divider-height);
+
+    &.md-primary {
+      @include md-theme-property(border-top-color, primary);
+    }
+
+    &.md-accent {
+      @include md-theme-property(border-top-color, accent);
+    }
+  }
+}
