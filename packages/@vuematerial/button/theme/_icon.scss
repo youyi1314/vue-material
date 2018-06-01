@@ -1,0 +1,15 @@
+.md-button {
+  @include md-theme-component() {
+    &.md-icon-button {
+      @include md-theme-override-property(width, button-icon-size, button-icon-size);
+      @include md-theme-override-property(min-width, button-icon-size, button-icon-size);
+      @include md-theme-override-property(height, button-icon-size, button-icon-size);
+
+      &.md-dense {
+        @include md-theme-override-property(width, button-dense-height, button-dense-height);
+        @include md-theme-override-property(min-width, button-dense-height, button-dense-height);
+        @include md-theme-override-property(height, button-dense-height, button-dense-height);
+      }
+    }
+  }
+}

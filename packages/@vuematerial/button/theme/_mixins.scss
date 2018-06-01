@@ -1,0 +1,40 @@
+@mixin md-icon-on-buttons ($state, $type) {
+  .md-icon-font {
+    @include md-theme-property(color, $state, $type);
+  }
+
+  .md-icon-image {
+    @include md-theme-property(fill, $state, $type);
+  }
+}
+
+@mixin md-button-plain () {
+  @if md-get-theme-mode() == light {
+    color: #000;
+    background-color: #fff;
+
+    .md-icon-font {
+      color: #000;
+    }
+
+    .md-icon-image {
+      fill: #000;
+    }
+  } @else {
+    color: #fff;
+    background-color: #212121;
+
+    .md-icon-font {
+      color: #fff;
+    }
+
+    .md-icon-image {
+      fill: #fff;
+    }
+  }
+
+  .md-ripple-wave {
+    background-color: currentColor;
+    opacity: .26;
+  }
+}

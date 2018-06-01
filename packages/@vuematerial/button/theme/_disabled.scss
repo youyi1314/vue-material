@@ -1,0 +1,8 @@
+.md-button {
+  @include md-theme-component() {
+    &[disabled] {
+      @include md-theme-property(color, disabled, background);
+      @include md-icon-on-buttons(icon-disabled, background);
+    }
+  }
+}

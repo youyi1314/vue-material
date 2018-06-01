@@ -1,0 +1,23 @@
+.md-button {
+  @include md-theme-component() {
+    @include md-theme-property(color, text-primary, background);
+    @include md-theme-override-property(min-width, button-min-width, button-min-width);
+    @include md-theme-override-property(height, button-height, button-height);
+    @include md-theme-override-property(border-radius, global-radius, button-radius);
+    @include md-theme-override-property(font-size, button-font-size, button-font-size);
+
+    &.md-primary {
+      @include md-theme-property(color, primary, background);
+      @include md-icon-on-buttons(primary, background);
+    }
+
+    &.md-accent {
+      @include md-theme-property(color, accent, background);
+      @include md-icon-on-buttons(accent, background);
+    }
+
+    &.md-plain {
+      @include md-button-plain;
+    }
+  }
+}

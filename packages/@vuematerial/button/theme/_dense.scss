@@ -1,0 +1,7 @@
+.md-button {
+  @include md-theme-component() {
+    &.md-dense {
+      @include md-theme-override-property(height, button-dense-height, button-dense-height);
+    }
+  }
+}
