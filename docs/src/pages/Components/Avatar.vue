@@ -2,7 +2,7 @@
   <AppContainer page="Avatar">
     <AppExample>
       <MdAvatar class="md-small">
-        <img src="/img/examples/avatar.jpg" alt="People">
+        <img src="/img/examples/avatar.jpg" alt="Avatar">
       </MdAvatar>
 
       <MdAvatar>

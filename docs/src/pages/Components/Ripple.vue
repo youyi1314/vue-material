@@ -2,8 +2,22 @@
   <AppContainer page="Ripple">
     <AppExample>
       <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
-      <MdRipple :md-active.sync="trigger">Click here</MdRipple>
-      <MdRipple>Click here</MdRipple>
+
+      <div class="example">
+        <MdContent>
+          <MdRipple :md-active.sync="trigger">Click here</MdRipple>
+        </MdContent>
+
+        <MdContent class="md-primary">
+          <MdRipple>Click here</MdRipple>
+        </MdContent>
+
+        <MdAvatar>
+          <MdRipple>
+            <img src="/img/examples/avatar.jpg" alt="Avatar">
+          </MdRipple>
+        </MdAvatar>
+      </div>
     </AppExample>
   </AppContainer>
 </template>
@@ -22,14 +36,23 @@
 </script>
 
 <style lang="scss" scoped>
-  .md-ripple:not(.md-button) {
+  .example .md-content {
     width: 150px;
     height: 200px;
-    margin: 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: #cacaca;
+    margin: 0 24px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 6px;
+
+    .md-ripple {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .md-avatar /deep/ .md-ripple-wave {
+    background-color: #fff;
+    opacity: .5;
   }
 </style>

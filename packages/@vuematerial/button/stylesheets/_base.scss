@@ -25,10 +25,15 @@
 
 .md-button {
   @extend .md-button-clean;
+
   margin: 6px 8px;
   user-select: none;
   font-weight: 500;
   text-transform: uppercase;
+
+  &.md-ripple {
+    width: auto;
+  }
 
   &::-moz-focus-inner {
     padding: 0;
