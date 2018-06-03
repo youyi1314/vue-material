@@ -3,7 +3,7 @@
     @include md-theme-property(color, $state, $type);
   }
 
-  .md-icon-image {
+  .md-icon-image svg {
     @include md-theme-property(fill, $state, $type);
   }
 }

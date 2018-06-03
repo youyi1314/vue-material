@@ -2,7 +2,12 @@
   @include md-theme-component() {
     &[disabled] {
       @include md-theme-property(color, disabled, background);
-      @include md-icon-on-buttons(icon-disabled, background);
+
+      &.md-raised,
+      &.md-contained,
+      &.md-fab {
+        @include md-icon-on-buttons(disabled, background);
+      }
     }
   }
 }

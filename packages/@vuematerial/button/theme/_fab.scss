@@ -23,6 +23,7 @@
       &.md-mini,
       &.md-dense {
         @include md-theme-override-property(width, button-fab-size-mini, button-fab-size-mini);
+        @include md-theme-override-property(min-width, button-fab-size-mini, button-fab-size-mini);
         @include md-theme-override-property(height, button-fab-size-mini, button-fab-size-mini);
       }
 

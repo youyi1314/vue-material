@@ -1,0 +1,27 @@
+@import '~@vuematerial/icon/stylesheets/mixins';
+
+.md-button {
+  &.md-raised,
+  &.md-contained {
+    @include md-elevation(2);
+
+    padding: 0 16px;
+
+    &:active {
+      @include md-elevation(8);
+    }
+
+    &.md-primary,
+    &.md-accent {
+      &:hover:before {
+        opacity: .16;
+      }
+    }
+
+    .md-icon {
+      @include md-icon-size(18px);
+
+      margin: 0 8px 0 -4px;
+    }
+  }
+}

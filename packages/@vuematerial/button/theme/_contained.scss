@@ -1,6 +1,7 @@
 .md-button {
   @include md-theme-component() {
-    &.md-raised {
+    &.md-raised,
+    &.md-contained {
       @include md-theme-property(background-color, surface);
       @include md-theme-property(color, text-primary, surface);
 

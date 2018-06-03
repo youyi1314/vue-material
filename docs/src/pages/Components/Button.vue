@@ -8,10 +8,10 @@
     </AppExample>
 
     <AppExample>
-      <MdButton class="md-raised">Default</MdButton>
-      <MdButton class="md-raised md-primary">Primary</MdButton>
-      <MdButton class="md-raised md-accent">Accent</MdButton>
-      <MdButton class="md-raised md-accent" disabled>Disabled</MdButton>
+      <MdButton class="md-contained">Default</MdButton>
+      <MdButton class="md-contained md-primary">Primary</MdButton>
+      <MdButton class="md-contained md-accent">Accent</MdButton>
+      <MdButton class="md-contained md-accent" disabled>Disabled</MdButton>
     </AppExample>
 
     <AppExample>
@@ -22,10 +22,43 @@
     </AppExample>
 
     <AppExample>
-      <MdButton class="md-fab">&lt;3</MdButton>
-      <MdButton class="md-fab md-primary">&lt;3</MdButton>
-      <MdButton class="md-fab md-plain">&lt;3</MdButton>
-      <MdButton class="md-fab" disabled>:(</MdButton>
+      <MdButton class="md-contained">
+        <MdIcon>add</MdIcon> Default
+      </MdButton>
+
+      <MdButton class="md-contained md-primary">
+        <MdIcon>add</MdIcon> Primary
+      </MdButton>
+
+      <MdButton class="md-contained md-accent">
+        <MdIcon>add</MdIcon> Accent
+      </MdButton>
+
+      <MdButton class="md-contained md-accent" disabled>
+        <MdIcon>add</MdIcon> Disabled
+      </MdButton>
+    </AppExample>
+
+    <AppExample>
+      <MdButton class="md-fab">
+        <MdIcon>add</MdIcon>
+      </MdButton>
+
+      <MdButton class="md-fab md-primary">
+        <MdIcon>favorite</MdIcon>
+      </MdButton>
+
+      <MdButton class="md-fab md-plain">
+        <MdIcon>star</MdIcon>
+      </MdButton>
+
+      <MdButton class="md-fab md-mini">
+        <MdIcon>face</MdIcon>
+      </MdButton>
+
+      <MdButton class="md-fab" disabled>
+        <MdIcon>thumb_down</MdIcon>
+      </MdButton>
     </AppExample>
 
     <AppExample>

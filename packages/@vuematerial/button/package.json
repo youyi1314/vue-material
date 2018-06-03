@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vuematerial/core": "^2.0.0",
+    "@vuematerial/icon": "^2.0.0",
     "@vuematerial/motion": "^2.0.0",
     "@vuematerial/ripple": "^2.0.0",
     "@vuematerial/tag-switcher": "^2.0.0",

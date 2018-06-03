@@ -1,11 +1,4 @@
-$md-icon-size: 24px;
-
-@mixin md-icon-size($size: $icon-size) {
-  width: $size;
-  min-width: $size;
-  height: $size;
-  font-size: $size !important;
-}
+@import './mixins';
 
 .md-icon {
   @include md-icon-size($md-icon-size);
