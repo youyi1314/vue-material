@@ -20,11 +20,6 @@ $generate-css-variables: false;
 
 @include md-register-theme('neo-dark', $theme-colors, $theme-overrides, $generate-css-variables);
 
-@import '~@vuematerial/avatar/theme';
-@import '~@vuematerial/base/theme';
-@import '~@vuematerial/button/theme';
-@import '~@vuematerial/content/theme';
-@import '~@vuematerial/divider/theme';
-@import '~@vuematerial/field/theme';
+@import '~vue-material/theme/all';
 
 @include md-neo-font-theme;

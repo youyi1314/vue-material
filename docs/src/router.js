@@ -61,6 +61,11 @@ export default new Router({
       component: importPage('Components/Field')
     },
     {
+      path: '/components/icon',
+      name: 'components/icon',
+      component: importPage('Components/Icon')
+    },
+    {
       path: '/components/ripple',
       name: 'components/ripple',
       component: importPage('Components/Ripple')

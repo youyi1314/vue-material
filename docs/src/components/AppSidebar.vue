@@ -40,6 +40,10 @@
             <MdRipple>Field</MdRipple>
           </RouterLink>
 
+          <RouterLink to="/components/icon">
+            <MdRipple>Icon</MdRipple>
+          </RouterLink>
+
           <RouterLink to="/components/ripple">
             <MdRipple>Ripple</MdRipple>
           </RouterLink>

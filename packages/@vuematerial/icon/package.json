@@ -1,6 +1,6 @@
 {
-  "name": "@vuematerial/theme",
-  "description": "Theme preset to be used with Vue Material theme engine",
+  "name": "@vuematerial/icon",
+  "description": "Icon component of Vue Material",
   "version": "2.0.0",
   "license": "MIT",
   "author": {
@@ -15,6 +15,9 @@
     "url": "https://github.com/vuematerial/vue-material/issues"
   },
   "dependencies": {
-    "vue-material": "^2.0.0"
+    "@vuematerial/core": "^2.0.0",
+    "@vuematerial/motion": "^2.0.0",
+    "@vuematerial/svg-loader": "^2.0.0",
+    "@vuematerial/test-utils": "^2.0.0"
   }
 }
