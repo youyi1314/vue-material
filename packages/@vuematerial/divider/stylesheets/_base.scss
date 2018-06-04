@@ -1,14 +1,11 @@
 @import "~@vuematerial/motion/variables";
-@import './variables';
 
 .md-divider {
-  height: $md-divider-border-width;
   margin: 0;
   padding: 0;
   display: block;
   border: none;
-  border-top: $md-divider-border-width $md-divider-border-style;
-  transition: margin-left $md-motion-default;
+  transition: $md-motion-default;
   will-change: margin-left;
 
   &.md-inset {

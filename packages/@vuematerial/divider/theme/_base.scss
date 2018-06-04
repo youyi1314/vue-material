@@ -1,7 +1,9 @@
 .md-divider {
   @include md-theme-component() {
     @include md-theme-property(border-top-color, divider);
+    @include md-theme-override-property(height, divider-height, divider-height);
     @include md-theme-override-property(border-top-width, divider-height, divider-height);
+    @include md-theme-override-property(border-top-style, divider-style, divider-style);
 
     &.md-primary {
       @include md-theme-property(border-top-color, primary);

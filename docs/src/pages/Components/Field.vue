@@ -12,15 +12,15 @@
       </MdField>
 
       <MdField>
-        <i class="md-icon">♥</i>
+        <MdIcon>money</MdIcon>
         <label>Password confirmation</label>
         <input class="md-input">
       </MdField>
 
       <MdField>
+        <MdIcon>favorite</MdIcon>
         <label>Password confirmation</label>
         <input class="md-input">
-        <i class="md-icon">♥</i>
       </MdField>
     </AppExample>
   </AppContainer>

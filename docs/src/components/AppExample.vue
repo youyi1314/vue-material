@@ -16,7 +16,6 @@
   .app-example {
     padding: 16px;
     border: 1px solid rgba(#000, .12);
-    border-radius: 8px;
 
     + .app-example {
       margin-top: 40px;

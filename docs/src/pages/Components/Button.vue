@@ -23,19 +23,19 @@
 
     <AppExample>
       <MdButton class="md-contained">
-        <MdIcon>add</MdIcon> Default
+        <MdIcon>edit</MdIcon> Default
       </MdButton>
 
       <MdButton class="md-contained md-primary">
-        <MdIcon>add</MdIcon> Primary
+        <MdIcon>shopping_cart</MdIcon> Primary
       </MdButton>
 
       <MdButton class="md-contained md-accent">
-        <MdIcon>add</MdIcon> Accent
+        <MdIcon>print</MdIcon> Accent
       </MdButton>
 
       <MdButton class="md-contained md-accent" disabled>
-        <MdIcon>add</MdIcon> Disabled
+        <MdIcon>thumb_down</MdIcon> Disabled
       </MdButton>
     </AppExample>
 
@@ -45,15 +45,15 @@
       </MdButton>
 
       <MdButton class="md-fab md-primary">
-        <MdIcon>favorite</MdIcon>
+        <MdIcon>edit</MdIcon>
       </MdButton>
 
       <MdButton class="md-fab md-plain">
-        <MdIcon>star</MdIcon>
+        <MdIcon>shopping_cart</MdIcon>
       </MdButton>
 
       <MdButton class="md-fab md-mini">
-        <MdIcon>face</MdIcon>
+        <MdIcon>print</MdIcon>
       </MdButton>
 
       <MdButton class="md-fab" disabled>

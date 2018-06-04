@@ -4,12 +4,12 @@
  * https://hanken.co/product/hk-grotesk/
  *
  * Recomended font for latin glyphs (for others the recomended is
- * Lato Sans from Google)
+ * Noto Sans from Google)
  *
  */
 
 /* Regular */
-@font-face {
+/* @font-face {
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 400;
@@ -17,11 +17,11 @@
        local('HKGrotesk Regular'),
        url('fonts/hk-grotesk-regular.woff2') format('woff2'),
        url('fonts/hk-grotesk-regular.woff') format('woff');
-}
+} */
 
 
 /* Medium */
-@font-face {
+/* @font-face {
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 500;
@@ -29,11 +29,11 @@
        local('HKGrotesk Semibold'),
        url('fonts/hk-grotesk-semibold.woff2') format('woff2'),
        url('fonts/hk-grotesk-semibold.woff') format('woff');
-}
+} */
 
 
 /* Semibold */
-@font-face {
+/* @font-face {
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 600;
@@ -41,11 +41,11 @@
        local('HKGrotesk Semibold'),
        url('fonts/hk-grotesk-semibold.woff2') format('woff2'),
        url('fonts/hk-grotesk-semibold.woff') format('woff');
-}
+} */
 
 
 /* Bold */
-@font-face {
+/* @font-face {
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 700;
@@ -53,7 +53,7 @@
        local('HKGrotesk Bold'),
        url('fonts/hk-grotesk-bold.woff2') format('woff2'),
        url('fonts/hk-grotesk-bold.woff') format('woff');
-}
+} */
 
 
 
@@ -62,8 +62,10 @@
  *
  */
 
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
 @mixin md-neo-font-theme () {
   @include md-theme-component(true) {
-    font-family: 'HK Grotesk';
+    font-family: 'HK Grotesk', Rubik, sans-serif;
   }
 }

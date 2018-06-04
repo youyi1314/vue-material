@@ -5,6 +5,12 @@
       <MdDivider class="md-primary" />
       <MdDivider class="md-accent" />
     </AppExample>
+
+    <AppExample>
+      <MdDivider class="md-inset" />
+      <MdDivider class="md-inset md-primary" />
+      <MdDivider class="md-inset md-accent" />
+    </AppExample>
   </AppContainer>
 </template>
 

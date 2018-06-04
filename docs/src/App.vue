@@ -32,14 +32,14 @@
   body {
     overflow: hidden;
   }
-</style>
 
-<style lang="scss" src="vue-material/vue-material.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/default/default.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/neo/neo.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/neo/neo-dark.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/rally/rally.scss"></style>
-<style lang="scss" src="@vuematerial/theme/presets/crane/crane.scss"></style>
+  @import '~vue-material/vue-material.scss';
+  @import '~@vuematerial/theme/presets/default/default.scss';
+  @import '~@vuematerial/theme/presets/neo/neo.scss';
+  @import '~@vuematerial/theme/presets/neo/neo-dark.scss';
+  @import '~@vuematerial/theme/presets/rally/rally.scss';
+  @import '~@vuematerial/theme/presets/crane/crane.scss';
+</style>
 
 <style lang="scss" scoped>
   .app {
