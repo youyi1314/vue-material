@@ -32,6 +32,10 @@
             <MdRipple>Content</MdRipple>
           </RouterLink>
 
+          <RouterLink to="/components/dialog">
+            <MdRipple>Dialog</MdRipple>
+          </RouterLink>
+
           <RouterLink to="/components/divider">
             <MdRipple>Divider</MdRipple>
           </RouterLink>

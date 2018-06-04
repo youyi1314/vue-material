@@ -51,6 +51,11 @@ export default new Router({
       component: importPage('Components/Content')
     },
     {
+      path: '/components/dialog',
+      name: 'components/dialog',
+      component: importPage('Components/Dialog')
+    },
+    {
       path: '/components/divider',
       name: 'components/divider',
       component: importPage('Components/Divider')

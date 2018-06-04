@@ -1,0 +1,7 @@
+.md-dialog-container {
+  @include md-theme-component() {
+    @include md-theme-property(background-color, surface);
+    @include md-theme-property(color, text-primary, surface);
+    @include md-theme-override-property(border-radius, dialog-radius, dialog-radius);
+  }
+}

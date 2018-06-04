@@ -1,0 +1,115 @@
+@import "~@vuematerial/motion/variables";
+@import "~@vuematerial/elevation/mixins";
+
+// @import "~components/MdLayout/mixins";
+
+.md-dialog {
+  @include md-elevation(24);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  border-radius: 2px;
+  backface-visibility: hidden;
+  pointer-events: auto;
+  transition: $md-motion-open;
+}
+
+.md-dialog-enter-active .md-dialog-container {
+  transition: opacity $md-motion-open-fast,
+              transform $md-motion-open-fast;
+}
+
+.md-dialog-leave-active {
+  .md-dialog-container {
+    transition: opacity $md-motion-close-fast,
+    transform $md-motion-close-fast;
+  }
+}
+
+.md-dialog-enter,
+.md-dialog-leave-active {
+  .md-overlay {
+    opacity: 0;
+  }
+
+  .md-dialog-container {
+    opacity: 0;
+    transform: scale(.9);
+
+    > .md-dialog-tabs,
+    > .md-dialog-title,
+    > .md-dialog-content,
+    > .md-dialog-actions {
+      opacity: 0;
+      transform: translate3D(0, 10%, 0);
+    }
+  }
+}
+
+.md-dialog-container {
+  min-width: 280px;
+  max-width: 80%;
+  max-height: 80%;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  position: relative;
+  z-index: 110;
+  overflow: hidden;
+  transition: $md-motion-default;
+  will-change: opacity, transform;
+
+  > .md-dialog-tabs,
+  > .md-dialog-title,
+  > .md-dialog-content,
+  > .md-dialog-actions {
+    transition: opacity $md-motion-simple,
+                transform $md-motion-simple;
+    will-change: opacity, transform;
+  }
+
+  .md-tabs {
+    flex: 1;
+  }
+
+  .md-tabs-navigation {
+    padding: 0 12px;
+  }
+
+  /* .md-tab {
+    @include md-layout-xsmall {
+      padding: 12px;
+    }
+  } */
+}
+
+/* .md-dialog-fullscreen {
+  @include md-layout-xsmall {
+    max-width: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    transform: none;
+
+    &.md-dialog-enter {
+      opacity: 0;
+      transform: translate3D(0, 30%, 0);
+    }
+
+    &.md-dialog-leave-active {
+      opacity: 0;
+      transform: translate3D(0, 0, 0);
+    }
+  }
+} */

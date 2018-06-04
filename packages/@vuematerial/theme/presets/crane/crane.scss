@@ -13,9 +13,10 @@ $theme-colors: (
   accent-light: #ff554f
 );
 $theme-overrides: (
-  global-radius: 36px,
-  button-radius: 36px,
-  button-outlined-border-width: 2px
+  global-radius: 16px,
+  button-radius: 16px,
+  button-outlined-border-width: 2px,
+  dialog-radius: 16px
 );
 $generate-css-variables: false;
 
