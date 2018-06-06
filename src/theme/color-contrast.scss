@@ -322,12 +322,19 @@ $md-linear-channel-values:
  * @access private
  * ---
  * @param {string} $color —  The desired color to be compared
+ * @param {string} $comparator_ —  The color to be the background for comparison
  */
 
-@function md-pick-contrast($color) {
-  $lightColor: map-get(map-get($md-color-levels, dark), text-primary);
+@function md-pick-contrast($color, $comparator_: null) {
+  $comparator: $comparator_;
+
+  @if $comparator == null {
+    $comparator: text-primary;
+  }
+
+  $lightColor: map-get(map-get($md-color-levels, dark), $comparator);
   $lightContrast: md-calculate-contrast($color, $lightColor);
-  $darkColor: map-get(map-get($md-color-levels, light), text-primary);
+  $darkColor: map-get(map-get($md-color-levels, light), $comparator);
   $darkContrast: md-calculate-contrast($color, $darkColor);
 
   @if ($lightContrast > $darkContrast) {

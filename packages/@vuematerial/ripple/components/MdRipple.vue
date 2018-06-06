@@ -3,7 +3,7 @@
     v-bind="mdAttrs || $attrs"
     v-on="$listeners"
     :md-tag="mdTag"
-    :class="['md-ripple', { 'md-centered': mdCentered }]"
+    :class="rippleClasses"
     v-if="!isDisabled"
     @mousedown.passive="onMouseDown"
     @mouseout.passive="onMouseOut"
@@ -11,8 +11,6 @@
     @touchstart.passive="onTouchStart"
     @touchend.passive="onTouchEnd"
   >
-    <slot />
-
     <MdRippleWave
       v-for="({ style, classes, triggered }, id) in waves"
       :key="id"
@@ -21,6 +19,8 @@
       :id="triggered ? id : ''"
       @md-ripple-end="clearTriggeredWave"
     />
+
+    <slot />
   </MdTagSwitcher>
 
   <MdTagSwitcher :md-tag="mdTag" :class="'md-ripple md-ripple-disabled'" v-else>
@@ -68,6 +68,14 @@
       return !this.$material.ripple || this.mdDisabled
     }
 
+    get rippleClasses () {
+      return [
+        'md-ripple',
+        { 'md-centered': this.mdCentered },
+        this.mdAttrs.class
+      ]
+    }
+
     @Watch('mdActive')
     onMdActive (active) {
       if (active) {
@@ -79,7 +87,7 @@
     getWaveSize () {
       const { offsetWidth, offsetHeight } = this.$el
 
-      return Math.round(Math.max(offsetWidth, offsetHeight))
+      return Math.round(offsetWidth + offsetHeight / 2)
     }
 
     getSquareSize (size) {

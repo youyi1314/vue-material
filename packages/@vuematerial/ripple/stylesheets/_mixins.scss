@@ -1,0 +1,42 @@
+@import "~@vuematerial/motion/variables";
+@import "./functions";
+
+@mixin md-ripple-state-tones($variantColor: null) {
+  &:hover:before {
+    opacity: md-ripple-opacity(hover, $variantColor);
+  }
+
+  &:active {
+    &:before {
+      opacity: md-ripple-opacity(activated-dim, $variantColor);
+    }
+
+    &.md-ripple-disabled:before {
+      opacity: md-ripple-opacity(pressed, $variantColor);
+    }
+  }
+
+  &.md-focused:before {
+    opacity: md-ripple-opacity(activated, $variantColor);
+  }
+
+  .md-ripple-wave {
+    opacity: md-ripple-opacity(pressed, $variantColor);
+  }
+}
+
+@mixin md-ripple-state () {
+  @include md-ripple-state-tones;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: $md-motion-default;
+    content: ' ';
+  }
+}

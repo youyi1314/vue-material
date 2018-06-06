@@ -1,0 +1,12 @@
+@import "./variables";
+@import "~@vuematerial/theme/engine/color-contrast";
+
+@function md-ripple-opacity($state, $variantColor: null) {
+  $opacitySource: light;
+
+  @if $variantColor != null {
+    $opacitySource: md-pick-contrast($variantColor);
+  }
+
+  @return map-get(map-get($md-ripple-state, $opacitySource), $state);
+}

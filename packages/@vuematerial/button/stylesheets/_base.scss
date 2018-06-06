@@ -42,26 +42,6 @@
     border: 0;
   }
 
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: currentColor;
-    opacity: 0;
-    transition: $md-motion-default;
-    content: ' ';
-  }
-
-  &:hover:before {
-    opacity: .08;
-  }
-
-  &.md-ripple-disabled:active:before {
-    opacity: .2;
-  }
-
   + .md-button {
     margin-left: 0;
   }
@@ -71,6 +51,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 2;
 }

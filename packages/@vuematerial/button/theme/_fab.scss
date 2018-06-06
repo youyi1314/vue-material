@@ -13,11 +13,6 @@
         @include md-theme-property(background-color, primary);
         @include md-icon-on-buttons(text-primary, primary);
         @include md-theme-property(color, text-primary, primary);
-
-        .md-ripple-wave {
-          @include md-theme-property(background-color, primary-light);
-          opacity: 1;
-        }
       }
 
       &.md-mini,
@@ -27,13 +22,12 @@
         @include md-theme-override-property(height, button-fab-size-mini, button-fab-size-mini);
       }
 
-      &.md-disabled {
-        @include md-theme-property(background-color, disabled-background, background);
+      &.md-plain {
+        @include md-button-plain;
       }
 
-      .md-ripple-wave {
-        @include md-theme-property(background-color, accent-light);
-        opacity: 1;
+      &.md-disabled {
+        @include md-theme-property(background-color, disabled-background, background);
       }
     }
   }

@@ -252,7 +252,7 @@
 
   @if $value != null {
     @if $calc != null {
-      $value: call($calc, $value);
+      $value: call(get-function($calc), $value);
     }
 
     #{$property}: $value;

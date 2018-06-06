@@ -43,7 +43,9 @@
     @Prop({ type: Boolean, default: true })
     mdRipple
 
+    mdHasFocus = false
     rippleActive = false
+    isFlat = false
 
     /* mixins: [
       MdFocused
@@ -67,6 +69,7 @@
 
     get buttonClasses () {
       return {
+        'md-flat': this.isFlat,
         'md-focused': this.mdHasFocus,
         'md-disabled': this.disabled
       }
@@ -113,12 +116,32 @@
       return this.$router && this.to
     }
 
+    isButtonFlat () {
+      const containClass = (cssClass) => this.$el.classList.contains(cssClass)
+
+      return !containClass('md-fab') && !containClass('md-contained') && !containClass('md-raised')
+    }
+
+    setIsFlat () {
+      window.setTimeout(() => {
+        this.isFlat = this.isButtonFlat()
+      }, 15)
+    }
+
     beforeCreate () {
       const newProps = MdRouterLinkProps(this, this.$options.props)
 
       delete newProps.to.required
 
       this.$options.props = newProps
+    }
+
+    mounted () {
+      this.setIsFlat()
+    }
+
+    updated () {
+      this.setIsFlat()
     }
   }
 </script>

@@ -1,10 +1,18 @@
 @import "~@vuematerial/motion/variables";
+@import "./mixins";
 
 .md-ripple {
+  @include md-ripple-state;
+
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  *:not(.md-ripple-wave) {
+    position: relative;
+    z-index: 3;
+  }
 }
 
 .md-ripple-wave {
@@ -13,7 +21,6 @@
   pointer-events: none;
   background: currentColor;
   border-radius: 50%;
-  opacity: .12;
   transform: scale(2.3) translateZ(0);
 
   &.md-centered,
@@ -21,35 +28,42 @@
     top: 50%;
     left: 50%;
   }
-
-  ~ *:not(.md-ripple-wave) {
-    position: relative;
-    z-index: 2;
-  }
 }
 
 .md-ripple-enter-active,
 .md-ripple-leave-active {
-  transition: .55s $md-motion-open-timing;
+  transition-duration: .8s;
   transition-property: opacity, transform;
   will-change: opacity, transform;
 
-  &.md-force-centered {
-    opacity: 0;
+  &.md-centered {
+    transition-duration: 1.2s;
   }
 
-  &.md-centered {
-    transition-duration: 1s;
+  &.md-force-centered {
+    transition-duration: $md-motion-open-duration;
+  }
+}
+
+.md-ripple-enter-active {
+  transition-timing-function: $md-motion-open-timing;
+}
+
+.md-ripple-leave-active {
+  transition-duration: .3s;
+  transition-timing-function: $md-motion-default-timing;
+
+  &.md-force-centered {
+    transition: $md-motion-simple;
   }
 }
 
 .md-ripple-enter {
-  transform: scale(.7) translateZ(0);
+  transform: scale(.54) translateZ(0);
   opacity: .1;
 
   &.md-force-centered {
-    transform: scale(.54) translateZ(0);
-    opacity: .12;
+    opacity: .1;
   }
 }
 

@@ -1,0 +1,21 @@
+@import '../stylesheets/mixins';
+
+.md-ripple {
+  @include md-theme-component() {
+    &.md-primary {
+      @include md-ripple-state-tones(md-theme(primary, text-primary));
+    }
+
+    &.md-accent {
+      @include md-ripple-state-tones(md-theme(accent, text-primary));
+    }
+
+    &.md-plain {
+      @include md-ripple-state-tones(md-theme(surface, text-primary));
+    }
+
+    &.md-flat {
+      @include md-ripple-state-tones(md-theme(surface));
+    }
+  }
+}
