@@ -5,6 +5,7 @@
     :class="buttonClasses"
     :md-attrs="attributes"
     :md-tag="buttonTag"
+    :md-disabled="disabled || !mdRipple"
   >
     <span class="md-button-content">
       <slot />
@@ -66,8 +67,8 @@
 
     get buttonClasses () {
       return {
-        'md-ripple-off': !this.mdRipple,
-        'md-focused': this.mdHasFocus
+        'md-focused': this.mdHasFocus,
+        'md-disabled': this.disabled
       }
     }
 

@@ -15,9 +15,10 @@
   border: 0;
   border-radius: 0;
   transition: $md-motion-default;
-  font-family: inherit;
+  font: inherit;
   font-size: 14px;
   font-weight: 500;
+  letter-spacing: inherit;
   line-height: normal;
   text-decoration: none;
   vertical-align: top;
@@ -53,12 +54,12 @@
     content: ' ';
   }
 
-  &:active {
-    outline: none;
-  }
-
   &:hover:before {
     opacity: .08;
+  }
+
+  &.md-ripple-disabled:active:before {
+    opacity: .2;
   }
 
   + .md-button {

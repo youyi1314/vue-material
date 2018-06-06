@@ -13,7 +13,12 @@
         <RouterLink to="/style">
           <MdRipple>Style</MdRipple>
         </RouterLink>
-        <div class="app-sidebar-nav-group" />
+
+        <div class="app-sidebar-nav-group">
+          <RouterLink to="/style/typography">
+            <MdRipple>Typography</MdRipple>
+          </RouterLink>
+        </div>
 
         <RouterLink to="/components">
           <MdRipple>Components</MdRipple>

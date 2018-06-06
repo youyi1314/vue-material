@@ -27,7 +27,7 @@
         }
       }
 
-      &[disabled] {
+      &.md-disabled {
         @include md-theme-property(background-color, disabled-background, surface);
         @include md-theme-property(color, disabled, surface);
       }

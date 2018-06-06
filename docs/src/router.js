@@ -82,6 +82,11 @@ export default new Router({
       name: 'style',
       component: importPage('Style/Style')
     },
+    {
+      path: '/style/typography',
+      name: 'style/typography',
+      component: importPage('Style/Typography')
+    },
 
     /* OTHERS */
     {

@@ -1,3 +1,5 @@
+@import './typography';
+
 /**
  * Structure
  *
@@ -16,10 +18,10 @@ html {
 }
 
 body {
+  @extend .md-body-1;
   min-height: 100vh;
   margin: 0;
   position: relative;
-  line-height: 1.4em;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }

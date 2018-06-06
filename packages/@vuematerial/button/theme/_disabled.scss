@@ -1,6 +1,6 @@
 .md-button {
   @include md-theme-component() {
-    &[disabled] {
+    &.md-disabled {
       @include md-theme-property(color, disabled, background);
 
       &.md-raised,

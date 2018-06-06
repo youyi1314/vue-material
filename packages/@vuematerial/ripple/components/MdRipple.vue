@@ -23,7 +23,7 @@
     />
   </MdTagSwitcher>
 
-  <MdTagSwitcher :md-tag="mdTag" class="md-ripple md-disabled" v-else>
+  <MdTagSwitcher :md-tag="mdTag" :class="'md-ripple md-ripple-disabled'" v-else>
     <slot />
   </MdTagSwitcher>
 </template>

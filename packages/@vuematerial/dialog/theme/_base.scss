@@ -4,7 +4,7 @@
     @include md-theme-property(color, text-primary, surface);
     @include md-theme-override-property(border-radius, dialog-radius, dialog-radius);
 
-    .md-dialog-content {
+    .md-dialog-title ~ .md-dialog-content {
       @include md-theme-property(color, text-accent, surface);
     }
   }

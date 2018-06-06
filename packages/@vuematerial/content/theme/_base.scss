@@ -9,8 +9,8 @@
       @include md-theme-property(color, text-primary, primary);
 
       &::selection {
-        @include md-theme-property(background-color, accent, background);
-        @include md-theme-property(color, text-primary, accent);
+        @include md-theme-property(color, text-primary, primary-light);
+        @include md-theme-property(background-color, primary-light, "", .87);
       }
     }
 
@@ -19,8 +19,8 @@
       @include md-theme-property(color, text-primary, accent);
 
       &::selection {
-        @include md-theme-property(background-color, primary, background);
-        @include md-theme-property(color, text-primary, primary);
+        @include md-theme-property(color, text-primary, accent-light);
+        @include md-theme-property(background-color, accent-light, "", .87);
       }
     }
 
