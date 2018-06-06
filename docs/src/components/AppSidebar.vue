@@ -3,68 +3,30 @@
     <aside class="app-sidebar">
       <header class="app-sidebar-header">
         <h1 class="app-sidebar-title">
-          <MdRipple>
-            <RouterLink to="/">{{ $t('appName') }}</RouterLink>
-          </MdRipple>
+          <RouterLink tag="MdRipple" to="/">{{ $t('appName') }}</RouterLink>
         </h1>
       </header>
 
       <nav class="app-sidebar-nav">
-        <RouterLink to="/style">
-          <MdRipple>Style</MdRipple>
-        </RouterLink>
-
+        <RouterLink tag="MdRipple" to="/style">Style</RouterLink>
         <div class="app-sidebar-nav-group">
-          <RouterLink to="/style/typography">
-            <MdRipple>Typography</MdRipple>
-          </RouterLink>
+          <RouterLink tag="MdRipple" to="/style/typography">Typography</RouterLink>
         </div>
 
-        <RouterLink to="/components">
-          <MdRipple>Components</MdRipple>
-        </RouterLink>
-
+        <RouterLink tag="MdRipple" to="/components">Components</RouterLink>
         <div class="app-sidebar-nav-group">
-          <RouterLink to="/components/avatar">
-            <MdRipple>Avatar</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/button">
-            <MdRipple>Button</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/content">
-            <MdRipple>Content</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/dialog">
-            <MdRipple>Dialog</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/divider">
-            <MdRipple>Divider</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/field">
-            <MdRipple>Field</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/icon">
-            <MdRipple>Icon</MdRipple>
-          </RouterLink>
-
-          <RouterLink to="/components/ripple">
-            <MdRipple>Ripple</MdRipple>
-          </RouterLink>
+          <RouterLink tag="MdRipple" to="/components/avatar">Avatar</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/button">Button</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/content">Content</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/dialog">Dialog</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/divider">Divider</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/field">Field</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/icon">Icon</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/ripple">Ripple</RouterLink>
         </div>
 
-        <RouterLink to="/about">
-          <MdRipple>About</MdRipple>
-        </RouterLink>
-
-        <RouterLink to="/license">
-          <MdRipple>License</MdRipple>
-        </RouterLink>
+        <RouterLink tag="MdRipple" to="/about">About</RouterLink>
+        <RouterLink tag="MdRipple" to="/license">License</RouterLink>
       </nav>
 
       <div class="theme-selector">
@@ -110,17 +72,14 @@
       margin: 0;
       font-size: 24px;
 
-      a {
-        color: inherit;
-        text-decoration: none;
+      .md-ripple {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgba(#000, .87);
       }
-    }
-
-    &-header .md-ripple {
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     &-nav {
@@ -128,24 +87,15 @@
       display: flex;
       flex-direction: column;
 
-      a {
-        text-decoration: none !important;
+      .md-ripple {
+        margin: 2px 0;
+        padding: 4px 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        color: rgba(#000, .87);
 
-        &.router-link-exact-active .md-ripple {
-          background-color: rgba(md-get-palette-color(blue, A400), .12);
-          color: md-get-palette-color(blue, A400) !important;
+        &.md-activated {
           font-weight: 700;
-        }
-
-        .md-ripple {
-          margin: 2px 0;
-          padding: 4px 8px;
-          border-radius: 4px;
-          color: rgba(#000, .87) !important;
-
-          &:hover {
-            color: md-get-palette-color(blue, A400) !important;
-          }
         }
       }
     }
@@ -155,7 +105,7 @@
       display: flex;
       flex-direction: column;
 
-      a .md-ripple {
+      .md-ripple {
         padding-left: 24px;
       }
     }

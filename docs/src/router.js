@@ -17,6 +17,7 @@ function importPage (path) {
 
 export default new Router({
   mode: 'history',
+  linkExactActiveClass: 'md-activated',
   routes: [
     {
       path: '/',

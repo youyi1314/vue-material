@@ -20,6 +20,14 @@
     opacity: md-ripple-opacity(activated, $variantColor);
   }
 
+  &.md-selected:after {
+    opacity: md-ripple-opacity(selected, $variantColor);
+  }
+
+  &.md-activated:after {
+    opacity: md-ripple-opacity(activated, $variantColor);
+  }
+
   .md-ripple-wave {
     opacity: md-ripple-opacity(pressed, $variantColor);
   }
@@ -28,7 +36,8 @@
 @mixin md-ripple-state () {
   @include md-ripple-state-tones;
 
-  &:before {
+  &:before,
+  &:after {
     position: absolute;
     top: 0;
     right: 0;
