@@ -75,7 +75,7 @@
   .example > {
     div,
     p {
-      min-height: 48px;
+      min-height: 2.5em;
       display: flex;
       align-items: center;
     }
