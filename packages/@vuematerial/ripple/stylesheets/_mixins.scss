@@ -8,7 +8,7 @@
 
   &:active {
     &:before {
-      opacity: md-ripple-opacity(activated-dim, $variantColor);
+      opacity: md-ripple-opacity(activated, $variantColor);
     }
 
     &.md-ripple-disabled:before {
@@ -30,6 +30,16 @@
 
   .md-ripple-wave {
     opacity: md-ripple-opacity(pressed, $variantColor);
+
+    &.md-ripple-enter {
+      &.md-force-centered {
+        opacity: md-ripple-opacity(pressed, $variantColor);
+
+        &:before {
+          opacity: md-ripple-opacity(activated, $variantColor);
+        }
+      }
+    }
   }
 }
 
@@ -43,6 +53,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 2;
     background-color: currentColor;
     opacity: 0;
     transition: $md-motion-default;

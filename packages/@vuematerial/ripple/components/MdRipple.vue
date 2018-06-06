@@ -87,7 +87,7 @@
     getWaveSize () {
       const { offsetWidth, offsetHeight } = this.$el
 
-      return Math.round(offsetWidth + offsetHeight / 2)
+      return Math.round(Math.max(offsetWidth, offsetHeight) * 2.3)
     }
 
     getSquareSize (size) {

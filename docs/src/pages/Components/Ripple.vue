@@ -6,19 +6,17 @@
       <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
 
       <div class="example">
-        <MdContent>
-          <MdRipple :md-active.sync="trigger">Click here</MdRipple>
-        </MdContent>
+        <MdRipple md-tag="MdContent" :md-active.sync="trigger">
+          Click here
+        </MdRipple>
 
-        <MdContent class="md-primary">
-          <MdRipple>Click here</MdRipple>
-        </MdContent>
+        <MdRipple md-tag="MdContent" class="md-primary">
+          Click here
+        </MdRipple>
 
-        <MdAvatar>
-          <MdRipple>
-            <img src="/img/examples/avatar.jpg" alt="Avatar">
-          </MdRipple>
-        </MdAvatar>
+        <MdRipple md-tag="MdAvatar" class="md-large">
+          <img src="/img/examples/avatar.jpg" alt="Avatar">
+        </MdRipple>
       </div>
     </AppExample>
   </AppContainer>
@@ -39,24 +37,19 @@
 
 <style lang="scss" scoped>
   .example .md-content {
-    width: 150px;
-    height: 200px;
+    width: 233px;
+    height: 132px;
     margin-right: 24px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    border-radius: 6px;
     vertical-align: top;
-
-    .md-ripple {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   .md-avatar /deep/ .md-ripple-wave {
     background-color: #fff;
-    opacity: .5;
+    opacity: .3;
   }
 
   .md-button {
