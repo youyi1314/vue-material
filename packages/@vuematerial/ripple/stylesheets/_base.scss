@@ -32,25 +32,25 @@
 
 .md-ripple-enter-active,
 .md-ripple-leave-active {
-  transition-duration: .8s;
+  transition-duration: 1s;
   transition-property: opacity, transform;
   will-change: opacity, transform;
 
   &.md-centered {
     transition-duration: 1.2s;
   }
-
-  &.md-force-centered {
-    transition-duration: $md-motion-open-duration;
-  }
 }
 
 .md-ripple-enter-active {
   transition-timing-function: $md-motion-open-timing;
+
+  &.md-force-centered {
+    opacity: 0;
+  }
 }
 
 .md-ripple-leave-active {
-  transition-duration: .3s;
+  transition-duration: .35s;
   transition-timing-function: $md-motion-default-timing;
 
   &.md-force-centered {
@@ -60,10 +60,14 @@
 
 .md-ripple-enter {
   transform: scale(.54) translateZ(0);
-  opacity: .1;
 
   &.md-force-centered {
-    opacity: .1;
+    opacity: .16;
+    transform: scale(.3) translateZ(0);
+
+    &:before {
+      opacity: .06;
+    }
   }
 }
 
