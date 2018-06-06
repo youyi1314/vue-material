@@ -3,5 +3,9 @@
     @include md-theme-property(background-color, surface);
     @include md-theme-property(color, text-primary, surface);
     @include md-theme-override-property(border-radius, dialog-radius, dialog-radius);
+
+    .md-dialog-content {
+      @include md-theme-property(color, text-accent, surface);
+    }
   }
 }

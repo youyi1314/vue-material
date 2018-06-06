@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,600,800');
 
 @mixin md-crane-font-theme () {
   @include md-theme-component(true) {
@@ -7,6 +7,7 @@
 
   .md-button {
     @include md-theme-component() {
+      font-weight: 600;
       line-height: 32px;
     }
   }
