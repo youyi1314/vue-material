@@ -1,0 +1,3 @@
+@import './variables';
+
+@include md-add-default-theme-overrides($md-toolbar-default);

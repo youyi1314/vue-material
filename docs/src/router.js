@@ -76,6 +76,11 @@ export default new Router({
       name: 'components/ripple',
       component: importPage('Components/Ripple')
     },
+    {
+      path: '/components/toolbar',
+      name: 'components/toolbar',
+      component: importPage('Components/Toolbar')
+    },
 
     /* STYLE */
     {

@@ -2,12 +2,16 @@
   <Transition name="app-container" appear>
     <main :style="appContainerStyles" class="app-container" @scroll="onScroll">
       <div class="app-container-wrapper">
-        <header ref="header" :class="{ 'fixed md-elevation-4': isHeaderFixed }" class="app-container-header">
+        <MdToolbar
+          ref="header"
+          :md-elevation="isHeaderFixed ? 4 : 0"
+          :class="{ 'fixed': isHeaderFixed }"
+          class="app-container-header md-plain">
           <div class="app-container-wrapper">
             <h1 class="app-container-title">{{ $t(`${pageKey}.title`) }}</h1>
             <p class="app-container-description">{{ $t(`${pageKey}.description`) }}</p>
           </div>
-        </header>
+        </MdToolbar>
 
         <div class="app-container-content">
           <slot />
@@ -59,7 +63,7 @@
     }
 
     mounted () {
-      this.headerEl = this.$refs.header
+      this.headerEl = this.$refs.header.$el
       this.headerHeight = this.headerEl.offsetHeight
     }
   }

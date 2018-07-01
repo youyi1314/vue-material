@@ -23,6 +23,7 @@
           <RouterLink tag="MdRipple" to="/components/field">Field</RouterLink>
           <RouterLink tag="MdRipple" to="/components/icon">Icon</RouterLink>
           <RouterLink tag="MdRipple" to="/components/ripple">Ripple</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/toolbar">Toolbar</RouterLink>
         </div>
 
         <RouterLink tag="MdRipple" to="/about">About</RouterLink>

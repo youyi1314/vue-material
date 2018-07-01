@@ -7,7 +7,7 @@ export default () => {
   PortalTarget.name = 'MdPortalRender'
   PortalTarget.abstract = true
 
-  if (!document.querySelector('.md-portal')) {
+  if (!document.querySelector('.md-portal') || !document.querySelector('.vue-portal-target')) {
     const portalOutlet = document.createElement('div')
 
     portalInstance = new Vue({
