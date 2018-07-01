@@ -27,6 +27,12 @@ export default {
     installation: 'Installation',
     npmOrYarn: 'NPM or Yarn'
   },
+  configuration: {
+    title: 'Configuration',
+    viaVueGlobalObject: 'Via Vue global object',
+    inVueComponents: 'In Vue components',
+    options: 'Options'
+  },
   themes: {
     title: 'Themes'
   },
@@ -47,10 +53,10 @@ export default {
     nav: 'Advanced'
   },
   components: {
-    title: 'Components',
+    title: 'Components'
   },
   uiElements: {
-    title: 'UI Elements',
+    title: 'UI Elements'
   },
   elevation: {
     title: 'Elevation',
@@ -163,7 +169,7 @@ export default {
     description: 'A list that doesn’t contain any items, or a search that doesn’t display any results, are examples of empty states.'
   },
   pickers: {
-    title: 'Pickers',
+    title: 'Pickers'
   },
   progress: {
     title: 'Progress',

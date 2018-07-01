@@ -2,6 +2,7 @@
   import MdInteractionEvents from 'core/utils/MdInteractionEvents'
   import MdRouterLinkProps from 'core/utils/MdRouterLinkProps'
   import MdListItemDefault from './MdListItemDefault'
+  import MdListItemFakeButton from './MdListItemFakeButton'
   import MdListItemButton from './MdListItemButton'
   import MdListItemLink from './MdListItemLink'
   import MdListItemRouter from './MdListItemRouter'
@@ -22,6 +23,10 @@
     }
   }
 
+  function hasChildrenButtons (childrens) {
+    return childrens.default.some(children => children.componentOptions && children.componentOptions.tag === 'md-button')
+  }
+
   function shouldRenderButtonWithListener (listeners) {
     let listenerNames = Object.keys(listeners)
     let shouldRender = false
@@ -35,11 +40,11 @@
     return shouldRender
   }
 
-  function isRouterLink(parent, props) {
+  function isRouterLink (parent, props) {
     return parent && parent.$router && props.to
   }
 
-  function createListComponent (props, parent, listeners) {
+  function createListComponent (props, parent, listeners, children) {
     if (hasExpansion(props)) {
       return MdListItemExpand
     }
@@ -62,6 +67,9 @@
     }
 
     if (shouldRenderButtonWithListener(listeners)) {
+      if (hasChildrenButtons(children)) {
+        return MdListItemFakeButton
+      }
       return MdListItemButton
     }
 
@@ -76,7 +84,7 @@
     },
     render (createElement, { parent, props, listeners, data, slots }) {
       let children = slots()
-      let listComponent = createListComponent(props, parent, listeners)
+      let listComponent = createListComponent(props, parent, listeners, children)
       let staticClass = 'md-list-item'
 
       if (data.staticClass) {
@@ -92,7 +100,7 @@
           props,
           scopedSlots: resolveScopedSlot(props, children),
           staticClass: 'md-list-item-container md-button-clean',
-          on: listeners,
+          on: listeners
         }, children.default)
       ])
     }
