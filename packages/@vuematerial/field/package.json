@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vuematerial/core": "^2.0.0",
+    "@vuematerial/elevation": "^2.0.0",
     "@vuematerial/motion": "^2.0.0"
   }
 }

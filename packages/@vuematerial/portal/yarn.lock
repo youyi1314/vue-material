@@ -15,7 +15,3 @@ raf@^3.4.0:
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
   dependencies:
     performance-now "^2.1.0"
-
-vue-dom-portal@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/vue-dom-portal/-/vue-dom-portal-0.1.6.tgz#844291456773e8ae1174313614f254a93f75ed75"
