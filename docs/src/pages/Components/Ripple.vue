@@ -6,7 +6,7 @@
       <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
 
       <div class="example">
-        <MdRipple md-tag="MdContent" :md-active.sync="trigger">
+        <MdRipple md-tag="MdContent" md-centered :md-active.sync="trigger">
           Click here
         </MdRipple>
 
@@ -37,14 +37,20 @@
 
 <style lang="scss" scoped>
   .example .md-content {
-    width: 233px;
-    height: 132px;
+    width: 250px;
+    height: 130px;
     margin-right: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     vertical-align: top;
+
+    &:first-child {
+      width: 130px;
+      height: 130px;
+      border-radius: 100%;
+    }
   }
 
   .md-avatar /deep/ .md-ripple-wave {

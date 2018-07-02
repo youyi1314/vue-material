@@ -12,12 +12,10 @@
     @touchend.passive="onTouchEnd"
   >
     <MdRippleWave
-      v-for="({ style, classes, triggered }, id) in waves"
+      v-for="({ style, classes }, id) in waves"
       :key="id"
       :style="style"
       :class="classes"
-      :id="triggered ? id : ''"
-      @md-ripple-end="clearTriggeredWave"
     />
 
     <slot />
@@ -81,6 +79,7 @@
       if (active) {
         this.createWave({}, true)
         this.$emit('update:mdActive', false)
+        this.$nextTick(() => this.onMouseUp())
       }
     }
 
@@ -142,8 +141,7 @@
       this.lastWave = waveId
       this.$set(this.waves, waveId, {
         style: this.getWaveStyle(event, forceCentered),
-        classes: forceCentered && 'md-force-centered',
-        triggered: forceCentered
+        classes: forceCentered && 'md-force-centered'
       })
 
       return waveId

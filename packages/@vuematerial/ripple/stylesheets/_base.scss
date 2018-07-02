@@ -13,6 +13,14 @@
     position: relative;
     z-index: 3;
   }
+
+  &.md-centered,
+  &.md-force-centered {
+    .md-ripple-wave {
+      top: 50%;
+      left: 50%;
+    }
+  }
 }
 
 .md-ripple-wave {
@@ -25,23 +33,6 @@
   transition: 1s opacity $md-motion-open-timing,
               .7s transform $md-motion-open-timing;
   will-change: opacity, transform;
-
-  &.md-centered,
-  &.md-force-centered {
-    top: 50%;
-    left: 50%;
-  }
-}
-
-.md-ripple-enter-active,
-.md-ripple-leave-active {
-  &.md-centered {
-    transition-duration: 1.2s;
-  }
-
-  &.md-force-centered {
-    transition: $md-motion-open-slow;
-  }
 }
 
 .md-ripple-enter {
@@ -52,8 +43,4 @@
   opacity: 0 !important;
   transition-duration: .45s;
   transition-timing-function: $md-motion-default-timing;
-
-  &.md-force-centered {
-    transition: $md-motion-simple;
-  }
 }

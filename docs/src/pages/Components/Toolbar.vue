@@ -5,12 +5,20 @@
         <h3 class="md-title">Default</h3>
       </MdToolbar>
 
-      <MdToolbar class="md-transparent">
-        <h3 class="md-title">Transparent</h3>
+      <MdToolbar :md-elevation="0">
+        <h3 class="md-title">Flat</h3>
       </MdToolbar>
 
       <MdToolbar class="md-accent">
         <h3 class="md-title">Accent</h3>
+      </MdToolbar>
+
+      <MdToolbar class="md-plain">
+        <h3 class="md-title">Plain</h3>
+      </MdToolbar>
+
+      <MdToolbar class="md-transparent">
+        <h3 class="md-title">Transparent</h3>
       </MdToolbar>
     </AppExample>
 
