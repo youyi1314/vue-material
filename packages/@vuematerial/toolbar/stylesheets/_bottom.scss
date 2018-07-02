@@ -1,0 +1,50 @@
+.md-toolbar {
+  &.md-inset {
+    background: none !important;
+
+
+    .md-cut-out {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      &:after {
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translate(50%, -50%);
+        border-radius: 50%;
+        content: " ";
+      }
+
+      ~ * {
+        z-index: 2;
+      }
+    }
+  }
+
+  &.md-fab-end {
+    .md-fab,
+    .md-cut-out:after {
+      right: 16px;
+      transform: translate(0, -50%);
+    }
+
+    .md-cut-out:after {
+      right: 8px;
+    }
+  }
+
+  .md-fab {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}

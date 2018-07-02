@@ -1,0 +1,27 @@
+.md-toolbar.md-inset {
+  @include md-theme-component() {
+    background: none;
+
+    .md-cut-out:after {
+      @include md-theme-box-shadow(0 0 0 9999em, primary);
+    }
+
+    &.md-plain {
+      .md-cut-out:after {
+        @include md-theme-box-shadow(0 0 0 9999em, background);
+      }
+    }
+
+    &.md-accent {
+      .md-cut-out:after {
+        @include md-theme-box-shadow(0 0 0 9999em, accent);
+      }
+    }
+
+    &.md-transparent {
+      .md-cut-out:after {
+        @include md-theme-box-shadow(0 0 0 9999em, background);
+      }
+    }
+  }
+}

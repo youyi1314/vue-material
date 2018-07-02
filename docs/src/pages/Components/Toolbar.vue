@@ -76,6 +76,92 @@
         </div>
       </MdToolbar>
     </AppExample>
+
+    <AppExample class="bottom-toolbar">
+      <MdToolbar md-inset>
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-fab">
+          <MdIcon>add</MdIcon>
+        </MdButton>
+      </MdToolbar>
+
+      <MdToolbar class="md-accent md-fab-end" md-inset>
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-fab md-primary">
+          <MdIcon>add</MdIcon>
+        </MdButton>
+      </MdToolbar>
+
+      <MdToolbar class="md-plain">
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-fab md-primary">
+          <MdIcon>add</MdIcon>
+        </MdButton>
+      </MdToolbar>
+
+      <MdToolbar class="md-fab-end">
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-fab md-accent">
+          <MdIcon>add</MdIcon>
+        </MdButton>
+      </MdToolbar>
+    </AppExample>
   </AppContainer>
 </template>
 
@@ -89,5 +175,9 @@
 <style lang="scss" scoped>
   .md-toolbar + .md-toolbar {
     margin-top: 16px;
+  }
+
+  .bottom-toolbar .md-toolbar {
+    margin-top: 48px;
   }
 </style>

@@ -218,6 +218,43 @@
 
 
 /**
+ * Theme a box-shadow property
+ * ---
+ * Usage example:
+ *
+ * .md-component {
+ *   height: 56px;
+ *
+ *   @include md-theme-component() {
+ *     @include md-theme-box-shadow(0 0 0 9999em, background);
+ *   }
+ * }
+ *
+ * ---
+ * @access public
+ * @param {string} $value —  box-shadow value
+ * @param {string} $type —  A palette type
+ * @param {string} $background —  The background color to analyse contrast
+ */
+
+@mixin md-theme-box-shadow ($value, $type, $background: "") {
+  $property: box-shadow;
+  $color: md-theme($type, $background);
+  $variant: null;
+
+  @if $background != "" {
+    $variant: -on-#{$background};
+  }
+
+  #{$property}: $value $color;
+
+  @if $md-css-variables == true {
+    #{$property}: $value var(--md-theme-#{$md-current-theme}-#{$type}#{$variant}, $color);
+  }
+}
+
+
+/**
  * Override a property based in the current theme
  * ---
  * Usage example:

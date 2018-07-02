@@ -35,7 +35,7 @@
     &.md-plain {
       @include md-theme-property(background-color, background);
       @include md-theme-property(color, text-primary, background);
-      @include md-toolbar-icon(text-primary, background);
+      @include md-toolbar-icon(text-primary, accent);
       @include md-toolbar-button(text-primary, background);
       @include md-toolbar-title(text-primary, background);
     }
