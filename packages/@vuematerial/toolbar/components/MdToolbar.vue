@@ -21,8 +21,9 @@
     mdInset
 
     cutOutStyles = {}
-    toolbarObserver = null
-    fabObserver = null
+    toolbarMutationObserver = null
+    fabMutationObserver = null
+    fabResizeObserver = null
 
     get classes () {
       let baseClass = `md-elevation-${this.mdElevation}`
@@ -38,7 +39,8 @@
       if (this.fabEl) {
         return {
           width: this.fabEl.offsetWidth + 16 + 'px',
-          height: this.fabEl.offsetHeight + 16 + 'px'
+          height: this.fabEl.offsetHeight + 16 + 'px',
+          borderRadius: this.fabEl.offsetHeight + 16 + 'px'
         }
       }
 
@@ -53,7 +55,7 @@
     }
 
     setFabEl () {
-      this.fabEl = this.$el.querySelector('.md-fab')
+      this.fabEl = this.$el.querySelector('.md-fab, .md-extended-fab')
     }
 
     setFabStylesAfterMutation () {
@@ -66,7 +68,16 @@
       this.setFabEl()
 
       if (this.fabEl) {
-        this.fabObserver = MdObserveElement(this.fabEl, { attributes: true }, this.setFabStylesAfterMutation)
+        this.fabMutationObserver = MdObserveElement(this.fabEl, {
+          attributes: true,
+          childList: true,
+          characterData: true,
+          subtree: true
+        }, this.setFabStylesAfterMutation)
+
+        if ('ResizeObserver' in window) {
+          this.fabResizeObserver = new ResizeObserver(this.setFabStylesAfterMutation)
+        }
       } else {
         this.destroyFabObserver()
       }
@@ -75,18 +86,22 @@
     }
 
     setupFabObserver () {
-      this.toolbarObserver = MdObserveElement(this.$el, { childList: true }, this.onToolbarMutation)
+      this.toolbarMutationObserver = MdObserveElement(this.$el, { childList: true }, this.onToolbarMutation)
     }
 
     destroyToolbarObserver () {
-      if (this.toolbarObserver) {
-        this.toolbarObserver.disconnect()
+      if (this.toolbarMutationObserver) {
+        this.toolbarMutationObserver.disconnect()
       }
     }
 
     destroyFabObserver () {
-      if (this.fabObserver) {
-        this.fabObserver.disconnect()
+      if (this.fabMutationObserver) {
+        this.fabMutationObserver.disconnect()
+      }
+
+      if (this.fabResizeObserver) {
+        this.fabResizeObserver.disconnect()
       }
     }
 

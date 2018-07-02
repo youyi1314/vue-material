@@ -78,6 +78,73 @@
     </AppExample>
 
     <AppExample class="bottom-toolbar">
+      <MdToolbar class="md-plain">
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-extended-fab md-primary">
+          <MdIcon>add</MdIcon>
+          Add a new Task
+        </MdButton>
+      </MdToolbar>
+
+      <MdToolbar class="md-fab-end">
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>add</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-extended-fab md-plain">
+          <MdIcon>check</MdIcon>
+          See all results
+        </MdButton>
+      </MdToolbar>
+
+      <MdToolbar md-inset class="md-accent">
+        <div class="md-toolbar-section-start">
+          <MdButton class="md-icon-button">
+            <MdIcon>menu</MdIcon>
+          </MdButton>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <MdButton class="md-icon-button">
+            <MdIcon>refresh</MdIcon>
+          </MdButton>
+
+          <MdButton class="md-icon-button">
+            <MdIcon>more_vert</MdIcon>
+          </MdButton>
+        </div>
+
+        <MdButton class="md-extended-fab md-primary">
+          <MdIcon>refresh</MdIcon>
+          Load new products
+        </MdButton>
+      </MdToolbar>
+
       <MdToolbar md-inset>
         <div class="md-toolbar-section-start">
           <MdButton class="md-icon-button">

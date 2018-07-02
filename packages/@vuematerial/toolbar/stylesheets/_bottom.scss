@@ -28,12 +28,21 @@
   }
 
   &.md-fab-end {
-    .md-fab {
+    .md-fab,
+    .md-extended-fab {
       right: 16px;
       transform: translate(0, -50%);
     }
 
+    .md-extended-fab {
+      right: 8px;
+    }
+
     &.md-inset {
+      .md-extended-fab {
+        right: 16px;
+      }
+
       .md-cut-out-mask {
         right: 8px;
         transform: translate(0, -50%);
@@ -41,7 +50,8 @@
     }
   }
 
-  .md-fab {
+  .md-fab,
+  .md-extended-fab {
     position: absolute;
     top: 0;
     right: 50%;

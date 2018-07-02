@@ -5,6 +5,27 @@
       @include md-theme-override-property(min-width, button-fab-size, button-fab-size);
       @include md-theme-override-property(height, button-fab-size, button-fab-size);
       @include md-theme-override-property(border-radius, button-fab-radius, button-fab-radius);
+
+      &.md-mini,
+      &.md-dense {
+        @include md-theme-override-property(width, button-fab-size-mini, button-fab-size-mini);
+        @include md-theme-override-property(min-width, button-fab-size-mini, button-fab-size-mini);
+        @include md-theme-override-property(height, button-fab-size-mini, button-fab-size-mini);
+      }
+    }
+
+    &.md-extended-fab {
+      @include md-theme-override-property(height, button-extended-fab-size, button-extended-fab-size);
+      @include md-theme-override-property(border-radius, button-extended-fab-radius, button-extended-fab-radius);
+
+      &.md-mini,
+      &.md-dense {
+        @include md-theme-override-property(height, button-extended-fab-size-mini, button-extended-fab-size-mini);
+      }
+    }
+
+    &.md-fab,
+    &.md-extended-fab {
       @include md-theme-property(background-color, accent);
       @include md-theme-property(color, text-primary, accent);
       @include md-icon-on-buttons(text-primary, accent);
@@ -13,13 +34,6 @@
         @include md-theme-property(background-color, primary);
         @include md-icon-on-buttons(text-primary, primary);
         @include md-theme-property(color, text-primary, primary);
-      }
-
-      &.md-mini,
-      &.md-dense {
-        @include md-theme-override-property(width, button-fab-size-mini, button-fab-size-mini);
-        @include md-theme-override-property(min-width, button-fab-size-mini, button-fab-size-mini);
-        @include md-theme-override-property(height, button-fab-size-mini, button-fab-size-mini);
       }
 
       &.md-plain {

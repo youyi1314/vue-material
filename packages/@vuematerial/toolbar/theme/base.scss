@@ -9,7 +9,7 @@
 }
 
 @mixin md-toolbar-button($primary, $secondary) {
-  .md-button:not([disabled]) {
+  .md-button:not([disabled]):not(.md-fab):not(.md-extended-fab) {
     &:not(.md-raised) {
       @include md-theme-property(color, $primary, $secondary);
     }

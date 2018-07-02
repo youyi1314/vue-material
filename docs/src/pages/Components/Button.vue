@@ -62,6 +62,33 @@
     </AppExample>
 
     <AppExample>
+      <MdButton class="md-extended-fab">
+        <MdIcon>add</MdIcon>
+        Create
+      </MdButton>
+
+      <MdButton class="md-extended-fab md-primary">
+        <MdIcon>edit</MdIcon>
+        Edit
+      </MdButton>
+
+      <MdButton class="md-extended-fab md-plain">
+        <MdIcon>shopping_cart</MdIcon>
+        Add to cart
+      </MdButton>
+
+      <MdButton class="md-extended-fab md-mini">
+        <MdIcon>print</MdIcon>
+        Print
+      </MdButton>
+
+      <MdButton class="md-extended-fab" disabled>
+        <MdIcon>thumb_down</MdIcon>
+        Dislike
+      </MdButton>
+    </AppExample>
+
+    <AppExample>
       <MdButton href="/components/button">Default</MdButton>
       <MdButton to="/components/button" class="md-primary">Primary</MdButton>
       <MdButton class="md-accent">Accent</MdButton>
@@ -79,5 +106,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .md-fab + .md-fab,
+  .md-extended-fab + .md-extended-fab {
+    margin-left: 8px;
+  }
 </style>
