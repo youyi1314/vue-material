@@ -1,8 +1,7 @@
+@import "~@vuematerial/motion/variables";
+
 .md-toolbar {
   &.md-inset {
-    background: none !important;
-
-
     .md-cut-out {
       overflow: hidden;
       position: absolute;
@@ -12,15 +11,14 @@
       left: 0;
       z-index: 1;
 
-      &:after {
-        width: 72px;
-        height: 72px;
+      .md-cut-out-mask {
         position: absolute;
         top: 0;
         right: 50%;
         transform: translate(50%, -50%);
+        transform-origin: 100% 0;
         border-radius: 50%;
-        content: " ";
+        transition: $md-motion-default;
       }
 
       ~ * {
@@ -30,14 +28,16 @@
   }
 
   &.md-fab-end {
-    .md-fab,
-    .md-cut-out:after {
+    .md-fab {
       right: 16px;
       transform: translate(0, -50%);
     }
 
-    .md-cut-out:after {
-      right: 8px;
+    &.md-inset {
+      .md-cut-out-mask {
+        right: 8px;
+        transform: translate(0, -50%);
+      }
     }
   }
 
