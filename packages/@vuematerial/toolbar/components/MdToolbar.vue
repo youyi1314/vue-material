@@ -56,9 +56,9 @@
     getCutOutStyles () {
       if (this.fabEl) {
         return {
-          width: this.fabEl.offsetWidth + 16 + 'px',
-          height: this.fabEl.offsetHeight + 16 + 'px',
-          borderRadius: this.fabEl.offsetHeight + 16 + 'px'
+          width: this.fabEl.clientWidth + 16 + 'px',
+          height: this.fabEl.clientHeight + 16 + 'px',
+          borderRadius: this.fabEl.clientHeight + 16 + 'px'
         }
       }
 
@@ -76,12 +76,6 @@
       this.fabEl = this.$el.querySelector('.md-fab, .md-extended-fab')
     }
 
-    setFabStylesAfterMutation () {
-      const transitionDuration = parseFloat(getComputedStyle(this.fabEl).transitionDuration) * 1000
-
-      setTimeout(this.setFabStyles, transitionDuration)
-    }
-
     onToolbarMutation () {
       this.setFabEl()
 
@@ -91,10 +85,10 @@
           childList: true,
           characterData: true,
           subtree: true
-        }, this.setFabStylesAfterMutation)
+        }, this.setFabStyles)
 
         if ('ResizeObserver' in window) {
-          this.fabResizeObserver = new ResizeObserver(this.setFabStylesAfterMutation)
+          this.fabResizeObserver = new ResizeObserver(this.setFabStyles)
         }
       } else {
         this.destroyFabObserver()
