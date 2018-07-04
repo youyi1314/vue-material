@@ -47,6 +47,11 @@ export default new Router({
       component: importPage('Components/Button')
     },
     {
+      path: '/components/card',
+      name: 'components/card',
+      component: importPage('Components/Card')
+    },
+    {
       path: '/components/content',
       name: 'components/content',
       component: importPage('Components/Content')

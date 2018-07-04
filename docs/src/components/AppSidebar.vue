@@ -18,6 +18,7 @@
           <RouterLink tag="MdRipple" to="/components/avatar">Avatar</RouterLink>
           <RouterLink tag="MdRipple" to="/components/button">Button</RouterLink>
           <RouterLink tag="MdRipple" to="/components/content">Content</RouterLink>
+          <RouterLink tag="MdRipple" to="/components/card">Card</RouterLink>
           <RouterLink tag="MdRipple" to="/components/dialog">Dialog</RouterLink>
           <RouterLink tag="MdRipple" to="/components/divider">Divider</RouterLink>
           <RouterLink tag="MdRipple" to="/components/field">Field</RouterLink>

@@ -1,5 +1,6 @@
 import MdAvatar from '@vuematerial/avatar'
 import MdButton from '@vuematerial/button'
+import MdCard from '@vuematerial/card'
 import MdContent from '@vuematerial/content'
 import MdDialog from '@vuematerial/dialog'
 import MdDivider from '@vuematerial/divider'
@@ -11,6 +12,7 @@ import MdToolbar from '@vuematerial/toolbar'
 export default Vue => {
   Vue.use(MdAvatar)
   Vue.use(MdButton)
+  Vue.use(MdCard)
   Vue.use(MdContent)
   Vue.use(MdDialog)
   Vue.use(MdDivider)

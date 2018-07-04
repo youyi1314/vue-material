@@ -1,0 +1,12 @@
+@import "~@vuematerial/motion/variables";
+@import "~@vuematerial/elevation/mixins";
+
+.md-card {
+  @include md-elevation(2);
+  position: relative;
+  z-index: 1;
+  transition: $md-motion-default;
+  transition-property: color, background-color;
+  will-change: color, background-color;
+
+}
