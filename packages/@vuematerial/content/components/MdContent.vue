@@ -1,25 +1,30 @@
 <template>
   <MdTagSwitcher
-    class="md-content"
     :md-tag="mdTag"
-    v-on="$listeners"
     v-bind="$attrs"
+    class="md-content"
+    v-on="$listeners"
   >
     <slot/>
   </MdTagSwitcher>
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
 
+  const props = {
+    mdTag: {
+      type: String,
+      default: 'div'
+    }
+  }
+
   @Component({
+    props,
     components: {
       MdTagSwitcher
     }
   })
-  export default class MdContent extends Vue {
-    @Prop({ type: String, default: 'div' })
-    mdTag
-  }
+  export default class MdContent extends Vue {}
 </script>

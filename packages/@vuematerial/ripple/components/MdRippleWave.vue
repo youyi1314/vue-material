@@ -8,7 +8,5 @@
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class MdRipple extends Vue {
-
-  }
+  export default class MdRipple extends Vue {}
 </script>

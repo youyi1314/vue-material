@@ -1,13 +1,18 @@
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
+
+  const props = {
+    mdTag: {
+      type: String,
+      default: 'div'
+    }
+  }
 
   @Component({
+    props,
     functional: true
   })
   export default class MdTagSwitcher extends Vue {
-    @Prop(String, { default: 'div' })
-    mdTag
-
     render (createElement, { props, data, listeners, children }) {
       return createElement(props.mdTag, {
         ...data,

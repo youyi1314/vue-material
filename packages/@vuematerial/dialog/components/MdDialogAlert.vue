@@ -1,7 +1,7 @@
 <template>
-  <MdDialog v-bind="$attrs" v-on="$listeners" :md-fullscreen="false">
+  <MdDialog v-bind="$attrs" :md-fullscreen="false" v-on="$listeners">
     <MdDialogTitle v-if="mdTitle">{{ mdTitle }}</MdDialogTitle>
-    <MdDialogContent v-html="mdContent" v-if="mdContent" />
+    <MdDialogContent v-if="mdContent" v-html="mdContent" />
     <MdDialogContent v-else>
       <slot />
     </MdDialogContent>
@@ -13,17 +13,25 @@
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-  @Component
-  export default class MdDialogAlert extends Vue {
-    @Prop(String)
-    mdTitle
-
-    @Prop(String)
-    mdContent
-
-    @Prop({ type: String, default: 'Ok' })
-    mdConfirmText
+  const props = {
+    mdTitle: {
+      type: String,
+      default: ''
+    },
+    mdContent: {
+      type: String,
+      default: ''
+    },
+    mdConfirmText: {
+      type: String,
+      default: 'Ok'
+    }
   }
+
+  @Component({
+    props
+  })
+  export default class MdDialogAlert extends Vue {}
 </script>

@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "checkJs": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
       "@/*": ["./docs/src/*"]
-    },
-    "target": "esnext"
+    }
   },
   "exclude": [
     "node_modules"

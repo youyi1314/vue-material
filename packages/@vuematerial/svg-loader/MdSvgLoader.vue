@@ -3,21 +3,31 @@
 </template>
 
 <script>
-  import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
+  import { Component, Vue, Watch } from 'vue-property-decorator'
 
-  let mdSVGStore = {}
+  const mdSVGStore = {}
+  const props = {
+    mdSrc: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 
-  @Component
+  @Component({
+    props
+  })
   export default class MdSvgLoader extends Vue {
-    @Prop({ type: String, default: '', required: true })
-    mdSrc
-
     html = null
     error = null
 
     @Watch('mdSrc')
     onMdSrc () {
       this.html = null
+      this.loadSVG()
+    }
+
+    mounted () {
       this.loadSVG()
     }
 
@@ -71,10 +81,6 @@
       } else {
         this.setHtml()
       }
-    }
-
-    mounted () {
-      this.loadSVG()
     }
   }
 </script>

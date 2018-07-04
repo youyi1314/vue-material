@@ -1,11 +1,11 @@
 <template>
   <MdRipple
-    class="md-button"
-    v-on="$listeners"
     :class="buttonClasses"
     :md-attrs="attributes"
     :md-tag="buttonTag"
     :md-disabled="disabled || !mdRipple"
+    class="md-button"
+    v-on="$listeners"
   >
     <span class="md-button-content">
       <slot />
@@ -14,13 +14,37 @@
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdRouterLinkProps from '@vuematerial/core/MdRouterLinkProps'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
   import MdButtonContent from './MdButtonContent'
-    // import MdFocused from 'core/mixins/MdFocused/MdFocused'
+  // import MdFocused from 'core/mixins/MdFocused/MdFocused'
+
+  const props = {
+    href: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'button'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    to: {
+      type: [String, Object],
+      default: ''
+    },
+    mdRipple: {
+      type: Boolean,
+      default: true
+    }
+  }
 
   @Component({
+    props,
     components: {
       MdButtonContent,
       MdTagSwitcher
@@ -28,21 +52,6 @@
   })
 
   export default class MdButton extends Vue {
-    @Prop(String)
-    href
-
-    @Prop({ type: String, default: 'button' })
-    type
-
-    @Prop(Boolean)
-    disabled
-
-    @Prop([String, Object])
-    to
-
-    @Prop({ type: Boolean, default: true })
-    mdRipple
-
     mdHasFocus = false
     rippleActive = false
     isFlat = false
@@ -112,22 +121,6 @@
       }
     }
 
-    isRouterLink () {
-      return this.$router && this.to
-    }
-
-    isButtonFlat () {
-      const containClass = (cssClass) => this.$el.classList.contains(cssClass)
-
-      return !containClass('md-fab') && !containClass('md-contained') && !containClass('md-raised')
-    }
-
-    setIsFlat () {
-      window.setTimeout(() => {
-        this.isFlat = this.isButtonFlat()
-      }, 15)
-    }
-
     beforeCreate () {
       const newProps = MdRouterLinkProps(this, this.$options.props)
 
@@ -142,6 +135,22 @@
 
     updated () {
       this.setIsFlat()
+    }
+
+    isRouterLink () {
+      return this.$router && this.to
+    }
+
+    isButtonFlat () {
+      const containClass = (cssClass) => this.$el.classList.contains(cssClass)
+
+      return !containClass('md-fab') && !containClass('md-contained') && !containClass('md-raised')
+    }
+
+    setIsFlat () {
+      window.setTimeout(() => {
+        this.isFlat = this.isButtonFlat()
+      }, 15)
     }
   }
 </script>

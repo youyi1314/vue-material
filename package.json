@@ -23,7 +23,7 @@
     "clean": "lerna clean; rm -rf node_modules yarn.lock;",
     "dev": "cd docs; yarn dev",
     "docs-test": "cd docs; yarn test",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint {docs,packages}/**/*.{js,vue}"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.3",

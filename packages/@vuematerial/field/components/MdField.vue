@@ -7,8 +7,12 @@
 <script>
   import { Component, Vue } from 'vue-property-decorator'
 
-  @Component
-  export default class MdField extends Vue {
+  const props = {
 
   }
+
+  @Component({
+    props
+  })
+  export default class MdField extends Vue {}
 </script>

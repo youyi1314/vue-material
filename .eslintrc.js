@@ -6,7 +6,7 @@ module.exports = {
   env: {
     'jest/globals': true
   },
-  extends: ['plugin:vue/strongly-recommended', '@vue/standard'],
+  extends: ['plugin:vue/recommended', '@vue/standard'],
   plugins: [
     'jest'
   ],

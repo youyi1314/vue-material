@@ -1,26 +1,31 @@
 <template>
   <MdSvgLoader
-    class="md-icon md-icon-image"
-    :md-src="mdSrc"
     v-if="mdSrc"
+    :md-src="mdSrc"
+    class="md-icon md-icon-image"
     @md-loaded="$emit('md-loaded')"
   />
-  <i class="md-icon md-icon-font" v-else>
+  <i v-else class="md-icon md-icon-font">
     <slot />
   </i>
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdSvgLoader from '@vuematerial/svg-loader/MdSvgLoader'
 
+  const props = {
+    mdSrc: {
+      type: String,
+      default: ''
+    }
+  }
+
   @Component({
+    props,
     components: {
       MdSvgLoader
     }
   })
-  export default class MdIcon extends Vue {
-    @Prop({ type: String, default: '' })
-    mdSrc
-  }
+  export default class MdIcon extends Vue {}
 </script>

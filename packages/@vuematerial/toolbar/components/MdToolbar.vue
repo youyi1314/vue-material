@@ -1,7 +1,7 @@
 <template>
-  <div class="md-toolbar" :class="classes">
-    <span class="md-cut-out" v-if="mdInset">
-      <span class="md-cut-out-mask" :style="cutOutStyles" />
+  <div :class="classes" class="md-toolbar">
+    <span v-if="mdInset" class="md-cut-out">
+      <span :style="cutOutStyles" class="md-cut-out-mask" />
     </span>
 
     <slot />
@@ -9,17 +9,24 @@
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdObserveElement from '@vuematerial/core/MdObserveElement'
 
-  @Component
+  const props = {
+    mdElevation: {
+      type: [String, Number],
+      default: 4
+    },
+    mdInset: {
+      type: Boolean,
+      default: false
+    }
+  }
+
+  @Component({
+    props
+  })
   export default class MdToolbar extends Vue {
-    @Prop({ type: [String, Number], default: 4 })
-    mdElevation
-
-    @Prop({ type: Boolean, default: false })
-    mdInset
-
     cutOutStyles = {}
     toolbarMutationObserver = null
     fabMutationObserver = null
@@ -33,6 +40,17 @@
       }
 
       return baseClass
+    }
+
+    mounted () {
+      this.setFabEl()
+      this.setupFabObserver()
+      this.setFabStyles()
+    }
+
+    beforeDestroy () {
+      this.destroyToolbarObserver()
+      this.destroyFabObserver()
     }
 
     getCutOutStyles () {
@@ -103,17 +121,6 @@
       if (this.fabResizeObserver) {
         this.fabResizeObserver.disconnect()
       }
-    }
-
-    mounted () {
-      this.setFabEl()
-      this.setupFabObserver()
-      this.setFabStyles()
-    }
-
-    beforeDestroy () {
-      this.destroyToolbarObserver()
-      this.destroyFabObserver()
     }
   }
 </script>

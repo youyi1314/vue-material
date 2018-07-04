@@ -2,37 +2,45 @@
   <MdPortal :md-disabled="mdNoPortal">
     <transition name="md-overlay">
       <div
-        class="md-overlay"
-        :class="{ 'md-fixed': mdFixed }"
-        v-on="$listeners"
         v-if="mdActive"
+        :class="{ 'md-fixed': mdFixed }"
+        class="md-overlay"
+        v-on="$listeners"
       />
     </transition>
   </MdPortal>
 </template>
 
 <script>
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
   import MdPortal from '@vuematerial/portal/MdPortal'
 
+  const props = {
+    mdActive: {
+      type: Boolean,
+      default: false
+    },
+    mdAttachToParent: {
+      type: Boolean,
+      default: false
+    },
+    mdFixed: {
+      type: Boolean,
+      default: false
+    },
+    mdNoPortal: {
+      type: Boolean,
+      default: false
+    }
+  }
+
   @Component({
+    props,
     components: {
       MdPortal
     }
   })
-  export default class MdOverlay extends Vue {
-    @Prop(Boolean)
-    mdActive
-
-    @Prop(Boolean)
-    mdAttachToParent
-
-    @Prop(Boolean)
-    mdFixed
-
-    @Prop(Boolean)
-    mdNoPortal
-  }
+  export default class MdOverlay extends Vue {}
 </script>
 
 <style lang="scss">

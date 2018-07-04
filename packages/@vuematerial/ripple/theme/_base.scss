@@ -10,7 +10,7 @@
       @include md-ripple-state-tones(md-theme(primary, text-primary));
 
       &.md-activated {
-        @include md-theme-property(color, text-primary, primary);
+        @include md-theme-property(color, text-primary);
       }
     }
 
@@ -18,7 +18,7 @@
       @include md-ripple-state-tones(md-theme(accent, text-primary));
 
       &.md-activated {
-        @include md-theme-property(color, text-primary, accent);
+        @include md-theme-property(color, text-primary);
       }
     }
 
