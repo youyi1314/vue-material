@@ -1,9 +1,26 @@
 <template>
   <AppContainer page="Card">
     <AppExample>
-      <MdCard />
-      <MdCard class="md-primary" />
-      <MdCard class="md-accent" />
+      <MdCard>
+        <MdCardContent />
+        <MdCardActions>
+          <MdButton>Buy</MdButton>
+        </MdCardActions>
+      </MdCard>
+
+      <MdCard class="md-primary">
+        <MdCardContent />
+        <MdCardActions>
+          <MdButton>Buy</MdButton>
+        </MdCardActions>
+      </MdCard>
+
+      <MdCard class="md-accent">
+        <MdCardContent />
+        <MdCardActions>
+          <MdButton>Buy</MdButton>
+        </MdCardActions>
+      </MdCard>
     </AppExample>
   </AppContainer>
 </template>
@@ -19,8 +36,6 @@
 
 <style lang="scss" scoped>
   .md-card {
-    min-height: 100px;
-
     + .md-card {
       margin-top: 24px;
     }

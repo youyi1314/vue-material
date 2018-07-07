@@ -1,12 +1,12 @@
 <template>
-  <MdTagSwitcher :md-tag="mdTag" class="md-card">
+  <MdContent :md-tag="mdTag" class="md-card">
     <slot />
-  </MdTagSwitcher>
+  </MdContent>
 </template>
 
 <script>
   import { Component, Vue } from 'vue-property-decorator'
-  import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
+  import MdContent from '@vuematerial/content/components/MdContent'
 
   const props = {
     mdTag: {
@@ -18,7 +18,7 @@
   @Component({
     props,
     components: {
-      MdTagSwitcher
+      MdContent
     }
   })
   export default class MdCard extends Vue {

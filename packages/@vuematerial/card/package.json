@@ -15,10 +15,10 @@
     "url": "https://github.com/vuematerial/vue-material/issues"
   },
   "dependencies": {
+    "@vuematerial/content": "^2.0.0",
     "@vuematerial/core": "^2.0.0",
     "@vuematerial/elevation": "^2.0.0",
     "@vuematerial/motion": "^2.0.0",
-    "@vuematerial/tag-switcher": "^2.0.0",
     "@vuematerial/test-utils": "^2.0.0"
   }
 }
