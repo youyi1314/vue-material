@@ -89,8 +89,8 @@
     </AppExample>
 
     <AppExample>
-      <MdButton href="/components/button">Default</MdButton>
-      <MdButton to="/components/button" class="md-primary">Primary</MdButton>
+      <MdButton href="/components/button/example">Default</MdButton>
+      <MdButton to="/components/button/router-link" class="md-primary">Primary</MdButton>
       <MdButton class="md-accent">Accent</MdButton>
     </AppExample>
   </AppContainer>

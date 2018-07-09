@@ -55,10 +55,13 @@
 
     getCutOutStyles () {
       if (this.fabEl) {
+        const width = this.fabEl.clientWidth + 16 + 'px'
+        const height = this.fabEl.clientHeight + 16 + 'px'
+
         return {
-          width: this.fabEl.clientWidth + 16 + 'px',
-          height: this.fabEl.clientHeight + 16 + 'px',
-          borderRadius: this.fabEl.clientHeight + 16 + 'px'
+          width,
+          height,
+          borderRadius: height
         }
       }
 
@@ -69,7 +72,9 @@
     }
 
     setFabStyles () {
-      this.cutOutStyles = this.getCutOutStyles()
+      requestAnimationFrame(() => {
+        this.cutOutStyles = this.getCutOutStyles()
+      })
     }
 
     setFabEl () {

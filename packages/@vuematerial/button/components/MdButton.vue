@@ -88,37 +88,23 @@
       return !this.href && this.type
     }
 
-    get attributes () {
-      const baseProps = {
+    get baseProps () {
+      return {
         href: this.href,
         disabled: this.disabled
       }
+    }
 
+    get attributes () {
       if (this.href) {
-        return baseProps
+        return this.baseProps
       }
 
       if (this.isRouterLink()) {
-        const newProps = {
-          ...baseProps,
-          ...this.$attrs,
-          ...this.$props
-        }
-
-        delete newProps.mdRipple
-
-        if (newProps.event === 'click') {
-          delete newProps.type
-        }
-
-        return newProps
+        return this.getRouterLinkProps()
       }
 
-      return {
-        ...baseProps,
-        ...this.$attrs,
-        type: this.type
-      }
+      return this.getButtonProps()
     }
 
     beforeCreate () {
@@ -135,6 +121,34 @@
 
     updated () {
       this.setIsFlat()
+    }
+
+    getButtonProps () {
+      const newProps = {
+        ...this.baseProps,
+        ...this.$attrs,
+        type: this.type
+      }
+
+      delete newProps.href
+
+      return newProps
+    }
+
+    getRouterLinkProps () {
+      const newProps = {
+        ...this.baseProps,
+        ...this.$attrs,
+        ...this.$props
+      }
+
+      delete newProps.mdRipple
+
+      if (newProps.event === 'click') {
+        delete newProps.type
+      }
+
+      return newProps
     }
 
     isRouterLink () {

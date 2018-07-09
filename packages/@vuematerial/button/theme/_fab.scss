@@ -42,6 +42,7 @@
 
       &.md-disabled {
         @include md-theme-property(background-color, disabled-background, background);
+        @include md-icon-on-buttons(icon-disabled, background);
       }
     }
   }
