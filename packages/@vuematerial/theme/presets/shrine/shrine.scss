@@ -1,0 +1,41 @@
+@import '../../engine/engine';
+@import './fonts';
+
+$color-text: #442c2e;
+
+$theme-colors: (
+  theme: light,
+  background: #fff,
+  surface: #fff,
+  primary: #fedbd0,
+  primary-dark: #caa99f,
+  primary-light: #fff,
+  accent: #feeae6,
+  accent-dark: #cbb8b4,
+  accent-light: #fff,
+  text-primary: $color-text,
+  text-accent: rgba($color-text, .6),
+  text-hint: rgba($color-text, .38),
+  disabled: rgba($color-text, .26),
+  disabled-background: rgba($color-text, .12),
+  highlight: rgba($color-text, .12),
+  icon: rgba($color-text, .6),
+  icon-disabled: rgba($color-text, .38),
+  divider: rgba($color-text, .12)
+);
+$theme-overrides: (
+  global-radius: 0,
+  content-angle-top-left: 12,
+  content-angle-top-right: 12,
+  content-angle-bottom-right: 12,
+  content-angle-bottom-left: 12,
+  button-radius: 0,
+  dialog-radius: 0
+);
+$generate-css-variables: false;
+
+@include md-register-theme('shrine', $theme-colors, $theme-overrides, $generate-css-variables);
+
+@import '~vue-material/theme/all';
+
+@include md-shrine-font-theme;

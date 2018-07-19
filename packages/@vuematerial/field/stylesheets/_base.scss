@@ -1,5 +1,49 @@
 @import "~@vuematerial/motion/variables";
 
 .md-field {
+  width: 100%;
+  display: flex;
+  position: relative;
+  font-family: inherit;
 
+  + #{&} {
+    margin-top: 24px;
+  }
+
+  &.md-focused label {
+    transform: translate3D(0, (-56px / 2), 0);
+    font-size: 12px;
+  }
+
+  label {
+    padding: 0 12px;
+    position: absolute;
+    top: (56px - 16px) / 2;
+    left: 0;
+    transition: $md-motion-default;
+    touch-action: manipulation;
+    font-size: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .md-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: (56px - 24px) / 2;
+    left: 9px;
+    color: rgba(#000, .54);
+    font-style: normal;
+    line-height: 24px;
+    text-align: center;
+
+    ~ label {
+      left: 30px;
+    }
+
+    ~ .md-input {
+      padding-left: 42px !important;
+    }
+  }
 }

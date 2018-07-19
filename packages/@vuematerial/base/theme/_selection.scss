@@ -1,0 +1,11 @@
+:not(input):not(textarea)::selection {
+  @include md-theme-component() {
+    @if md-get-theme-mode() == light {
+      @include md-theme-property(background-color, primary-light, background, .3);
+    } @else {
+      @include md-theme-property(background-color, primary-light, background, .54);
+    }
+
+    @include md-theme-property(color, text-primary, background);
+  }
+}

@@ -1,0 +1,24 @@
+.md-content {
+  @include md-theme-component() {
+    &.md-primary {
+      &::selection {
+        @include md-theme-property(color, text-primary, primary);
+        @include md-theme-property(background-color, primary-light, primary, .87);
+      }
+    }
+
+    &.md-accent {
+      &::selection {
+        @include md-theme-property(color, text-primary, accent);
+        @include md-theme-property(background-color, accent-light, accent, .87);
+      }
+    }
+
+    &.md-plain {
+      &::selection {
+        @include md-theme-property(color, text-primary, background);
+        @include md-theme-property(background-color, primary-light, background, .87);
+      }
+    }
+  }
+}

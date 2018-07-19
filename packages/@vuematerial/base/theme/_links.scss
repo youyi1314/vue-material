@@ -1,0 +1,17 @@
+a:not(.md-button) {
+  @include md-theme-component() {
+    @include md-theme-property(color, primary, background);
+
+    &:hover {
+      @include md-theme-property(color, primary, background, .8);
+    }
+
+    &.md-accent {
+      @include md-theme-property(color, accent, background);
+
+      &:hover {
+        @include md-theme-property(color, accent, background, .8);
+      }
+    }
+  }
+}

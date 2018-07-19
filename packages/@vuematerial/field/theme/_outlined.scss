@@ -1,0 +1,32 @@
+.md-field-notch-mask {
+  @include md-theme-component() {
+    @include md-theme-override-property(height, field-radius, field-radius);
+
+    &.left:after {
+      @include md-theme-override-property(border-top-left-radius, field-radius, field-radius);
+    }
+
+    &.right:after {
+      @include md-theme-override-property(border-top-right-radius, field-radius, field-radius);
+    }
+  }
+}
+
+.md-field.md-focused {
+  @include md-theme-component() {
+    .md-input,
+    .md-textarea {
+      @include md-theme-property(border-color, primary, background);
+    }
+
+    label {
+      @include md-theme-property(color, primary, background);
+    }
+
+    .md-field-notch-mask {
+      &:after {
+        @include md-theme-property(border-color, primary, background);
+      }
+    }
+  }
+}

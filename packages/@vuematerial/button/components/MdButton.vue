@@ -17,13 +17,15 @@
   import { Component, Vue } from 'vue-property-decorator'
   import MdRouterLinkProps from '@vuematerial/core/MdRouterLinkProps'
   import MdTagSwitcher from '@vuematerial/tag-switcher/MdTagSwitcher'
-  import MdButtonContent from './MdButtonContent'
+  import MdPropValidator from '@vuematerial/core/MdPropValidator'
   // import MdFocused from 'core/mixins/MdFocused/MdFocused'
 
-  const props = {
+  const mdAlignmentAccepts = ['left', 'right', 'space-between']
+  export const props = {
     href: {
       type: String,
-      default: ''
+      default: '',
+      description: 'Test'
     },
     type: {
       type: String,
@@ -35,7 +37,9 @@
     },
     to: {
       type: [String, Object],
-      default: ''
+      default: '',
+      accepts: mdAlignmentAccepts,
+      ...MdPropValidator('md-alignment', mdAlignmentAccepts)
     },
     mdRipple: {
       type: Boolean,
@@ -46,11 +50,9 @@
   @Component({
     props,
     components: {
-      MdButtonContent,
       MdTagSwitcher
     }
   })
-
   export default class MdButton extends Vue {
     mdHasFocus = false
     rippleActive = false
@@ -146,6 +148,7 @@
 
       if (newProps.event === 'click') {
         delete newProps.type
+        delete newProps.href
       }
 
       return newProps

@@ -1,0 +1,52 @@
+@import "~@vuematerial/elevation/mixins";
+@import "~@vuematerial/motion/variables";
+
+.md-field-notch {
+  height: 56px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.md-field-notch-mask {
+  position: absolute;
+  overflow: hidden;
+  transition: width $md-motion-complex;
+
+  .md-field.md-focused & {
+    transition: width $md-motion-default;
+  }
+
+  &:after {
+    height: 200%;
+    position: absolute;
+    border: 1px solid #ededed;
+    transition: border $md-motion-close;
+    content: " ";
+
+    .md-field.md-focused & {
+      transition: border $md-motion-default;
+      border-width: 2px;
+    }
+  }
+
+  &.left {
+    left: 0;
+
+    &:after {
+      width: 9999em;
+      border-right-width: 0 !important;
+    }
+  }
+
+  &.right {
+    right: 0;
+
+    &:after {
+      width: 100%;
+      border-left-width: 0 !important;
+    }
+  }
+}

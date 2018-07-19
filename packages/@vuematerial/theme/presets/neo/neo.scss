@@ -4,20 +4,21 @@
 $theme-colors: (
   theme: light,
   surface: #fff,
-  background: #f8f8f8,
-  primary: #2979ff,
-  primary-light: #75a7ff,
-  primary-dark: #004ecb,
-  accent: #212121,
-  accent-light: #484848,
-  accent-dark: #000
+  background: #F6F6F6,
+  primary: #0075F2,
+  primary-light: #66a3ff,
+  primary-dark: #004bbe,
+  accent: #9B287B,
+  accent-light: #cf5baa,
+  accent-dark: #69004f
 );
 $theme-overrides: (
   global-radius: 6px,
-  button-radius: 6px,
   button-outlined-border-width: 2px,
+  button-radius: 6px,
   content-radius: 6px,
-  dialog-radius: 6px
+  dialog-radius: 6px,
+  field-radius: 6px
 );
 $generate-css-variables: false;
 

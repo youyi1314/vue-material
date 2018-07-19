@@ -6,7 +6,7 @@
       <MdButton class="md-raised md-primary" @click="triggerActive()">Trigger</MdButton>
 
       <div class="example">
-        <MdRipple md-tag="MdContent" md-centered :md-active.sync="trigger">
+        <MdRipple :md-active.sync="trigger" md-tag="MdContent" md-centered class="md-accent">
           Click here
         </MdRipple>
 
@@ -53,9 +53,12 @@
     }
   }
 
-  .md-avatar /deep/ .md-ripple-wave {
-    background-color: #fff;
-    opacity: .3;
+  .md-avatar {
+    color: #fff;
+
+    /deep/ .md-ripple-wave {
+      opacity: .3;
+    }
   }
 
   .md-button {

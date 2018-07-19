@@ -8,11 +8,13 @@
   import { Component, Vue } from 'vue-property-decorator'
   import MdPropValidator from '@vuematerial/core/MdPropValidator'
 
+  const mdAlignmentAccepts = ['left', 'right', 'space-between']
   const props = {
     mdAlignment: {
       type: String,
       default: 'right',
-      ...MdPropValidator('md-alignment', ['left', 'right', 'space-between'])
+      accepts: mdAlignmentAccepts,
+      ...MdPropValidator('md-alignment', mdAlignmentAccepts)
     }
   }
 

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue, Watch } from 'vue-property-decorator'
   import MdObserveElement from '@vuematerial/core/MdObserveElement'
 
   const props = {
@@ -40,6 +40,15 @@
       }
 
       return baseClass
+    }
+
+    get currentTheme () {
+      return this.$material.theming.themeName
+    }
+
+    @Watch('currentTheme')
+    onThemeChange () {
+      this.$nextTick(this.setFabStyles)
     }
 
     mounted () {

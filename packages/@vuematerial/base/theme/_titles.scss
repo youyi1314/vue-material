@@ -1,0 +1,9 @@
+.md-caption,
+.md-display-1,
+.md-display-2,
+.md-display-3,
+.md-display-4 {
+  @include md-theme-component() {
+    @include md-theme-property(color, text-accent, surface);
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <Transition name="app-container" appear>
-    <main :style="appContainerStyles" class="app-container" @scroll="onScroll">
+    <main :style="appContainerStyles" class="app-container md-scrollbar" @scroll="onScroll">
       <div class="app-container-wrapper">
         <MdToolbar
           ref="header"

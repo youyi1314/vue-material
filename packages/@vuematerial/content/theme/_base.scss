@@ -7,21 +7,16 @@
     &.md-primary {
       @include md-theme-property(background-color, primary);
       @include md-theme-property(color, text-primary, primary);
-
-      &::selection {
-        @include md-theme-property(color, text-primary, primary-light);
-        @include md-theme-property(background-color, primary-light, "", .87);
-      }
     }
 
     &.md-accent {
       @include md-theme-property(background-color, accent);
       @include md-theme-property(color, text-primary, accent);
+    }
 
-      &::selection {
-        @include md-theme-property(color, text-primary, accent-light);
-        @include md-theme-property(background-color, accent-light, "", .87);
-      }
+    &.md-plain {
+      @include md-theme-property(background-color, background);
+      @include md-theme-property(color, text-primary, background);
     }
 
     .md-app & {

@@ -1,0 +1,6 @@
+.md-input,
+.md-textarea {
+  @include md-theme-component() {
+    @include md-theme-override-property(border-radius, field-radius, field-radius);
+  }
+}

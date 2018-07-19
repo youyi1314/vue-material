@@ -1,0 +1,57 @@
+@import "~@vuematerial/motion/variables";
+
+.md-input,
+.md-textarea {
+  min-height: 56px;
+  margin: 0;
+  padding: 12px;
+  display: block;
+  flex: 1;
+  background-color: #fff;
+  border: solid #ededed;
+  border-width: 0 1px 1px;
+  background: none;
+  touch-action: manipulation;
+  transition: $md-motion-close;
+  transition-property: padding, border, color;
+  font-family: inherit;
+  font-size: 16px;
+
+  &[type="date"] {
+    font-size: 16px;
+  }
+
+  &[disabled] {
+    cursor: default;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    font-size: 16px;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+    transition: $md-motion-default;
+    transition-property: font-size, color;
+  }
+
+  .md-field.md-focused & {
+    padding: 12px 11px 11px;
+    border-width: 0 2px 2px;
+    outline: none;
+    transition: $md-motion-default;
+    transition-property: padding, border, color;
+  }
+
+  ~ .md-icon {
+    left: auto;
+    right: 12px;
+  }
+}
+
+.md-input {
+  height: 56px;
+  line-height: 56px;
+}

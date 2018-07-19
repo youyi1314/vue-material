@@ -3,24 +3,24 @@
     <AppExample>
       <MdField>
         <label>Username</label>
-        <input class="md-input">
+        <MdInput />
       </MdField>
 
-      <MdField class="focused">
+      <MdField>
         <label>Password</label>
-        <input class="md-input">
+        <MdInput />
       </MdField>
 
       <MdField>
         <MdIcon>money</MdIcon>
         <label>Password confirmation</label>
-        <input class="md-input">
+        <MdInput />
       </MdField>
 
       <MdField>
         <MdIcon>favorite</MdIcon>
         <label>Password confirmation</label>
-        <input class="md-input">
+        <MdInput />
       </MdField>
     </AppExample>
   </AppContainer>

@@ -1,4 +1,4 @@
-@import './typography';
+@import "~@vuematerial/motion/variables";
 
 /**
  * Structure
@@ -19,6 +19,8 @@ html {
 
 body {
   @extend .md-body-1;
+
+  transition: $md-motion-default;
   min-height: 100vh;
   margin: 0;
   position: relative;

@@ -1,7 +1,7 @@
 <template>
-  <footer class="app-footer">
+  <MdContent md-tag="footer" class="app-footer md-plain">
     <a href="https://github.com/marcosmoura" target="_blank">Made with <span class="heart">&hearts;</span> by Marcos Moura</a>
-  </footer>
+  </MdContent>
 </template>
 
 <script>

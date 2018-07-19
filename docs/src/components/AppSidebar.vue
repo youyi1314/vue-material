@@ -1,6 +1,6 @@
 <template>
   <Transition name="app-sidebar">
-    <aside class="app-sidebar">
+    <MdContent md-tag="aside" class="app-sidebar md-scrollbar md-plain">
       <header class="app-sidebar-header">
         <h1 class="app-sidebar-title">
           <RouterLink tag="MdRipple" to="/">{{ $t('appName') }}</RouterLink>
@@ -37,8 +37,9 @@
         <MdButton class="md-raised md-primary" @click="setTheme('default')">Default</MdButton>
         <MdButton class="md-raised md-primary" @click="setTheme('rally')">Rally</MdButton>
         <MdButton class="md-raised md-primary" @click="setTheme('crane')">Crane</MdButton>
+        <MdButton class="md-raised md-primary" @click="setTheme('shrine')">Shrine</MdButton>
       </div>
-    </aside>
+    </MdContent>
   </Transition>
 </template>
 
@@ -61,6 +62,7 @@
     height: 100vh;
     position: relative;
     z-index: 2;
+    overflow: auto;
     background-color: #fff;
     border-right: 1px solid rgba(#000, .12);
 
@@ -80,7 +82,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: rgba(#000, .87);
+        color: inherit;
       }
     }
 
@@ -94,7 +96,7 @@
         padding: 4px 8px;
         cursor: pointer;
         border-radius: 4px;
-        color: rgba(#000, .87);
+        color: inherit;
 
         &.md-activated {
           font-weight: 700;

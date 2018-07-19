@@ -123,5 +123,23 @@
     $newColor: md-get-color-by-theme($theme, $type);
   }
 
-  @return $newColor
+  @return $newColor;
+}
+
+
+/**
+ * Get a user override property value by name
+ * ---
+ * Usage example:
+ *
+ * $override: map-get($md-theme-overrides, $name)
+ *
+ * ---
+ * @access public
+ * ---
+ * @param {string} $name - The property name
+ */
+
+@function md-get-prop-override($name) {
+  @return map-get($md-theme-overrides, $name);
 }

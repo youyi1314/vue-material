@@ -7,6 +7,7 @@ import MdDivider from '@vuematerial/divider'
 import MdField from '@vuematerial/field'
 import MdIcon from '@vuematerial/icon'
 import MdRipple from '@vuematerial/ripple'
+import MdShape from '@vuematerial/shape'
 import MdToolbar from '@vuematerial/toolbar'
 
 export default Vue => {
@@ -19,5 +20,6 @@ export default Vue => {
   Vue.use(MdField)
   Vue.use(MdIcon)
   Vue.use(MdRipple)
+  Vue.use(MdShape)
   Vue.use(MdToolbar)
 }

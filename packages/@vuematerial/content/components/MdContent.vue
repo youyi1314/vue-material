@@ -1,8 +1,8 @@
 <template>
   <MdTagSwitcher
-    :md-tag="mdTag"
     v-bind="$attrs"
-    class="md-content"
+    :md-tag="mdTag"
+    :class="'md-content'"
     v-on="$listeners"
   >
     <slot/>

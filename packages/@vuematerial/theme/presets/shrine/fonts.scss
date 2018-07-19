@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
+@mixin md-shrine-font-theme () {
+  @include md-theme-component(true) {
+    font-family: Rubik, serif;
+  }
+
+  .md-button {
+    @include md-theme-component() {
+      line-height: 40px;
+    }
+  }
+}

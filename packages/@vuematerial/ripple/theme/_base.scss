@@ -28,6 +28,18 @@
 
     &.md-flat {
       @include md-ripple-state-tones(md-theme(surface));
+
+      &.md-primary {
+        &.md-activated {
+          @include md-theme-property(color, primary);
+        }
+      }
+
+      &.md-accent {
+        &.md-activated {
+          @include md-theme-property(color, accent);
+        }
+      }
     }
   }
 }
